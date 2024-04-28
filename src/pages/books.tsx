@@ -50,7 +50,7 @@ export default function  (props?: booksProps) {
     const _books = await bookService.list({})
     if(_books.list){
       setBooks(_books.list)
-      const main = _books.list.find((_b:{config:{is_default:boolean}})=> _b?.config?.is_default)
+      const main = _books.list.find((_b:{config:{default:boolean}})=> _b?.config?.default)
       if(main){
         setBook(main)
       }

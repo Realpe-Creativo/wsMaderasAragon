@@ -8,6 +8,7 @@
   margin-top: -100px; 
   
 }
+
 .content{
   background: rgba(138, 255, 234, 0.102);
   border-radius: 16px;
@@ -20,6 +21,7 @@
   height: 90vh;
   overflow-y: scroll;
 }
+
 .navbar{
   position: fixed;
   top: 0px;
@@ -50,6 +52,7 @@ textarea:focus {
   -ms-user-select: none;/* IE 10+ */ 
   user-select: none;
 }
+
 .navbar-option {
   margin: 0 6px;
   padding: 0 8px;
@@ -70,14 +73,12 @@ textarea:focus {
   border-radius: 16px;
 }
 
-body{
-  overflow: hidden;
-}
+
 input {
   all: unset;
 }
+
 .bg-glass{
-  
   background: rgba(249, 226, 184, 0.848);
   border-radius: 16px;
   backdrop-filter: blur(7.5px);
@@ -85,12 +86,26 @@ input {
 }
 
 .font-title{
-  font-family: "Sifonn", serif;
+  font-family: "Gilroy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-title{
+  color: #9D6620;
+}
+
+.font-title-bold{
+  font-family: "GilroyBold", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Sifonn;
-  src: url("/fonts/sifonn.otf") format("opentype");
+  font-family: Gilroy;
+  src: url("/fonts/gilroy.otf") format("opentype");
+}
+@font-face {
+  font-family: GilroyBold;
+  src: url("/fonts/gilroy-bold.otf") format("opentype");
 }

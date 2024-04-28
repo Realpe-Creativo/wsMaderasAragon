@@ -27,7 +27,7 @@ export default function  (props:props) {
     <div className="navbar text-plain">
       <div className="absolute left-12 items-center flex top-0">
         <img src="/logo.png" alt="logo" className="w-16 h-16 inline flex-initial"/>
-        <span className="text-4xl text-green-700 pt-3 text-title font-bold flex-initial leading-none">Books</span>
+        <span className="text-4xl text-green-700 pt-3 font-title font-bold flex-initial leading-none">Books</span>
       </div>
       <div className={`${$loading ? 'animate-pulse' : ''} navbar-container drop-shadow-lg bg-green-700 first:ms-0 last:me-0`}>
         {
