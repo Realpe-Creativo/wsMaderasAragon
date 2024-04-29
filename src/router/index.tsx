@@ -3,7 +3,6 @@ import PublicLayout from "../layouts/PublicLayout";
 import Landing from './../pages/landing'
 import Auth from "../pages/auth";
 import Home from "../pages/home";
-import Books from "../pages/books";
 import Products from "../pages/products";
 
 
@@ -32,10 +31,6 @@ export const router = createBrowserRouter([
   {
     path: "/home",
     element: <PublicLayout tab="home"><Home/></PublicLayout>
-  },
-  {
-    path: "/books",
-    element: <PublicLayout tab="books:books"><Books/></PublicLayout>
   },
   {
     path: "*",

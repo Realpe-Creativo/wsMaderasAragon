@@ -1,5 +1,5 @@
 import { get, post } from "../util/http"
-const api = '/books-book'
+const api = '/abook-book'
 export const bookService = {
   api,
   list: async(_params:any) => {

@@ -42,8 +42,8 @@ export default function  (props:props) {
               </div>
 
               {
-                can('navbar:books:books') &&
-                <div className={`${props?.tab === 'books:books' ? 'drop-shadow-md bg-white text-green-600' : ''} navbar-option transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
+                can('navbar:abook:abook') &&
+                <div className={`${props?.tab === 'abook:abook' ? 'drop-shadow-md bg-white text-green-600' : ''} navbar-option transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
                   <Link to={"/books"} className="flex align-middle content-center items-center">
                     <span className="flex h-fit p-1"><LuBook /></span>
                     <span className="flex">Libros</span>
@@ -52,8 +52,8 @@ export default function  (props:props) {
               }
 
               {
-                can('navbar:books:sheets') &&
-                <div className={`${props?.tab === 'books:sheets' ? 'drop-shadow-md bg-white text-green-600' : ''} navbar-option transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
+                can('navbar:abook:sheets') &&
+                <div className={`${props?.tab === 'abook:sheets' ? 'drop-shadow-md bg-white text-green-600' : ''} navbar-option transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
                   <Link to={"/sheets"} className="flex align-middle content-center items-center">
                     <span className="flex h-fit p-1"><LuFileSpreadsheet /></span>
                     <span className="flex">Planillas</span>
@@ -62,8 +62,8 @@ export default function  (props:props) {
               }
 
               {
-                can('navbar:books:employees') &&
-                <div className={`${props?.tab === 'books:employees' ? 'drop-shadow-md bg-white text-green-600' : ''} navbar-option transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
+                can('navbar:abook:employees') &&
+                <div className={`${props?.tab === 'abook:employees' ? 'drop-shadow-md bg-white text-green-600' : ''} navbar-option transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
                   <Link to={"/employees"} className="flex align-middle content-center items-center">
                     <span className="flex h-fit p-1"><LuHelpingHand /></span>
                     <span className="flex">Colaboradores</span>

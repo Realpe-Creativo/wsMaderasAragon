@@ -17,17 +17,17 @@ export default function  (props:props) {
         : null
       }
       {
-        props.tab === 'books:books'?
+        props.tab === 'abook:abook'?
         <LuBook size="200px" />
         : null
       }
       {
-        props.tab === 'books:sheets'?
+        props.tab === 'abook:sheets'?
         <LuFileSpreadsheet size="200px" />
         : null
       }
       {
-        props.tab === 'books:employees'?
+        props.tab === 'abook:employees'?
         <LuHelpingHand size="200px" />
         : null
       }
