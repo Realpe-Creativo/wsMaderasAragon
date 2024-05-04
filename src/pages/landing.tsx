@@ -12,11 +12,13 @@ export default function  (props?: LoadingProps) {
   props
   return (
     <>
-      <div className="w-screen  mt-4 flex justify-center items-center align-middle h-screen bg-fixed p-6" style={{backgroundImage: 'url(/banner.jpg)'}}>
+    <div className="relative">
+      <video src="/banner.mp4" muted autoPlay loop className="absolute hero-video z-0"></video>
+      <div className="w-screen  mt-4 flex justify-center items-center align-middle h-screen bg-stone-900 bg-fixed p-6">
         <div
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="h-[40rem] group flex flex-col overflow-hidden justify-start   gap-4 mx-auto px-8 relative text-start w-9/12 pt-80 rounded-3xl border  border-stone-900/25 hover:border-stone-950/60 hover:shadow-md bg-stone-900/25 backdrop-blur-sm"
+        className="h-[40rem] group flex flex-col overflow-hidden justify-start   gap-4 mx-auto px-8 relative text-start w-11/12 md:w-9/12 pt-80 rounded-3xl border  border-stone-900/25 hover:border-stone-950/60 hover:shadow-md bg-stone-900/25 backdrop-blur-sm"
         >
           <AnimatePresence>
             {hovered && (
@@ -41,9 +43,9 @@ export default function  (props?: LoadingProps) {
           </AnimatePresence>
           <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
           <br /><br />
-          <span className="text-[6.5rem] leading-10 z-50 flex font-title-bold text-white">Productos</span>
+          <span className="text-[3.0rem] md:text-[6.5rem] leading-10 z-50 flex font-title-bold text-white">Productos</span>
           <br />
-          <p className="flex w-8/12  z-50  text-white font-normal text-2xl">Elige sostenibilidad con nuestra madera reforestada. Calidad y consciencia en cada producto</p>
+          <p className="flex w-8/12  z-50  text-white font-normal text-sm md:text-2xl">Elige sostenibilidad con nuestra madera reforestada. Calidad y consciencia en cada producto</p>
           <Button bg="green" className="hidden group-hover:flex z-50 text-4xl absolute bottom-8 right-8">
             <LuArrowRightCircle />
           </Button>
@@ -51,22 +53,28 @@ export default function  (props?: LoadingProps) {
         </div>
         
       </div>
-      <div className="bg-stone-950 flex text-white text-3xl flex-row justify-center p-3">
+    </div>
+    <div className="-mt-4">
+      <div className="bg-stone-950 z-50 flex text-white text-3xl flex-row mt-3 justify-center p-3">
         <div className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
-          <LuNewspaper className="flex text-stone-400 text-[4.5rem]" />
-          <span className="flex">Noticias</span>
+          <LuNewspaper className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" />
+          <span className="flex text-sm md:text-2xl">Noticias</span>
         </div>
         <div className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
-          <LuMessageCircle className="flex text-stone-400 text-[4.5rem]" />
-          <span className="flex">Contactanos</span>
+          <LuMessageCircle className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" />
+          <span className="flex text-sm md:text-2xl">Contactanos</span>
 
         </div>
         <div className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
-          <LuBadgeCheck className="flex text-stone-400 text-[4.5rem]" />
-          <span className="flex">Conocenos</span>
+          <LuBadgeCheck className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" />
+          <span className="flex text-sm md:text-2xl">Conocenos</span>
 
         </div>
       </div>
+      
+    </div>
+    
+    
     </>
   )
 }

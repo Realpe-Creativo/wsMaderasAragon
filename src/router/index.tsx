@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import PublicLayout from "../layouts/PublicLayout";
 import Landing from './../pages/landing'
 import Auth from "../pages/auth";
-import Home from "../pages/home";
 import Products from "../pages/products";
+import Know from "../pages/know";
 
 
 
@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "/know",
-    element: <PublicLayout tab="know"><Products/></PublicLayout>,
+    element: <PublicLayout tab="know"><Know/></PublicLayout>,
   },
   {
     path: "/contact",
@@ -27,10 +27,6 @@ export const router = createBrowserRouter([
   {
     path: "/auth",
     element: <PublicLayout tab="auth"><Auth/></PublicLayout>
-  },
-  {
-    path: "/home",
-    element: <PublicLayout tab="home"><Home/></PublicLayout>
   },
   {
     path: "*",

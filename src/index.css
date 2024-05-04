@@ -13,3 +13,8 @@
     -webkit-text-stroke: 4px black;
   }
 }
+.hero-video{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
