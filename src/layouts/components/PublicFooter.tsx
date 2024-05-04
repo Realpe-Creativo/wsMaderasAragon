@@ -1,8 +1,3 @@
-import Button from "../../components/Button";
-import { LuCreditCard, LuFacebook, LuInstagram, LuStore } from "react-icons/lu";
-
-
-
 interface props{
   tab:String
 }

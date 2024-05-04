@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import PublicLayout from "../layouts/PublicLayout";
 import Landing from './../pages/landing'
 import Auth from "../pages/auth";
-import Products from "../pages/products";
 import Know from "../pages/know";
+import Products from "../pages/products";
 
 
 

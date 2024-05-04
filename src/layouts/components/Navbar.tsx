@@ -1,6 +1,6 @@
 import { useStore } from "@nanostores/react";
 import { token, user, loading, access, can } from "../../atoms/context";
-import {  LuBook, LuFeather, LuFileSpreadsheet, LuGhost, LuHelpingHand, LuHexagon, LuHome, LuLogOut, LuUserCircle } from "react-icons/lu";
+import {  LuBook, LuFileSpreadsheet, LuGhost, LuHelpingHand, LuHexagon, LuHome, LuLogOut, LuUserCircle } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
 interface props{

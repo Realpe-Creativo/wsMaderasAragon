@@ -1,7 +1,3 @@
-
-
-
-
 import { ReactNode, useEffect } from 'react'
 import Navbar from './components/PublicNavbar'
 import Footer from './components/PublicFooter'
