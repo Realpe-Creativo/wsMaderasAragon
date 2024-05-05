@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "../components/Reveal";
 import React from "react";
 import Button from "../components/Button";
-import { LuArrowRightCircle, LuBadgeCheck, LuMessageCircle, LuNewspaper, LuStar } from "react-icons/lu";
+import { LuArrowRightCircle, LuBadgeCheck, LuMessageCircle, LuNewspaper } from "react-icons/lu";
 
 export interface LoadingProps {
 }
