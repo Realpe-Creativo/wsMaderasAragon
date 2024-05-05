@@ -3,7 +3,7 @@ interface props{
 }
 
 export default function  (props:props) {
-
+  props
   return (
     <div className="w-screen h-42rem] flex flex-col justify-center items-center align-middle bg-fixed bg-center bg-cover" style={{backgroundImage: 'url(/footer.png)'}}>
       <div className="w-full h-[40rem] justify-center flex flex-col content-center items-center md:flex-row backdrop-blur-sm bg-stone-950/25">
