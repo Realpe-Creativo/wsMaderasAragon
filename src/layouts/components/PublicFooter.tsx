@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 interface props{
   tab:String
 }
@@ -9,9 +11,9 @@ export default function  (props:props) {
       <div className="w-full h-[40rem] justify-center flex flex-col content-center items-center md:flex-row backdrop-blur-sm bg-stone-950/25">
       <div className="flex p-6 text-white align-middle justify-center content-center items-center w-3/12 mx-4 text-start">
           <div className="flex flex-col text-xl font-title-bold">
-
-            <span className="flex my-1">Politica de privacidad</span>
-
+            <Link className="flex" to="/legal#init">
+              <span className="flex my-1">Politica de privacidad</span>
+            </Link>
           </div>
         </div>
         <div className="flex w-3/12 mx-4 justify-center flex-col h-full items-center content-center align-middle">
