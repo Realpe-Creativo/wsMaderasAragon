@@ -13,7 +13,7 @@ export interface PublicLayoutProps {
 }
 
 export default function  (props: PublicLayoutProps) {
-
+  props
   useEffect(()=>{
     setTimeout(()=>{
 
