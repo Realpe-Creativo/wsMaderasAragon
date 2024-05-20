@@ -10,22 +10,22 @@ export default function  (props?: ContactProps) {
 
   return (
     <div className="flex flex-col mt-32 mb-20">
-      <div className="flex p-4 justify-center w-full flex-row">
+      <div className="flex p-4 justify-center w-full bg-stone-700 flex-row">
         <div className="flex w-fit content-center">
-          <span className="text-5xl my-4 font-title-bold">Contactanos</span>
+          <span className="text-5xl my-4 text-white font-title-bold">Contáctanos</span>
         </div>
       </div>
       <div className="flex flex-row p-4 justify-center">
-        <div className="flex flex-col md:w-6/12">
+        <div className="flex flex-col p-2 md:w-5/12">
           <img src="/contact.png" className="rounded-xl drop-shadow-lg" alt="Foto" />
         </div>
-        <div className="flex flex-col md:w-3/12">
+        <div className="flex flex-col p-2 md:w-3/12">
 
         </div>
       </div>
       <hr className="border-stone-200 mx-10 my-4" />
       <div className="flex flex-row p-4 justify-center">
-        <div className="flex flex-col md:w-4/12">
+        <div className="flex flex-col p-2 md:w-4/12">
           <span className="flex text-2xl">Sedes</span>
           <span className="flex text-3xl font-title-bold mt-4">Villanueva</span>
           <span className="flex text-xl">Casanare - Colombia</span>
