@@ -41,6 +41,7 @@ export default function  (props:props) {
             </div>
             <div className="flex w-6/12 p-2 justify-center">
               <Button bg={`${'stone'}`} bgAccent={`${props.tab === 'products' ? 950 :''}`} href="/products" className="mx-2"> Productos </Button>
+              <Button bg={`${'stone'}`} bgAccent={`${props.tab === 'services' ? 950 :''}`} href="/services" className="mx-2"> Servicios </Button>
               <Button bg={`${'stone'}`} bgAccent={`${props.tab === 'know' ? 950 :''}`} href="/know"  className="mx-2"> Conócenos </Button>
               <Button bg={`${'stone'}`} bgAccent={`${props.tab === 'contact' ? 950 :''}`} href="/contact"  className="mx-2"> Contáctanos </Button>
             </div>
