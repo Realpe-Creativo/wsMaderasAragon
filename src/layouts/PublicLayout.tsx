@@ -31,7 +31,7 @@ export default function  (props: PublicLayoutProps) {
       <Navbar tab={props?.tab}/>
       {props.children}
       <>
-        <a target='_blank' className='flex bg-green-600 animate-pulse hover:animate-none transition-all text-white text-2xl p-3 rounded-full fixed bottom-4 right-4 z-50' href='https://wa.me/573106900729'>
+        <a target='_blank' className='flex bg-green-600 animate-pulse hover:animate-none transition-all text-white text-2xl p-3 rounded-full fixed bottom-4 right-4 z-50' href='https://wa.me/573125085185'>
           <ImWhatsapp className='flex' />
         </a>
       </>
