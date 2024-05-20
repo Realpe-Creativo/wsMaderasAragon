@@ -9,14 +9,16 @@ export default function  (props?: KnowProps) {
       <video src="/us.mp4" muted autoPlay loop className="absolute hero-video top-0"></video>
       <div className="w-screen overflow-y-scroll scroll-smooth  mt-4 flex justify-center  h-screen bg-fixed p-6">
         
-        <div className="flex-col mt-10  p-4 w-full justify-center z-10">
+        <div className="flex-col mt-10  p-4 w-full justify-center z-10 rounded-xl bg-stone-900/10 h-fit">
           
           <div className="bg-stone-900/50 mt-[12rem] mx-auto transition-all hover:bg-stone-900/75 flex p-10 justify-center w-fit h-fit rounded-xl font-title-bold  backdrop-blur-sm">
               <h1 className="text-4xl  text-white">¿Quienes somos?</h1>
           </div>
           
-          <div className="my-[5rem] mx-auto  bg-stone-900/50 transition-all hover:bg-stone-900/75  flex p-10 justify-center w-fit h-fit rounded-xl  backdrop-blur-sm text-white">
-            Historia de la empresa
+          <div className="my-[5rem] mx-auto  bg-stone-900/50 transition-all hover:bg-stone-900/75  flex p-10 justify-center md:w-8/12 h-fit rounded-xl  backdrop-blur-sm text-white">
+            Maderas Aragón S.A.S. fue constituida en la Cámara de Comercio de Villavicencio, Meta, el 23 de septiembre de 2011 por su fundador Guillermo Aragón Montilla, quien identificó la necesidad de suministrar soluciones maderables en la región. Inicialmente, la empresa se dedicó a la venta de madera aserrada para abastecer la demanda de las carpinterías locales.<br/>
+            Maderas Aragón S.A.S. contó con 4 puntos de venta en la ciudad de Villavicencio, expandiéndose posteriormente a diferentes zonas del Meta y, específicamente, en Villanueva, Casanare. En el kilómetro 19 de la vía Yopal nació la iniciativa de tener su propia planta de producción, por lo que se inició la construcción de una bodega de más de 2.800 m2 en un terreno propio de 9 hectáreas, donde actualmente continúan operando como su punto clave y centro fundamental.<br/>
+            Hoy en día, tienen presencia en el Meta y Casanare, con distribución y experiencia a lo largo y ancho de todo el país, brindando a sus clientes la mejor alternativa para proyectos de construcción, proyectos ganaderos, turísticos o ambientación de espacios. Continuarán creciendo siempre y cuando sus clientes se lo permitan, y de la mano de Dios.
           </div>
           
           <div className="my-10 mt-[18rem] flex-row  flex p-10 justify-center w-fit h-fit    text-white">

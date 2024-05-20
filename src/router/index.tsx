@@ -5,6 +5,7 @@ import Auth from "../pages/auth";
 import Know from "../pages/know";
 import Products from "../pages/products";
 import Legal from "../pages/legal";
+import Contact from "../pages/contact";
 
 
 
@@ -27,7 +28,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "/contact",
-    element: <PublicLayout tab="contact"><Products/></PublicLayout>,
+    element: <PublicLayout tab="contact"><Contact/></PublicLayout>,
   },
   {
     path: "/auth",
