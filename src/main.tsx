@@ -5,7 +5,8 @@ import {
 } from "react-router-dom";
 import './index.css'
 import { router } from './router';
-
+import { MantineProvider } from '@mantine/core';
+import '@mantine/core/styles.css'
 
 
 
@@ -13,6 +14,8 @@ import { router } from './router';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <MantineProvider>
+      <RouterProvider router={router} />
+    </MantineProvider>
   </React.StrictMode>,
 )

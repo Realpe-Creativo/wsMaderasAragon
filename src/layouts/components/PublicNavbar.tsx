@@ -1,6 +1,8 @@
 import Button from "../../components/Button";
-import { LuCreditCard, LuFacebook, LuInstagram, LuStore } from "react-icons/lu";
+import { LuCreditCard, LuFacebook, LuInstagram, LuShoppingBag, LuStore } from "react-icons/lu";
 import { Link } from "react-router-dom"
+import { car } from "../../atoms/context";
+import { useStore } from "@nanostores/react";
 
 
 interface props{
@@ -8,7 +10,7 @@ interface props{
 }
 
 export default function  (props:props) {
-
+  const $car = useStore(car)
   return (
     <>
       <div className="flex z-50 flex-col fixed top-0 w-full">
@@ -26,7 +28,7 @@ export default function  (props:props) {
               </span>
             </div>
             <div className="flex w-1/2 text-sm justify-end pe-6">
-              <Button bg="green" className="min-w-24 mx-1">Tienda <LuStore className="ms-2"/></Button>
+              <Button onClick={() => car.set({...car.get(), open: !$car.open})}  bg="green" className="min-w-24 mx-1">Carrito <LuShoppingBag className="ms-2"/></Button>
               <Button bg="blue" className="min-w-24 mx-1">Pagos <LuCreditCard className="ms-2"/></Button>
             </div>
 
@@ -41,7 +43,7 @@ export default function  (props:props) {
             </div>
             <div className="flex w-6/12 p-2 justify-center">
               <Button bg={`${'stone'}`} bgAccent={`${props.tab === 'products' ? 950 :''}`} href="/products" className="mx-2"> Productos </Button>
-              <Button bg={`${'stone'}`} bgAccent={`${props.tab === 'services' ? 950 :''}`} href="/services" className="mx-2"> Servicios </Button>
+              {/* <Button bg={`${'stone'}`} bgAccent={`${props.tab === 'services' ? 950 :''}`} href="/services" className="mx-2"> Servicios </Button> */}
               <Button bg={`${'stone'}`} bgAccent={`${props.tab === 'know' ? 950 :''}`} href="/know"  className="mx-2"> Conócenos </Button>
               <Button bg={`${'stone'}`} bgAccent={`${props.tab === 'contact' ? 950 :''}`} href="/contact"  className="mx-2"> Contáctanos </Button>
             </div>

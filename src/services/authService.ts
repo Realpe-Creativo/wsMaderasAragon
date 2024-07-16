@@ -13,4 +13,11 @@ export default class AuthService {
     const response = await post({api:`${this.api || API}/login`, options: {data: {username, password, app} }})
     return response
   }
+  public async loginCode ({user, code, brand}: {user:string,code:string,brand:string}, app: any = 'maketo')  {
+    const response = await post({api:`${this.api || API}/login-code`, options: {data: {user, code, brand, app} }})
+    return response
+  }
+
+  public async logout ()  {
+  }
 }

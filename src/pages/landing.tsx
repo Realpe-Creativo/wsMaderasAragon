@@ -3,6 +3,7 @@ import { CanvasRevealEffect } from "../components/Reveal";
 import React from "react";
 import Button from "../components/Button";
 import { LuArrowRightCircle, LuBadgeCheck, LuMessageCircle, LuNewspaper } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 export interface LoadingProps {
 }
@@ -56,20 +57,18 @@ export default function  (props?: LoadingProps) {
     </div>
     <div className="-mt-4">
       <div className="bg-stone-950 z-50 flex text-white text-3xl flex-row mt-3 justify-center p-3">
-        <div className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
+        <Link to={"/news"} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
           <LuNewspaper className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" />
           <span className="flex text-sm md:text-2xl">Noticias</span>
-        </div>
-        <div className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
+        </Link>
+        <Link to={"/contact"} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
           <LuMessageCircle className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" />
           <span className="flex text-sm md:text-2xl">Contactanos</span>
-
-        </div>
-        <div className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
+        </Link>
+        <Link to={"/know"} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
           <LuBadgeCheck className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" />
           <span className="flex text-sm md:text-2xl">Conocenos</span>
-
-        </div>
+        </Link>
       </div>
       
     </div>

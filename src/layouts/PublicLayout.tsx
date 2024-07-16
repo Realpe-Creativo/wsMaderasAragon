@@ -27,7 +27,7 @@ export default function  (props: PublicLayoutProps) {
   }, [])
 
   return(
-    <div className='relative'>
+    <div className='relative bg-stone-200'>
       <Navbar tab={props?.tab}/>
       {props.children}
       <>
