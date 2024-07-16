@@ -155,7 +155,7 @@ export default function  (props?: CheckoutProps) {
 
   return (
     <>
-      <div className="flex flex-col justify-center pt-[120px] pb-6">
+      <div className="flex flex-col justify-center pt-[180px] min-h-[85vh]">
         <Stepper color="gray" className="flex m-auto mt-4 flex-col w-[60rem]" active={active} onStepClick={setActive} completedIcon={<LuCheck />}>
           <Stepper.Step className="flex" content="flex" label="Resumen" description="Resumen de compra">
             <div className="flex flex-col w-[50rem] m-auto content-center p-3 gap-4 flex-wrap">
