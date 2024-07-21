@@ -4,10 +4,10 @@ import AddButton from "../components/car/AddButton"
 import Car from "../components/car/Car"
 import { tagService } from "../services/tagService"
 import { useStore } from "@nanostores/react";
-import { brand, car } from "../atoms/context";
+import { brand } from "../atoms/context";
 import { productService } from "../services/productService";
 import { Card, Image } from '@mantine/core';
-import { LuArrowBigLeft, LuSearch, LuShoppingBag } from "react-icons/lu";
+import { LuArrowBigLeft, LuSearch } from "react-icons/lu";
 
 
 export interface ProductsProps {
@@ -15,7 +15,6 @@ export interface ProductsProps {
 
 export default function  (props?: ProductsProps) {
   const $brand = useStore(brand);
-  const $car = useStore(car)
   
   const [product, setProduct] = useState<any>(null)
 

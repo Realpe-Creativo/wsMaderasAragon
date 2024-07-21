@@ -1,5 +1,5 @@
 import Button from "../../components/Button";
-import { LuCreditCard, LuFacebook, LuInstagram, LuShoppingBag, LuStore } from "react-icons/lu";
+import { LuCreditCard, LuFacebook, LuInstagram, LuShoppingBag } from "react-icons/lu";
 import { Link } from "react-router-dom"
 import { car } from "../../atoms/context";
 import { useStore } from "@nanostores/react";

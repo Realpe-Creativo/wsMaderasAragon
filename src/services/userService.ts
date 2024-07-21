@@ -1,5 +1,5 @@
 import { brand } from "./../atoms/context"
-import { get, post } from "../util/http"
+import {  post } from "../util/http"
 const api = '/user'
 export const userService = {
   api,
