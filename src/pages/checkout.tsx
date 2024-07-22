@@ -237,7 +237,7 @@ export default function  (props?: CheckoutProps) {
                   className="flex h-fit"
                   defaultCountry={"CO"}
                   countries={['CO']}
-                  placeholder="Ingresa tu numero"
+                  placeholder="Ingresa tu número"
                   value={number}
                   onChange={(e)=>{setNumber(e || '')}}
                   limitMaxLength={true}
@@ -246,7 +246,7 @@ export default function  (props?: CheckoutProps) {
                 {
                   !$user?
                     <div className="flex h-fit">
-                      <button disabled={number.length < 12} onClick={()=>handleSendSMS()}  className="flex hover mx-1 cursor-pointer disabled:bg-stone-50 disabled:text-stone-600 items-center justify-center 'text-white bg-stone-700 text-white hover:bg-stone-50 hover:text-stone-600  px-4 py2 rounded-3xl">{ sended? 'Solicitar otro': 'Enviar Codigo' }</button>
+                      <button disabled={number.length < 12} onClick={()=>handleSendSMS()}  className="flex hover mx-1 cursor-pointer disabled:bg-stone-50 disabled:text-stone-600 items-center justify-center 'text-white bg-stone-700 text-white hover:bg-stone-50 hover:text-stone-600  px-4 py2 rounded-3xl">{ sended? 'Solicitar otro': 'Enviar Código' }</button>
                     </div>
 
                   : null
