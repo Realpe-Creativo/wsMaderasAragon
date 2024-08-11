@@ -14,7 +14,7 @@ export default function  (props?: LoadingProps) {
     <>
     <div className="relative">
       <video src="/banner.mp4" muted autoPlay loop className="absolute hero-video z-0"></video>
-      <div className="w-[100vw]  mt-4 flex justify-center items-center align-middle h-[100vh] bg-stone-900 bg-fixed p-6">
+      <div className="w-[100vw]  mt-8 md:mt-4 flex justify-center items-center align-middle h-[100vh] bg-stone-900 bg-fixed p-6">
         <div
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
@@ -41,7 +41,7 @@ export default function  (props?: LoadingProps) {
               </motion.div>
             )}
           </AnimatePresence>
-          <div className="absolute inset-0 top-4 -pt-4 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
+          <div className="absolute [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
           <br /><br />
           <span className="text-[3.0rem] md:text-[6.5rem] leading-10 z-50 flex font-title-bold text-white">Productos</span>
           <br />
