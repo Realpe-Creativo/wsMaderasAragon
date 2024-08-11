@@ -5,15 +5,15 @@ export interface LegalProps {
 export default function  (props?: LegalProps) {
   props
   return (
-    <div id="init" className="pt-10 relative">
+    <div id="init" className="pt-28 md:pt-10 relative">
       <div className="p-3 relative">
         <div className="absolute top-3 flex align-middle items-center justify-center right-3">
           <div className="flex  flex-col justify-center items-center flex-wrap">
             
-            <span className="flex font-title-bold font-light leading-10 text-[5rem]">Maderas Aragón</span>
-            <span className="flex text-xl leading-10 tracking-widest">Amigos del medioambiente</span>
+            <span className="flex p-1 font-title-bold font-light leading-10 text-[2.5rem] md:text-[5rem]">Maderas Aragón</span>
+            <span className="flex p-1 text-xl leading-0 md:leading-10 tracking-widest">Amigos del medioambiente</span>
           </div>
-          <img src="/logo.png" alt="Logo Atorie" className="flex w-72 h-72"/>
+          <img src="/logo.png" alt="Logo Atorie" className="flex h-28 w-28 md:w-72 md:h-72"/>
         </div>
         <div className="p-3">
           <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
