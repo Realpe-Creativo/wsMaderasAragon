@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "../components/Reveal";
 import React from "react";
 import Button from "../components/Button";
-import { LuArrowRightCircle, LuBadgeCheck, LuMessageCircle, LuNewspaper } from "react-icons/lu";
+import { LuArrowRight, LuBadgeCheck, LuMessageCircle, LuNewspaper } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
 export interface LoadingProps {
@@ -17,9 +17,9 @@ export default function  (props?: LoadingProps) {
       <video src="/banner.mp4" muted autoPlay loop className="absolute hero-video z-0"></video>
       <div className="w-screen  mt-4 flex justify-center items-center align-middle h-screen bg-stone-900 bg-fixed p-6">
         <div
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        className="h-[40rem] group flex flex-col overflow-hidden justify-start   gap-4 mx-auto px-8 relative text-start w-11/12 md:w-9/12 pt-80 rounded-3xl border  border-stone-900/25 hover:border-stone-950/60 hover:shadow-md bg-stone-900/25 backdrop-blur-sm"
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          className="h-[40rem] group flex flex-col overflow-hidden justify-start   gap-4 mx-auto px-8 relative text-start w-11/12 md:w-9/12 pt-80 rounded-3xl border  border-stone-900/25 hover:border-stone-950/60 hover:shadow-md bg-stone-900/25 backdrop-blur-sm"
         >
           <AnimatePresence>
             {hovered && (
@@ -47,12 +47,10 @@ export default function  (props?: LoadingProps) {
           <span className="text-[3.0rem] md:text-[6.5rem] leading-10 z-50 flex font-title-bold text-white">Productos</span>
           <br />
           <p className="flex w-8/12  z-50  text-white font-normal text-sm md:text-2xl">Elige sostenibilidad con nuestra madera reforestada. Calidad y consciencia en cada producto</p>
-          <Button bg="green" className="hidden group-hover:flex z-50 text-4xl absolute bottom-8 right-8">
-            <LuArrowRightCircle />
-          </Button>
-
+          <Link to={`/products`}  className="hidden  bg-green-700 rounded-full text-white 0 group-hover:flex z-50 text-4xl absolute bottom-8 right-8">
+            <LuArrowRight />
+          </Link>
         </div>
-        
       </div>
     </div>
     <div className="-mt-4">
