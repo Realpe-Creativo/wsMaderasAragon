@@ -27,7 +27,7 @@ export default function  (props:props) {
                 <a href="https://instagram.com/maderasaragon" className="mx-1 hover:text-purple-500 transition-all" target="_blank">
                   <LuInstagram size={20}/>
                 </a>
-                <a href="https://facebook.com/MaderasAragonSAS" className="mx-1 hover:text-purple-500 transition-all" target="_blank">
+                <a href="https://facebook.com/MaderasAragonSAS" className="mx-1 hover:text-blue-500 transition-all" target="_blank">
                   <LuFacebook size={20}/>
                 </a>
               </span>
