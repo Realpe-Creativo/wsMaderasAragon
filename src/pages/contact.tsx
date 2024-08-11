@@ -30,7 +30,7 @@ export default function  (props?: ContactProps) {
         </div>
       </div>
       <div className="flex flex-col my-3 md:flex-row p-4 justify-center">
-        <div className="flex flex-col  px-6 py-2 w-full md:w-4/12">
+        <div className="flex flex-col px-6 py-2 w-full mb-3 md:w-4/12">
           <span className="flex text-3xl font-title-bold mt-4">Villanueva</span>
           <span className="flex text-xl">Casanare - Colombia</span>
           <div className="flex mt-2 align-middle items-center">
@@ -51,7 +51,7 @@ export default function  (props?: ContactProps) {
         <div className="hidden md:flex w-full md:w-4/12">
           <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3979.8096611371197!2d-73.50840822502444!3d4.059194395914552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwMDMnMzMuMSJOIDczwrAzMCcyMS4wIlc!5e0!3m2!1ses-419!2sco!4v1723420086100!5m2!1ses-419!2sco" width="100%" height="450" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-xl drop-shadow-md"></iframe>
         </div>
-        <div className="flex flex-col px-6 py-2 w-full md:w-4/12">
+        <div className="flex flex-col px-6 py-2 w-full mb-3 md:w-4/12">
           <span className="flex text-3xl font-title-bold mt-4">Villavicencio</span>
           <span className="flex text-xl">Meta - Colombia</span>
           <div className="flex mt-2 align-middle items-center">
