@@ -19,10 +19,10 @@ export default function  (props:props) {
           <div className="flex flex-row w-full">
             <div className="flex w-1/2 justify-start ps-6 text-white align-middle content-center items-center">
               <span className="flex h-fit">
-                <a href="https://instagram.com/maderasAragón" className="mx-1 hover:text-purple-500 transition-all" target="_blank">
+                <a href="https://instagram.com/maderasaragon" className="mx-1 hover:text-purple-500 transition-all" target="_blank">
                   <LuInstagram size={20}/>
                 </a>
-                <a href="https://instagram.com/maderasAragón" className="mx-1 hover:text-blue-500 transition-all" target="_blank">
+                <a href="https://facebook.com/maderasaragon" className="mx-1 hover:text-blue-500 transition-all" target="_blank">
                   <LuFacebook size={20}/>
                 </a>
               </span>
