@@ -3,7 +3,7 @@ import { get, post } from "../util/http"
 const api = '/product'
 export const productService = {
   api,
-  list: async(_params?:{brand?:string}) => {
+  list: async(_params?:{brand?:string, status?:string}) => {
     return await get({api, options:{ params:{brand: brand.get()?._id, ...(_params ? _params : {})}} })
   },
   search: async(_params?:any) => {

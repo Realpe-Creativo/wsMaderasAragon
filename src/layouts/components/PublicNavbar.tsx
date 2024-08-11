@@ -28,8 +28,12 @@ export default function  (props:props) {
               </span>
             </div>
             <div className="flex w-1/2 text-sm justify-end pe-6">
-              <Button onClick={() => car.set({...car.get(), open: !$car.open})}  bg="green" className="min-w-24 mx-1">Carrito <LuShoppingBag className="ms-2"/></Button>
-              <Button bg="blue" className="min-w-24 mx-1">Pagos <LuCreditCard className="ms-2"/></Button>
+              {
+                window.location.href.includes("products") ? 
+                  <Button onClick={() => car.set({...car.get(), open: !$car.open})}  bg="green" className="min-w-24 mx-1">Carrito <LuShoppingBag className="ms-2"/></Button>
+                : null
+              }
+              {/* <Button bg="blue" className="min-w-24 mx-1">Pagos <LuCreditCard className="ms-2"/></Button> */}
             </div>
 
           </div>

@@ -7,6 +7,7 @@ import Products from "../pages/products";
 import Legal from "../pages/legal";
 import Contact from "../pages/contact";
 import Checkout from "../pages/checkout";
+import News from "../pages/news";
 
 
 
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
   {
     path: "/know",
     element: <PublicLayout tab="know"><Know/></PublicLayout>,
+  },
+  {
+    path: "/news",
+    element: <PublicLayout tab="know"><News/></PublicLayout>,
   },
   {
     path: "/checkout",
