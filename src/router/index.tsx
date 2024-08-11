@@ -13,10 +13,7 @@ const News = lazy(() => import("../pages/news"));
 const NotFound = lazy(() => import("../pages/notFound"));
 
 
-
-
-
-export const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: 
@@ -100,3 +97,5 @@ export const router = createBrowserRouter([
   }
   
 ]);
+
+export default router;
