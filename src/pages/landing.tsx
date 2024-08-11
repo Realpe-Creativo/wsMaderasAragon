@@ -18,7 +18,7 @@ export default function  (props?: LoadingProps) {
         <div
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          className="h-[36rem] mt-20 md:h-[40rem] group flex flex-col overflow-hidden justify-start   gap-4 mx-auto px-8 relative text-start w-full md:w-9/12 pt-80 rounded-3xl border  border-stone-900/25 hover:border-stone-950/60 hover:shadow-md bg-stone-900/25 backdrop-blur-sm"
+          className="h-[32rem] mt-20 md:h-[40rem] group flex flex-col overflow-hidden justify-start   gap-4 mx-auto px-8 relative text-start w-full md:w-9/12 pt-80 rounded-3xl border  border-stone-900/25 hover:border-stone-950/60 hover:shadow-md bg-stone-900/25 backdrop-blur-sm"
         >
           <AnimatePresence>
             {hovered && (
