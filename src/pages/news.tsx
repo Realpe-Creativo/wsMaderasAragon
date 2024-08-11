@@ -16,7 +16,7 @@ export default function  (props?: PostsProps) {
   const [post, setPost] = useState<any>(null)
 
   const init = async () => {
-    const response = await postService.list({brand:  $brand._id, status: "public"})
+    const response = await postService.list({brand:  $brand._id, status: "public", limit:25})
     if(response.code === 200){
       setPosts(response.list)
     }
