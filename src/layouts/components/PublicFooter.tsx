@@ -1,3 +1,4 @@
+import { useWindowScroll } from "@mantine/hooks"
 import { Link } from "react-router-dom"
 
 interface props{
@@ -6,6 +7,9 @@ interface props{
 
 export default function  (props:props) {
   props
+
+  const [scroll, scrollTo] = useWindowScroll()
+  scroll
   return (
     <div className="w-screen h-42rem] flex flex-col justify-center items-center align-middle bg-fixed bg-center bg-cover" style={{backgroundImage: 'url(/footer.png)'}}>
       <div className="w-full h-[40rem] justify-center flex flex-col content-center items-center md:flex-row backdrop-blur-sm bg-stone-950/25">
@@ -23,10 +27,10 @@ export default function  (props:props) {
         <div className="flex p-6 text-white align-middle justify-center content-center items-center w-3/12 mx-4 text-start">
           <div className="flex flex-col text-xl font-title-bold">
 
-            <Link to={'/'} className="flex my-1">Inicio</Link>
-            <Link to={'/know'} className="flex my-1">Conocenos</Link>
-            <Link to={'/contact'} className="flex my-1">Contactanos</Link>
-            <Link to={'/products'} className="flex my-3">Productos</Link>
+            <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),200)} to={'/#init'} className="flex my-1">Inicio</Link>
+            <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),200)} to={'/know#init'} className="flex my-1">Conocenos</Link>
+            <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),200)} to={'/contact#init'} className="flex my-1">Contactanos</Link>
+            <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),200)} to={'/products#init'} className="flex my-3">Productos</Link>
 
           </div>
         </div>
