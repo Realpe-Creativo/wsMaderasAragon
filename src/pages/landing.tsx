@@ -41,11 +41,11 @@ export default function  (props?: LoadingProps) {
               </motion.div>
             )}
           </AnimatePresence>
-          <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
+          <div className="absolute inset-0 top-4 -pt-4 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
           <br /><br />
           <span className="text-[3.0rem] md:text-[6.5rem] leading-10 z-50 flex font-title-bold text-white">Productos</span>
           <br />
-          <p className="flex w-8/12  z-50  text-white font-normal text-sm md:text-2xl">Elige sostenibilidad con nuestra madera reforestada. Calidad y consciencia en cada producto</p>
+          <p className="flex w-10/12 md:w-8/12  z-50  text-white font-normal text-sm md:text-2xl">Elige sostenibilidad con nuestra madera reforestada. Calidad y consciencia en cada producto</p>
           <Link to={`/products`}  className="hidden  bg-green-700 rounded-full text-white 0 group-hover:flex z-50 text-4xl absolute bottom-8 right-8">
             <LuArrowRight />
           </Link>
