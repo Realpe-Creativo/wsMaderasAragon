@@ -1,5 +1,5 @@
 
-import {  LuInfo, LuInstagram, LuMessageCircle, LuShoppingBag } from "react-icons/lu";
+import {  LuFacebook, LuInfo, LuInstagram, LuMessageCircle, LuShoppingBag } from "react-icons/lu";
 import { Link } from "react-router-dom"
 import { car } from "../../atoms/context";
 import { useStore } from "@nanostores/react";
@@ -26,6 +26,9 @@ export default function  (props:props) {
               <span className="flex h-fit">
                 <a href="https://instagram.com/maderasaragon" className="mx-1 hover:text-purple-500 transition-all" target="_blank">
                   <LuInstagram size={20}/>
+                </a>
+                <a href="https://facebook.com/MaderasAragonSAS" className="mx-1 hover:text-purple-500 transition-all" target="_blank">
+                  <LuFacebook size={20}/>
                 </a>
               </span>
             </div>
