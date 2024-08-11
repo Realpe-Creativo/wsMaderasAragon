@@ -25,7 +25,7 @@ export default function  (props:props) {
   return (
     <>
     <div className="navbar text-plain">
-      <div className="absolute left-12 items-center flex top-0">
+      <div className="absolute left-3 md:left-12 items-center flex top-0">
         <img src="/logo.png" alt="logo" className="w-16 h-16 inline flex-initial"/>
         <span className="text-4xl text-green-700 pt-3 font-title font-bold flex-initial leading-none">Books</span>
       </div>
@@ -37,7 +37,7 @@ export default function  (props:props) {
               <div className={`${props?.tab === 'home' ? 'drop-shadow-md bg-white text-green-600' : ''} navbar-option transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
                 <Link to={`/${$access?.home}`} className="flex align-middle content-center items-center">
                   <span className="flex h-fit p-1"><LuHome/></span>
-                  <span className="flex">Inicio</span>
+                  <span className="hidden md:flex">Inicio</span>
                 </Link>
               </div>
 
@@ -46,7 +46,7 @@ export default function  (props:props) {
                 <div className={`${props?.tab === 'abook:abook' ? 'drop-shadow-md bg-white text-green-600' : ''} navbar-option transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
                   <Link to={"/books"} className="flex align-middle content-center items-center">
                     <span className="flex h-fit p-1"><LuBook /></span>
-                    <span className="flex">Libros</span>
+                    <span className="hidden md:flex">Libros</span>
                   </Link>
                 </div>
               }
@@ -56,7 +56,7 @@ export default function  (props:props) {
                 <div className={`${props?.tab === 'abook:sheets' ? 'drop-shadow-md bg-white text-green-600' : ''} navbar-option transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
                   <Link to={"/sheets"} className="flex align-middle content-center items-center">
                     <span className="flex h-fit p-1"><LuFileSpreadsheet /></span>
-                    <span className="flex">Planillas</span>
+                    <span className="hidden md:flex">Planillas</span>
                   </Link>
                 </div>
               }
@@ -66,7 +66,7 @@ export default function  (props:props) {
                 <div className={`${props?.tab === 'abook:employees' ? 'drop-shadow-md bg-white text-green-600' : ''} navbar-option transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
                   <Link to={"/employees"} className="flex align-middle content-center items-center">
                     <span className="flex h-fit p-1"><LuHelpingHand /></span>
-                    <span className="flex">Colaboradores</span>
+                    <span className="hidden md:flex">Colaboradores</span>
                   </Link>
                 </div>
               }
@@ -78,13 +78,13 @@ export default function  (props:props) {
               <div className={`${props?.tab === 'index' ? 'drop-shadow-md bg-white text-green-600' : ''} navbar-option transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
                 <Link to={'/'} className="flex align-middle content-center items-center">
                   <span className="flex h-fit p-1"><LuHexagon/></span>
-                  <span className="flex">Inicio</span>
+                  <span className="hidden md:flex">Inicio</span>
                 </Link>
               </div>
               <div className={`${props?.tab === 'auth' ? 'drop-shadow-md bg-white text-green-600' : ''} navbar-option transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
                 <Link to={"/auth"} className="flex align-middle content-center items-center">
                   <span className="flex h-fit p-1"><LuGhost /></span>
-                  <span className="flex">Login</span>
+                  <span className="hidden md:flex">Login</span>
 
                 </Link>
               </div>
@@ -98,7 +98,7 @@ export default function  (props:props) {
               <div className={`${props?.tab === 'profile' ? 'drop-shadow-md bg-white text-green-600' : ''} navbar-option transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
                 <Link to={"/profile"} className="flex align-middle content-center items-center">
                   <span className="flex h-fit p-1"><LuUserCircle /></span>
-                  <span className="flex">{$user?.profile?.first_name}</span>
+                  <span className="hidden md:flex">{$user?.profile?.first_name}</span>
                 </Link>
               </div>
               <div className={`navbar-option just-icon transition-all hover:bg-white hover:text-green-600 hover:shadow-md active:bg-white active:text-green-600`}>
