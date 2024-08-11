@@ -21,20 +21,20 @@ export default function  (props?: KnowProps) {
             Hoy en día, tienen presencia en el Meta y Casanare, con distribución y experiencia a lo largo y ancho de todo el país, brindando a sus clientes la mejor alternativa para proyectos de construcción, proyectos ganaderos, turísticos o ambientación de espacios. Continuarán creciendo siempre y cuando sus clientes se lo permitan, y de la mano de Dios.
           </div>
           
-          <div className="my-10 mt-[18rem] flex-row  flex p-10 justify-center w-fit h-fit    text-white">
-            <div className="flex text-[6rem] justify-center items-center w-1/3 align-middle bg-stone-900/50 mx-4 rounded-xl p-4 backdrop-blur-sm transition-all hover:bg-stone-900/75 font-title-bold ">
+          <div className="my-10 mt-[18rem] flex-col md:flex-row  flex md:p-10 justify-center w-fit h-fit    text-white">
+            <div className="flex text-[3rem] mb-4 md:text-[6rem] justify-center items-center w-10/12 md:w-1/3 align-middle bg-stone-900/50 mx-auto rounded-xl p-4 backdrop-blur-sm transition-all hover:bg-stone-900/75 font-title-bold ">
               Misión
             </div>
-            <div className="flex  w-1/3 align-middle bg-stone-900/50 mx-4 rounded-xl p-8 backdrop-blur-sm transition-all hover:bg-stone-900/75 ">
+            <div className="flex  w-10/12 md:w-1/3 align-middle bg-stone-900/50 mx-auto rounded-xl p-8 backdrop-blur-sm transition-all hover:bg-stone-900/75 ">
               Nuestra misión es superar las expectativas de nuestros clientes al ofrecer productos maderables, servicios forestales y madera cilindrada y aserrada de la más alta calidad. Nos especializamos en la construcción de postes, casas, cabañas y bodegas en madera, siempre con un enfoque en la excelencia y la sostenibilidad. Nuestro compromiso va más allá de la entrega de productos, nos esforzamos por crear valor duradero y contribuir activamente a la protección del medio ambiente.
             </div>
           </div>
 
-          <div className="my-10 mt-[16rem] mb-[18rem] flex-row  flex p-10 justify-center w-fit h-fit    text-white">
-            <div className="flex  w-1/3 align-middle bg-stone-900/50 mx-4 rounded-xl p-8 backdrop-blur-sm transition-all hover:bg-stone-900/75  ">
+          <div className="my-10 mt-[18rem] flex-col md:flex-row  flex md:p-10 justify-center w-fit h-fit    text-white">
+            <div className="flex  w-10/12 mb-4 md:w-1/3 align-middle bg-stone-900/50 mx-auto rounded-xl p-8 backdrop-blur-sm transition-all hover:bg-stone-900/75 ">
               Nuestra visión es consolidarnos como líderes en la industria de la construcción en madera, y ser reconocidos por la calidad superior de nuestros productos y servicios forestales. Aspiramos a ser la primera opción para clientes que buscan soluciones de alta calidad, sostenibles, y respetuosas con el medio ambiente.
             </div>
-            <div className="flex font-title-bold text-[6rem] justify-center items-center w-1/3 align-middle bg-stone-900/50 mx-4 rounded-xl p-4 backdrop-blur-sm transition-all hover:bg-stone-900/75 ">
+            <div className="flex text-[3rem] mb-4 md:text-[6rem] justify-center items-center w-10/12 md:w-1/3 align-middle bg-stone-900/50 mx-auto rounded-xl p-4 backdrop-blur-sm transition-all hover:bg-stone-900/75 font-title-bold ">
               Visión
             </div>
           </div>
