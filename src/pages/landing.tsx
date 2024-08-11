@@ -14,11 +14,11 @@ export default function  (props?: LoadingProps) {
     <>
     <div className="relative">
       <video src="/banner.mp4" muted autoPlay loop className="absolute hero-video z-0"></video>
-      <div className="w-[100vw]  mt-12 md:mt-4 flex justify-center items-center align-middle h-[90vh] md:h-[100vh] bg-stone-900 bg-fixed p-6">
+      <div className="w-[100vw] mt-4 flex justify-center items-center align-middle h-[98vh] md:h-[100vh] bg-stone-900 bg-fixed p-6">
         <div
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          className="h-[40rem] md:h-[48rem] group flex flex-col overflow-hidden justify-start   gap-4 mx-auto px-8 relative text-start w-full md:w-9/12 pt-80 rounded-3xl border  border-stone-900/25 hover:border-stone-950/60 hover:shadow-md bg-stone-900/25 backdrop-blur-sm"
+          className="h-[40rem] mt-14 md:h-[48rem] group flex flex-col overflow-hidden justify-start   gap-4 mx-auto px-8 relative text-start w-full md:w-9/12 pt-80 rounded-3xl border  border-stone-900/25 hover:border-stone-950/60 hover:shadow-md bg-stone-900/25 backdrop-blur-sm"
         >
           <AnimatePresence>
             {hovered && (
