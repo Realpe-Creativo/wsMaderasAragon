@@ -115,7 +115,7 @@ export default function  (props?: ProductsProps) {
 
   props
   return (
-    <div className="flex w-full h-fit pt-[120px] min-h-[85vh] pb-6">
+    <div className="flex w-full h-fit pt-[120px] min-h-[88vh] pb-6">
       {
         product ?
           <div className="flex w-full justify-center">
