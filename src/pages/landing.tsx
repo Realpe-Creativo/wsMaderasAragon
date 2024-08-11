@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "../components/Reveal";
 import React from "react";
-import Button from "../components/Button";
 import { LuArrowRight, LuBadgeCheck, LuMessageCircle, LuNewspaper } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
