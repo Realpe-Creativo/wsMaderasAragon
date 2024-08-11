@@ -23,10 +23,10 @@ export default function  (props:props) {
         <div className="flex p-6 text-white align-middle justify-center content-center items-center w-3/12 mx-4 text-start">
           <div className="flex flex-col text-xl font-title-bold">
 
-            <span className="flex my-1">Inicio</span>
-            <span className="flex my-1">Conocenos</span>
-            <span className="flex my-1">Contactanos</span>
-            <span className="flex my-3">Productos</span>
+            <Link to={'/'} className="flex my-1">Inicio</Link>
+            <Link to={'/know'} className="flex my-1">Conocenos</Link>
+            <Link to={'contact'} className="flex my-1">Contactanos</Link>
+            <Link to={'products'} className="flex my-3">Productos</Link>
 
           </div>
         </div>
