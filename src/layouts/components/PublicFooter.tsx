@@ -25,8 +25,8 @@ export default function  (props:props) {
 
             <Link to={'/'} className="flex my-1">Inicio</Link>
             <Link to={'/know'} className="flex my-1">Conocenos</Link>
-            <Link to={'contact'} className="flex my-1">Contactanos</Link>
-            <Link to={'products'} className="flex my-3">Productos</Link>
+            <Link to={'/contact'} className="flex my-1">Contactanos</Link>
+            <Link to={'/products'} className="flex my-3">Productos</Link>
 
           </div>
         </div>
