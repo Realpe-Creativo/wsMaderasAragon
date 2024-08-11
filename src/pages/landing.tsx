@@ -3,17 +3,19 @@ import { CanvasRevealEffect } from "../components/Reveal";
 import React from "react";
 import { LuArrowRight, LuBadgeCheck, LuMessageCircle, LuNewspaper } from "react-icons/lu";
 import { Link } from "react-router-dom";
+import { useOs } from "@mantine/hooks";
 
 export interface LoadingProps {
 }
 
 export default function  (props?: LoadingProps) {
   const [hovered, setHovered] = React.useState(false);
+  const os = useOs();
   props
   return (
     <>
     <div className="relative" id="init">
-      <video src="/banner.mp4" muted autoPlay loop className="absolute hero-video z-0"></video>
+      <video src="/banner.mp4" muted autoPlay={!os.toLowerCase().includes('ios') || !os.toLowerCase().includes('android') } loop className="absolute hero-video z-0"></video>
       <div className="w-[100vw] mt-4 flex justify-center items-center align-middle h-[98vh] md:h-[100vh] bg-stone-900 bg-fixed p-6">
         <div
           onMouseEnter={() => setHovered(true)}

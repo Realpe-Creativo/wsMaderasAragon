@@ -1,12 +1,14 @@
+import { useOs } from "@mantine/hooks";
 
 export interface KnowProps {
 }
 
 export default function  (props?: KnowProps) {
   props
+  const os = useOs();
   return (
     <div className="relative">
-      <video src="/us.mp4" muted autoPlay loop className="absolute hero-video top-0"></video>
+      <video src="/us.mp4" muted autoPlay={!os.toLowerCase().includes('ios') || !os.toLowerCase().includes('android') }  loop className="absolute hero-video top-0"></video>
       <div className="w-screen overflow-y-scroll scroll-smooth  mt-4 flex justify-center  h-screen bg-fixed p-6">
         
         <div className="flex-col mt-10  p-4 w-full justify-center z-10 rounded-xl bg-stone-900/10 h-fit">
