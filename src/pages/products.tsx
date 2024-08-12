@@ -119,43 +119,43 @@ export default function  (props?: ProductsProps) {
       {
         product ?
           <div className="flex w-full justify-center">
-            <span onClick={()=>{setProduct(null)}} className="flex absolute top-32 left-2 hover mx-1 cursor-pointer items-center justify-center text-stone-700 bg-white hover:bg-stone-600 hover:text-stone-50 p-2 rounded-full mt-3">
+            <span onClick={()=>{setProduct(null)}} className="flex absolute top-32 left-3 md:left-2 hover mx-1 cursor-pointer items-center justify-center text-stone-700 bg-white hover:bg-stone-600 hover:text-stone-50 p-2 rounded-full mt-3">
               <LuArrowBigLeft className='inline mx-1'/>
             </span>
             <div className="flex flex-col max-w-[1240px] w-full">
               {
                 product.bento.length ? 
-                  <div className="flex w-full mb-5 flex-row gap-5">
-                    <div style={{backgroundImage: `url(${product.bento[0]?.value})`}} className="flex rounded-s-xl bg-center bg-cover h-[420px] w-1/3">
+                  <div className="flex w-full mb-5 flex-row gap-2 p-2 md:p-4 md:gap-5">
+                    <div style={{backgroundImage: `url(${product.bento[0]?.value})`}} className="flex rounded-s-xl bg-center bg-cover h-[420px] w-full md:w-1/3">
                     </div>
-                    <div className="flex h-[420px] flex-col gap-5  w-1/3">
+                    <div className="flex h-[420px] flex-col gap-2 md:gap-5 w-full md:w-1/3">
                       <div style={{backgroundImage: `url(${product.bento[1]?.value})`}}  className="flex bg-center bg-cover h-full">
                       </div>
                       <div style={{backgroundImage: `url(${product.bento[2]?.value})`}}  className="flex  bg-center bg-cover h-full">
                       </div>
                     </div>
-                    <div style={{backgroundImage: `url(${product.bento[3]?.value})`}}  className="flex rounded-e-xl h-[420px]  bg-center bg-cover w-1/3">
+                    <div style={{backgroundImage: `url(${product.bento[3]?.value})`}}  className="flex rounded-e-xl h-[420px]  bg-center bg-cover w-full md:w-1/3">
                     </div>
                   </div>
                 : null
               }
 
-              <div className="flex w-full">
-                <div className="flex flex-col p-4 w-1/3">
+              <div className="flex flex-col md:flex-row w-full">
+                <div className="flex flex-col p-4 w-full md:w-1/3">
                   <div className="flex mb-3">
                     <span className="text-sm text-slate-500">{product?.code}</span>
                   </div>
                   <div className="flex mb-3">
                     <span className="text-2xl font-bold">{product?.name}</span>
                   </div>
-                  <div className="flex flex-col mb-3">
+                  <div className="flex flex-col w-full flex-wrap mb-3">
                   {
                     product?.types?.map((_t:string)=>{return (
-                      <div className="flex p-1.5" key={_t}>
-                        <span className="bg-stone-100 text-stone-800 text-sm font-medium me-2 px-3.5 py-1.5 rounded">{_t}</span>
+                      <div className="flex p-1 align-middle flex-wrap" key={_t}>
+                        <span className="flex bg-stone-100 text-stone-800 text-sm font-medium me-2 px-3.5 py-1 h-fit rounded">{_t}</span>
                         {
                           _t === 'size' && product?.variations?.filter((_v:any)=>{return _v.type === _t}).map((_v:any)=>{return (
-                            <div className="flex" key={_v._id}>
+                            <div className="flex mb-3" key={_v._id}>
                               <div onClick={()=>toggleVariation(_v._id)} className={`${variations.includes(_v._id) ? 'bg-stone-300 text-stone-900' : 'bg-stone-100 text-stone-800'} cursor-pointer flex relative text-sm font-medium me-2 px-3.5 py-1.5 rounded`}>
                                 <span>{_v.value}</span>
                               </div>
