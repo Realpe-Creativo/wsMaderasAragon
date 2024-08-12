@@ -9,12 +9,12 @@ export default function  (props?: KnowProps) {
   return (
     <div className="relative">
       <video src="/us.mp4" muted autoPlay={!os.toLowerCase().includes('ios') || !os.toLowerCase().includes('android') }  loop className="absolute hero-video top-0"></video>
-      <div className="w-screen overflow-y-scroll scroll-smooth  mt-4 flex justify-center  h-screen bg-fixed p-6">
+      <div className="w-screen overflow-y-scroll scroll-smooth  mt-4 flex justify-center  h-screen bg-fixed p-2 md:p-6">
         
-        <div className="flex-col mt:20 md:mt-10  p-4| w-full justify-center z-10 rounded-xl bg-stone-900/10 h-fit">
+        <div className="flex-col mt:20 md:mt-10  p-2 md:p-4 w-full justify-center z-10 rounded-xl bg-stone-900/10 h-fit">
           
-          <div className="bg-stone-900/50 mt-[12rem] mx-auto transition-all hover:bg-stone-900/75 flex p-10 justify-center w-fit h-fit rounded-xl font-title-bold  backdrop-blur-sm">
-              <h1 className="text-4xl  text-white">¿Quienes somos?</h1>
+          <div className="bg-stone-900/50 mt-[12rem] mx-auto transition-all hover:bg-stone-900/75 flex p-5 md:p-10 justify-center w-fit h-fit rounded-xl font-title-bold  backdrop-blur-sm">
+            <h1 className="text-4xl  text-white">¿Quienes somos?</h1>
           </div>
           
           <div className="my-[5rem] mx-auto  bg-stone-900/50 transition-all hover:bg-stone-900/75  flex p-10 justify-center md:w-8/12 h-fit rounded-xl  backdrop-blur-sm text-white">
