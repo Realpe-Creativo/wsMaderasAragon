@@ -10,6 +10,7 @@ import { Card, Image } from '@mantine/core';
 import { LuArrowBigLeft, LuSearch } from "react-icons/lu";
 
 import './products.scss'
+import { useWindowScroll } from "@mantine/hooks";
 
 export interface ProductsProps {
 }
@@ -46,6 +47,9 @@ export default function  (props?: ProductsProps) {
     search: undefined,
     tags: []
   })
+
+  const [scroll, scrollTo] = useWindowScroll()
+  scroll
 
   const handleSend = (e:any,fn:()=>any) =>{
     if(e.key === "Enter"){
@@ -222,7 +226,7 @@ export default function  (props?: ProductsProps) {
             <div className="flex justify-center gap-3 flex-wrap mt-4 w-full">
               {
                 products.map((_product:any)=>{ return (
-                  <Card className="flex w-60 border dark:border-gray-200 dark:bg-white dark:text-gray-900 shadow-sm text-grey-900 hover:shadow-md" shadow="sm" padding="lg" radius="md" onClick={() =>{setVariations([]); setProduct(_product)}} withBorder>
+                  <Card className="flex w-60 border dark:border-gray-200 dark:bg-white dark:text-gray-900 shadow-sm text-grey-900 hover:shadow-md" shadow="sm" padding="lg" radius="md" onClick={() =>{setVariations([]); setProduct(_product); setTimeout(()=>scrollTo({ y: 0 }),300)}} withBorder>
                     <Card.Section>
                       <Image
                         src={_product?.avatar}
