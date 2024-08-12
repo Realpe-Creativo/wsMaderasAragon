@@ -9,6 +9,7 @@ import { productService } from "../services/productService";
 import { Card, Image } from '@mantine/core';
 import { LuArrowBigLeft, LuSearch } from "react-icons/lu";
 
+import './products.scss'
 
 export interface ProductsProps {
 }
@@ -183,7 +184,7 @@ export default function  (props?: ProductsProps) {
                 <div className="flex flex-col p-4 w-2/3">
                   {
                     product?.content?.map((_c:any)=>{return (
-                      <div className="flex p-1.5" key={_c._id}>
+                      <div className="flex p-1.5 content__editor" key={_c._id}>
                         <div dangerouslySetInnerHTML={{__html: _c.value}}></div>
                       </div>
                     )})
