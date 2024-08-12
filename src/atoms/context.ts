@@ -3,6 +3,7 @@ import { persistentAtom } from '@nanostores/persistent'
 import { atom } from 'nanostores'
 import shortid from 'shortid'
 import { brandService } from '../services/brandService'
+import moment from 'moment'
 
 const token = persistentAtom('token',null, {
   encode: JSON.stringify,
@@ -18,12 +19,11 @@ const brand = persistentAtom('brand',null, {
   encode: JSON.stringify,
   decode: JSON.parse,
 }) 
-
-if(brand.get() === null){
+if(brand.get() === null || !brand.get()._recover || moment.utc(brand.get()._recover ).isAfter(moment.utc().add(5, 'day'))){
   (async()=>{
     const response = await brandService.get({domain:'maderasaragon.com'})
     if(response.brand){
-      brand.set(response.brand)
+      brand.set({...response.brand, _recover: moment.utc().toISOString()})
     }
   })()
 }
