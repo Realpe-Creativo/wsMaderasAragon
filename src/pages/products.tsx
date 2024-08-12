@@ -156,7 +156,7 @@ export default function  (props?: ProductsProps) {
                         <span className="flex bg-stone-100 text-stone-800 text-sm font-medium me-2 px-3.5 py-1 h-fit rounded">{_t}</span>
                         {
                           _t === 'size' && product?.variations?.filter((_v:any)=>{return _v.type === _t}).map((_v:any)=>{return (
-                            <div className="flex mb-3" key={_v._id}>
+                            <div className="flex mb-2" key={_v._id}>
                               <div onClick={()=>toggleVariation(_v._id)} className={`${variations.includes(_v._id) ? 'bg-stone-300 text-stone-900' : 'bg-stone-100 text-stone-800'} cursor-pointer flex relative text-sm font-medium me-2 px-3.5 py-1.5 rounded`}>
                                 <span>{_v.value}</span>
                               </div>
@@ -181,7 +181,7 @@ export default function  (props?: ProductsProps) {
                     <AddButton variations={variations} product={product} quantity={1}></AddButton>
                   </div>
                 </div>
-                <div className="flex flex-col p-4 w-2/3">
+                <div className="flex flex-col p-4 w-full md:w-2/3">
                   {
                     product?.content?.map((_c:any)=>{return (
                       <div className="flex p-1.5 content__editor" key={_c._id}>
