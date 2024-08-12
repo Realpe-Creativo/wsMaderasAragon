@@ -24,13 +24,13 @@ export default function  (props:props) {
           <img src="/logo-white.png" className="flex min-w-40 min-h-40 w-40 h-40" alt="Logo Maderas Aragon" />
           <span className="flex text-4xl text-white text-center -mt-5 font-title-bold">Maderas Aragón</span>
         </div>
-        <div className="flex p-6 text-white align-middle justify-center content-center items-center w-3/12 mx-4 text-start">
+        <div className="flex p-6 text-white align-middle justify-center content-center items-center w-3/12 mx-4 text-center md:text-start">
           <div className="flex flex-col text-xl font-title-bold">
 
-            <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to={'/#init'} className="flex my-1">Inicio</Link>
-            <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to={'/know#init'} className="flex my-1">Conocenos</Link>
-            <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to={'/contact#init'} className="flex my-1">Contactanos</Link>
-            <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to={'/products#init'} className="flex my-3">Productos</Link>
+            <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to={'/#init'} className="flex justify-center md:justify-start w-full mx-auto my-1">Inicio</Link>
+            <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to={'/know#init'} className="flex justify-center md:justify-start w-full mx-auto my-1">Conocenos</Link>
+            <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to={'/contact#init'} className="flex justify-center md:justify-start w-full mx-auto my-1">Contactanos</Link>
+            <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to={'/products#init'} className="flex justify-center md:justify-start w-full mx-auto my-3">Productos</Link>
 
           </div>
         </div>
