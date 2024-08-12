@@ -226,7 +226,7 @@ export default function  (props?: ProductsProps) {
             <div className="flex justify-center gap-3 flex-wrap mt-4 w-full">
               {
                 products.map((_product:any)=>{ return (
-                  <Card className="flex w-60 border dark:border-gray-200 dark:bg-white dark:text-gray-900 shadow-sm text-grey-900 hover:shadow-md" shadow="sm" padding="lg" radius="md" onClick={() =>{setVariations([]); setProduct(_product); setTimeout(()=>scrollTo({ y: 0 }),300)}} withBorder>
+                  <Card className="flex w-44 md:w-60 border dark:border-gray-200 dark:bg-white dark:text-gray-900 shadow-sm text-grey-900 hover:shadow-md" shadow="sm" padding="lg" radius="md" onClick={() =>{setVariations([]); setProduct(_product); setTimeout(()=>scrollTo({ y: 0 }),300)}} withBorder>
                     <Card.Section>
                       <Image
                         src={_product?.avatar}
@@ -234,18 +234,16 @@ export default function  (props?: ProductsProps) {
                         alt="Norway"
                       />
                     </Card.Section>
- 
-                    <h5 className="text-xl line-clamp-2 font-semibold tracking-tight text-gray-900">
+                    <h5 className="text-md md:text-xl line-clamp-2 font-semibold tracking-tight text-gray-900">
                       {
                         _product?.name
                       }
                     </h5>
                     <div className="flex items-center justify-between">
-                      <span className="text-xl font-bold text-gray-900">
+                      <span className="text-md md:text-xl font-bold text-gray-900">
                         {new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(_product?.price || 0)}                     
                       </span>
                       <AddButton product={_product} quantity={1} size="sm" />
-                      
                     </div>
                   </Card>
                 )})
@@ -256,9 +254,6 @@ export default function  (props?: ProductsProps) {
       }  
       <Car></Car>
     </div>
-
-
-
   )
 
 }
