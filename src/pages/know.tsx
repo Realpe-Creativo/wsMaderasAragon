@@ -33,10 +33,13 @@ export default function  (props?: KnowProps) {
           </div>
 
           <div className="my-10 mt-[18rem] flex-col md:flex-row  flex md:p-10 justify-center w-fit h-fit    text-white">
+            <div className="flex md:hidden text-[3rem] mb-4 md:text-[6rem] justify-center items-center w-full md:w-1/3 align-middle bg-stone-900/50 mx-auto rounded-xl p-4 backdrop-blur-sm transition-all hover:bg-stone-900/75 font-title-bold ">
+              Visión
+            </div>
             <div className="flex  w-full mb-4 md:w-1/3 align-middle bg-stone-900/50 mx-auto rounded-xl p-8 backdrop-blur-sm transition-all hover:bg-stone-900/75 ">
               Nuestra visión es consolidarnos como líderes en la industria de la construcción en madera, y ser reconocidos por la calidad superior de nuestros productos y servicios forestales. Aspiramos a ser la primera opción para clientes que buscan soluciones de alta calidad, sostenibles, y respetuosas con el medio ambiente.
             </div>
-            <div className="flex text-[3rem] mb-4 md:text-[6rem] justify-center items-center w-full md:w-1/3 align-middle bg-stone-900/50 mx-auto rounded-xl p-4 backdrop-blur-sm transition-all hover:bg-stone-900/75 font-title-bold ">
+            <div className="hidden md:flex text-[3rem] mb-4 md:text-[6rem] justify-center items-center w-full md:w-1/3 align-middle bg-stone-900/50 mx-auto rounded-xl p-4 backdrop-blur-sm transition-all hover:bg-stone-900/75 font-title-bold ">
               Visión
             </div>
           </div>
