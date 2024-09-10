@@ -176,6 +176,15 @@ export default function  (props?: ProductsProps) {
                             </div>
                           )}) 
                         }
+                        {
+                          _t === 'material' && product?.variations?.filter((_v:any)=>{return _v.type === _t}).map((_v:any)=>{return (
+                            <div className="flex" key={_v._id}>
+                              <div onClick={()=>toggleVariation(_v._id)} className={`${variations.includes(_v._id) ? 'bg-stone-300 text-stone-900' : 'bg-stone-100 text-stone-800'} cursor-pointer flex relative text-sm font-medium me-2 px-3.5 py-1.5 rounded`}>
+                                <span>{_v.value}</span>
+                              </div>
+                            </div>
+                          )}) 
+                        }
                       </div>
                     )})
                   }
