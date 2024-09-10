@@ -107,8 +107,11 @@ export default function  (props?: CheckoutProps) {
     const aux = [...$car.items]
     aux.forEach((_i:any)=>{
       let _ = 0
-      _i.product?.variations?.forEach((_v:any)=>{
-        _ += _v.increase
+      _i?.variations?.forEach((_v:any)=>{
+        const _vvv = _i.product?.variations.find((_vv:any)=>{return _vv._id === _v})
+        if(_vvv){
+          _ += _vvv.increase
+        }
       })
       total += _i.quantity * (_i.product?.price + _)
       if(!_i.price){
@@ -136,8 +139,11 @@ export default function  (props?: CheckoutProps) {
 
   const handleTotalProduct = (_i?:any) => {
     let _ = 0
-    _i.product?.variations?.forEach((_v:any)=>{
-      _ += _v.increase
+    _i?.variations?.forEach((_v:any)=>{
+      const _vvv = _i.product?.variations.find((_vv:any)=>{return _vv._id === _v})
+      if(_vvv){
+        _ += _vvv.increase
+      }
     })
     let total = _i.quantity * (_i.product?.price + _)
     return total
@@ -145,8 +151,11 @@ export default function  (props?: CheckoutProps) {
 
   const handlePriceProduct = (_i?:any) => {
     let _ = 0
-    _i.product?.variations?.forEach((_v:any)=>{
-      _ += _v.increase
+    _i?.variations?.forEach((_v:any)=>{
+      const _vvv = _i.product?.variations.find((_vv:any)=>{return _vv._id === _v})
+      if(_vvv){
+        _ += _vvv.increase
+      }
     })
     let total = _i.product?.price + _
     return total
