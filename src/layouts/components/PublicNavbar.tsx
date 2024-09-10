@@ -1,10 +1,12 @@
 
-import {  LuFacebook, LuInfo, LuInstagram, LuMessageCircle, LuShoppingBag } from "react-icons/lu";
+import {  LuFacebook, LuInfo, LuInstagram, LuLogOut, LuMessageCircle, LuShoppingBag } from "react-icons/lu";
 import { Link } from "react-router-dom"
-import { car } from "../../atoms/context";
+import { car, token } from "../../atoms/context";
 import { useStore } from "@nanostores/react";
 import { useWindowScroll } from "@mantine/hooks";
 import Button from "../../components/Button";
+import AuthService from "@/services/authService";
+import { BsClipboardHeart } from "react-icons/bs";
 
 
 interface props{
@@ -13,7 +15,10 @@ interface props{
 
 export default function  (props:props) {
   const $car = useStore(car)
-  
+  const $token = useStore(token)
+
+  const authService = new AuthService('/auth')
+
   const [scroll, scrollTo] = useWindowScroll()
   scroll
   return (
@@ -37,6 +42,15 @@ export default function  (props:props) {
                 window.location.href.includes("products") ? 
                   <Button onClick={() => car.set({...car.get(), open: !$car.open})}  bg="green" className="min-w-24 mx-1">Carrito <LuShoppingBag className="ms-2"/></Button>
                 : null
+              }
+              {
+                $token && 
+                <>
+                  <Link to={'/orders'}>
+                    <Button bg="stone" className="min-w-24 mx-1">Ordenes <BsClipboardHeart className="ms-2"/></Button>
+                  </Link>
+                  <Button onClick={() => authService.logout()}  bg="sky" className="min-w-24 mx-1">Cerrar Sesión <LuLogOut className="ms-2"/></Button>
+                </>
               }
               {/* <Link bg="blue" className="min-w-24 mx-1">Pagos <LuCreditCard className="ms-2"/></Link> */}
             </div>

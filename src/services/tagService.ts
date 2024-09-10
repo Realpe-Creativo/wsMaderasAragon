@@ -10,9 +10,9 @@ export const tagService = {
     return await get({api: `${api}/get/${_id}`})
   },
   update: async (_params?:any) =>{
-    return await post({api:`${api}/update`, options: {data: {brand: brand.get()?._id, ..._params} }})
+    return await post({api:`${api}/update`, options: {data: { ..._params} }})
   },
   create: async (_params?:any) =>{
-    return await post({api:`${api}/create`, options: {data: {brand: brand.get()?._id, ..._params} }})
+    return await post({api:`${api}/create`, options: {data: { ..._params} }})
   }
 }

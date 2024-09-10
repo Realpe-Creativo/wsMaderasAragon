@@ -1,0 +1,88 @@
+{
+  "hello": "hello",
+  "change": "Change",
+  "leads": {
+    "status": "Status",
+    "email": "Email",
+    "full_name": "Full name"
+  },
+  "menu":{
+    "about": "About",
+    "preferences": "Preferences",
+    "file": "File",
+    "account": "Account",
+    "help": "Help",
+    "new": "New"
+  },
+  "products":{
+    "all": "All",
+    "title": "Products",
+    "name": "Name",
+    "price": "Price",
+    "code": "Code",
+    "tags": "Tags",
+    "filter": "Search by code",
+    "add": "Add",
+    "clear":"Clear"
+  },
+  "product":{
+    "title": "Product",
+    "name": "Name",
+    "price": "Price",
+    "code": "Code",
+    "tags": "Tags",
+    "edit": "Save changes",
+    "discard":"Discard"
+  },
+  "posts":{
+    "all": "All",
+    "title": "Posts",
+    "name": "Title",
+    "filter": "Search by name",
+    "add": "Add",
+    "clear":"Clear",
+    "description": "Description"
+  },
+  "post":{
+    "title": "Product",
+    "description": "Description", 
+    "name": "Title",
+    "edit": "Save changes",
+    "discard":"Discard",
+    "details": "Post details",
+    "details_info": "Edit the post content",  
+    "content": "Content",
+    "status": "Post status",
+    "image": "Post image",
+    "published": "Published",
+    "crafting": "Crafting",
+    "archived": "Archived",
+    "public": "Public"
+  },
+  "campaigns":{
+    "all": "All",
+    "title": "Campaigns",
+    "name": "Name",
+    "filter": "Search by name",
+    "add": "Add",
+    "clear":"Clear",
+    "description": "Description"
+  },
+  "campaign":{
+    "title": "Campaign",
+    "name": "Name",
+    "description": "Description", 
+    "edit": "Save changes",
+    "discard":"Discard",
+    "details": "Campaign details",
+    "users": "Users",
+    "users_info": "Select the user association and adnetworks you want to associate to your campaign",
+    "status": "Campaign status",
+    "image": "Campaign image",
+    "active": "Active",
+    "crafting": "Crafting",
+    "archived": "Archived",
+    "_status": "Status",
+    "add_user": "Add user"
+  }
+}

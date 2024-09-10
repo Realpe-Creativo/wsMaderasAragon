@@ -4,10 +4,10 @@ const api = '/product'
 export const productService = {
   api,
   list: async(_params?:{brand?:string, status?:string}) => {
-    return await get({api, options:{ params:{brand: brand.get()?._id, ...(_params ? _params : {})}} })
+    return await get({api, options:{ params:{ ...(_params ? _params : {})}} })
   },
   search: async(_params?:any) => {
-    return await post({api: `${api}/search`, options:{ data:{brand: brand.get()?._id, ...(_params ? _params : {})}} })
+    return await post({api: `${api}/search`, options:{ data:{ ...(_params ? _params : {})}} })
   },
   get: async({_id}:{_id:string}) =>{
     return await get({api: `${api}/get/${_id}`})

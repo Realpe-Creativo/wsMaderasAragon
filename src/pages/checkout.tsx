@@ -25,7 +25,7 @@ export default function  (props?: CheckoutProps) {
 
   const [active, setActive] = useState(0);
   const [userCode, setUserCode] = useState<any>(null);
-  const [number, setNumber] = useState<string>('+573012840460');
+  const [number, setNumber] = useState<string>('');
   const [sended, setSended] = useState<boolean>(false);
 
   const [addressModified, setAddressModified] = useState(false);
@@ -356,7 +356,7 @@ export default function  (props?: CheckoutProps) {
           <Stepper.Step className="flex" label="Hacer Orden" description="Finalizar pedido">
             <div className="flex p-3 justify-center">
               {
-                $brand?.maketo?.quote_only ? 
+                $brand?.zenit?.quote_only ? 
                   <div className="flex w-[50rem] flex-col mx-auto">
                     <span className="flex mb-3">De momento solo manejamos contizaciones</span>
                     <span className="flex mb-3 font-bold">¿Deseas continuar?</span>
@@ -367,7 +367,7 @@ export default function  (props?: CheckoutProps) {
             <Group justify="center" mt="xl">
               <Button variant="default" onClick={prevStep}>Anterior</Button>
               {
-                $brand?.maketo?.quote_only ?
+                $brand?.zenit?.quote_only ?
                   <Button variant="filled" color="gray" onClick={handleQuote}>Cotizar</Button>
                 : null
               }

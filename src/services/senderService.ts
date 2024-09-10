@@ -4,6 +4,6 @@ const api = '/sender'
 export const senderService = {
   api,
   sendSMS: async(_params?:any) => {
-    return await post({api: `${api}/send-sms`, options:{ data:{brand: brand.get()?._id, ...(_params ? _params : {})}} })
+    return await post({api: `${api}/send-sms`, options:{ data:{ ...(_params ? _params : {})}} })
   }
 }

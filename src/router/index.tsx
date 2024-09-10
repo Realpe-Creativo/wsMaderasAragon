@@ -11,6 +11,7 @@ const Contact = lazy(() => import("../pages/contact"));
 const Checkout = lazy(() => import("../pages/checkout"));
 const News = lazy(() => import("../pages/news"));
 const NotFound = lazy(() => import("../pages/notFound"));
+const Orders  = lazy(() => import("../pages/orders/orders"));
 
 
 const router = createBrowserRouter([
@@ -83,6 +84,15 @@ const router = createBrowserRouter([
       <PublicLayout tab="auth">
         <Suspense fallback={<div className="flex h-full">Loading...</div>}>
           <Auth/>
+        </Suspense>
+      </PublicLayout>
+  },
+  {
+    path: "/orders",
+    element: 
+      <PublicLayout tab="auth">
+        <Suspense fallback={<div className="flex h-full">Loading...</div>}>
+          <Orders/>
         </Suspense>
       </PublicLayout>
   },

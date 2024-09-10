@@ -19,7 +19,7 @@ export default function  (props?: AuthProps) {
   const handleLogin = async (e: FormEvent) => {
     
     e.preventDefault()
-    const response = await authService.login({username, password}, 'maketo')
+    const response = await authService.login({username, password}, 'zenit')
     if(response.token){
       token.set(response.token)
       user.set(response.user)

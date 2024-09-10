@@ -1,12 +1,27 @@
 
+import { useState } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
+import { leadService } from "../services/leadService";
 export interface ContactProps {
 }
 
+import { useToast } from "@/hooks/use-toast"
+
 export default function  (props?: ContactProps) {
   props
-
+  const { toast } = useToast()
+  const [lead, setLead] = useState<any>({})
+  const handleSend = async(_params?:any) =>{
+    const response = await leadService.external({...(_params || lead), brand: JSON.parse(localStorage.getItem('brand')||'{}')?._id})
+    if(response.status === 200){
+      toast({
+        title: "Tu mensaje ha sido enviado",
+        description: "Gracias por contactarnos"
+      })
+    }
+  }
 
   return (
     <div className="flex flex-col mt-32 mb-20">
@@ -15,11 +30,38 @@ export default function  (props?: ContactProps) {
           <span className="text-5xl my-4 text-white font-title-bold">Contáctanos</span>
         </div>
       </div>
-      <div className="flex flex-row p-4 justify-center">
+      <div className="flex flex-col md:flex-row p-4 justify-center">
         <div className="flex flex-col p-2 md:w-5/12">
           <img src="/contact.png" className="rounded-xl drop-shadow-lg" alt="Foto" />
         </div>
-        <div className="flex flex-col p-2 md:w-3/12">
+        <div className="flex flex-col p-1 md:p-4 md:w-3/12">
+          <div className="flex flex-col mb-2">
+            <label htmlFor="first_name">Nombres</label>
+            <input id="first_name" onChange={(_e)=>{ setLead({...lead, first_name: _e.target.value})}} type="text" value={lead?.first_name} className={`flex w-[95%] mb-3 outline-none px-2 py-1 disabled:bg-stone-50 shadow-md border-[1pt] border-solid border-stone-200 bg-white rounded-lg`}/>
+          </div>
+          <div className="flex flex-col mb-2">
+            <label htmlFor="last_name">Apellidos</label>
+            <input id="last_name" onChange={(_e)=>{ setLead({...lead, last_name: _e.target.value})}} type="text" value={lead?.last_name} className={`flex w-[95%] mb-3 outline-none px-2 py-1 disabled:bg-stone-50 shadow-md border-[1pt] border-solid border-stone-200 bg-white rounded-lg`}/>
+          </div>
+          <div className="flex flex-col mb-2">
+            <label htmlFor="last_name" className="mb-1">Telefono</label>
+              <PhoneInput
+                className="flex h-fit"
+                defaultCountry={"CO"}
+                countries={['CO']}
+                placeholder="Ingresa tu número"
+                value={lead.number}
+                onChange={(e)=>{setLead({...lead, number: e || ''})}}
+                limitMaxLength={true}
+              />
+          </div>
+          <div className="flex flex-col mb-2 w-full">
+            <label htmlFor="content">Mensaje</label>
+            <textarea id="content" onChange={(_e)=>{ setLead({...lead, content: _e.target.value}) }} value={lead?.content} className={`flex  mb-3 outline-none px-2 py-1 disabled:bg-stone-50 shadow-md border-[1pt] border-solid border-stone-200 bg-white rounded-lg`}/>
+          </div>
+          <div className="flex flex-col mb-2">
+            <button onClick={()=>handleSend(lead)} className="flex  justify-center bg-stone-600 hover:bg-stone-800 text-white font-semibold py-2 px-4 rounded-lg">Enviar</button>
+          </div>
 
         </div>
       </div>
