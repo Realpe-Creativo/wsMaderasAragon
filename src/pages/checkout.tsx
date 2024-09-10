@@ -102,8 +102,6 @@ export default function  (props?: CheckoutProps) {
 
   const handleTotal = () => {
     let total = 0
-
-    let modified = false
     const aux = [...$car.items]
     aux.forEach((_i:any)=>{
       let _ = 0
@@ -114,14 +112,7 @@ export default function  (props?: CheckoutProps) {
         }
       })
       total += _i.quantity * (_i.product?.price + _)
-      if(!_i.price){
-        // modified = true
-        _i.price = (_i.product?.price + _)
-      }
     })
-    if(modified){
-      car.set({...car.get(), items: aux})
-    }
 
     return total
   }
