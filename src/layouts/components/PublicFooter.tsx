@@ -31,7 +31,8 @@ export default function  (props:props) {
             <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to={'/know#init'} className="flex justify-center md:justify-start w-full mx-auto my-1">Conocenos</Link>
             <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to={'/contact#init'} className="flex justify-center md:justify-start w-full mx-auto my-1">Contactanos</Link>
             <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to={'/products#init'} className="flex justify-center md:justify-start w-full mx-auto my-3">Productos</Link>
-
+            <hr className="h-pt-1" />
+            <a href="https://zenit.atorie.co" target="_blank" className="flex justify-center md:justify-start w-full mx-auto my-3">Login</a>
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { orderService } from "@/services/orderService"
 import { useTranslation } from "react-i18next";
 import {
@@ -38,7 +38,6 @@ import {
 } from "@/components/ui/card"
 import { Button } from '@/components/ui/button'
 import moment from 'moment'
-import { Input } from '@/components/ui/input'
 
 export default  function Orders() {
   const [data, setData] = useState<Order[]>([])
@@ -49,18 +48,8 @@ export default  function Orders() {
     setData(_orders.list.map((_o:any, _i:number)=> ({..._o, set: setOrder, index: _i})))
   }
 
-  const location = useNavigate();
-
   const handleGhost = async () => {
-   
-  }
-
-  const handleUpsert = async (_params?:any) => {
-    const response = await orderService.upsert({_id: order?._id, ...(_params || order)})
-    if(response.code === 200){
-      setOrder(response.object)
-      await init()
-    }
+    
   }
 
   useEffect(() => {
