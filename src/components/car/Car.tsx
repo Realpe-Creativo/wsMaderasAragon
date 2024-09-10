@@ -99,6 +99,15 @@ export default function  (props?: CarProps) {
                             </div>
                           )}) 
                         }
+                        {
+                          _i?.variations?.filter((_v:any)=>{return _i?._variations?.[_v]?.type === 'material'}).map((_v:any)=>{return (
+                            <div className="flex" key={_v}>
+                              <div className="flex group/variation relative bg-amber-200 text-amber-800 text-sm font-medium me-2 px-3.5 py-1.5 rounded">
+                                <span>{_i._variations[_v].value}</span>
+                              </div>
+                            </div>
+                          )}) 
+                        }
                       </div>
                     </div>
                   </div>

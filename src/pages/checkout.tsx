@@ -22,13 +22,13 @@ export default function  (props?: CheckoutProps) {
   const $brand = useStore(brand)
   const authService = new AuthService('/auth')
   
-
   const [active, setActive] = useState(0);
   const [userCode, setUserCode] = useState<any>(null);
   const [number, setNumber] = useState<string>('');
   const [sended, setSended] = useState<boolean>(false);
 
   const [addressModified, setAddressModified] = useState(false);
+
 
   const [address, setAddress] = useState<any>({});
 
@@ -46,7 +46,7 @@ export default function  (props?: CheckoutProps) {
     }
   }
 
-  const handleSendSMS = async(_params?:any) =>{
+  const handleSendSMS = async(_params?:any) => {
     const data = {
       number,
       ..._params,
@@ -112,7 +112,7 @@ export default function  (props?: CheckoutProps) {
       })
       total += _i.quantity * (_i.product?.price + _)
       if(!_i.price){
-        modified = true
+        // modified = true
         _i.price = (_i.product?.price + _)
       }
     })
@@ -201,6 +201,15 @@ export default function  (props?: CheckoutProps) {
                             _i?.variations?.filter((_v:any)=>{return _i?._variations?.[_v]?.type === 'color'}).map((_v:any)=>{return (
                               <div className="flex" key={_v}>
                                 <div style={{backgroundColor: _i._variations[_v].value }} className={`flex group/variation relative text-white text-sm font-medium me-2 px-3.5 py-1.5 rounded`}>
+                                  <span>{_i._variations[_v].value}</span>
+                                </div>
+                              </div>
+                            )}) 
+                          }
+                          {
+                            _i?.variations?.filter((_v:any)=>{return _i?._variations?.[_v]?.type === 'material'}).map((_v:any)=>{return (
+                              <div className="flex" key={_v}>
+                                <div className="flex group/variation relative bg-stone-200 text-stone-800 text-sm font-medium me-2 px-3.5 py-1.5 rounded">
                                   <span>{_i._variations[_v].value}</span>
                                 </div>
                               </div>
