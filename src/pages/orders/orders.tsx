@@ -76,7 +76,7 @@ export default  function Orders() {
               </BreadcrumbList>
             </Breadcrumb>
         </div>
-        <div className="flex container mx-auto py-10">
+        <div className="flex container mx-auto p-1 md:p-4 py-10">
           <DataTable ghost={handleGhost} columns={columns} data={data} />
         </div>
         <Dialog open={order} onOpenChange={()=>setOrder(null)}>

@@ -88,7 +88,7 @@ export const columns: ColumnDef<Order>[] = [
               <DropdownMenuSeparator />
               <DropdownMenuItem onClick={()=>{
                 order.set(order)
-              }} className="data-[highlighted]:text-teal-400">Ver orden.</DropdownMenuItem>
+              }} className="data-[highlighted]:text-teal-400">Ver orden</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>

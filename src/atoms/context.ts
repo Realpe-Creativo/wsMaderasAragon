@@ -19,7 +19,8 @@ const brand = persistentAtom('brand',null, {
   encode: JSON.stringify,
   decode: JSON.parse,
 }) 
-if(brand.get() === null || !brand.get()._recover || moment.utc(brand.get()._recover ).isAfter(moment.utc().add(5, 'day'))){
+
+if(brand.get() === null || !brand.get()._recover || moment.utc(brand.get()._recover ).isBefore(moment.utc().add(-5, 'days'))){
   (async()=>{
     const response = await brandService.get({domain:'maderasaragon.com'})
     if(response.brand){
