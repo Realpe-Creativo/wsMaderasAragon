@@ -3,7 +3,7 @@ import { CanvasRevealEffect } from "../components/Reveal";
 import React from "react";
 import { LuArrowRight, LuBadgeCheck, LuMessageCircle, LuNewspaper } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import { useOs } from "@mantine/hooks";
+import { useOs, useWindowScroll } from "@mantine/hooks";
 import {BackgroundLines} from "@/components/ui/background-lines";
 import {  Highlight } from "@/components/ui/hero-highlight";
 export interface LoadingProps {
@@ -11,6 +11,8 @@ export interface LoadingProps {
 
 export default function  (props?: LoadingProps) {
   const [hovered, setHovered] = React.useState(false);
+  const [scroll, scrollTo] = useWindowScroll()
+  scroll
   const os = useOs();
   props
   return (
@@ -48,7 +50,7 @@ export default function  (props?: LoadingProps) {
             <span className="text-[3.0rem] md:text-[6.5rem] leading-10 z-50 flex font-title-bold text-white">Productos</span>
             <br />
             <p className="flex w-10/12 md:w-8/12  z-50  text-white font-normal text-sm md:text-2xl">Elige sostenibilidad con nuestra madera reforestada. Calidad y consciencia en cada producto</p>
-            <Link to={`/products`}  className="hidden  bg-green-500 rounded-full text-white p-2 group-hover:flex z-50 text-4xl absolute bottom-8 right-8">
+            <Link to={`/products`} onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)}  className="hidden  bg-green-500 rounded-full text-white p-2 group-hover:flex z-50 text-4xl absolute bottom-8 right-8">
               <LuArrowRight />
             </Link>
         </div>
@@ -56,15 +58,15 @@ export default function  (props?: LoadingProps) {
     </div>
     <div className="-mt-4">
       <div className="bg-stone-950 z-50 flex text-white text-3xl flex-row mt-3 justify-center p-3">
-        <Link to={"/news"} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
+        <Link to={"/news"} onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
           <LuNewspaper className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" />
           <span className="flex text-sm md:text-2xl">Noticias</span>
         </Link>
-        <Link to={"/contact"} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
+        <Link to={"/contact"} onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
           <LuMessageCircle className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" />
           <span className="flex text-sm md:text-2xl">Contactanos</span>
         </Link>
-        <Link to={"/know"} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
+        <Link to={"/know"} onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
           <LuBadgeCheck className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" />
           <span className="flex text-sm md:text-2xl">Conocenos</span>
         </Link>
