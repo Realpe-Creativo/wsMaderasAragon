@@ -156,9 +156,9 @@ export default function  (props?: CheckoutProps) {
   return (
     <>
       <div className="flex flex-col justify-center pt-[180px] min-h-[85vh]">
-        <Stepper color="gray" className="flex m-auto mt-4 flex-col w-[60rem]" active={active} onStepClick={setActive} completedIcon={<LuCheck />}>
+        <Stepper color="gray" className="flex m-auto mt-4 flex-col w-[90vw] md:w-[60rem] mb-6" active={active} onStepClick={setActive} completedIcon={<LuCheck />}>
           <Stepper.Step className="flex" content="flex" label="Resumen" description="Resumen de compra">
-            <div className="flex flex-col w-[50rem] m-auto content-center p-3 gap-4 flex-wrap">
+            <div className="flex flex-col w-full md:w-[50rem] m-auto content-center p-3 gap-4 flex-wrap">
               {
                 $car?.items?.map((_i:any)=>{
                   const _variations: any[] = []
@@ -167,7 +167,7 @@ export default function  (props?: CheckoutProps) {
                   })
                   _i._variations = _variations
                   return(
-                  <div className="flex justify-between items-center  flex-row w-full">
+                  <div className="flex justify-between items-center  flex-col md:flex-row w-full">
                     <div className="flex items-center">
                       <div style={{backgroundImage: `url(${_i.product?.avatar || '/default.png'})`}} className="flex items-center justify-center group min-h-20 min-w-20 bg-center bg-cover rounded-2xl drop-shadow hover:shadow-md">
                         <div onClick={()=>handleDelete(_i.product._id)} className="hidden group-hover:flex p-2 rounded-xl hover:cursor-pointer bg-stone-200">
@@ -229,7 +229,7 @@ export default function  (props?: CheckoutProps) {
                   </div>
                 )})
               }
-              <hr className="flex  mx-auto my-3 w-[50rem]" />
+              <hr className="flex  mx-auto my-3 w-full md:w-[50rem]" />
               <div className="flex justify-end">
                 <span className="font-semibold text-2xl">Total: {new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(handleTotal() || 0)}</span>
               </div>
@@ -240,8 +240,8 @@ export default function  (props?: CheckoutProps) {
             </Group>
           </Stepper.Step>
           <Stepper.Step className="flex" label="Datos de envio" description="Datos de envio">
-            <div className="flex flex-col min-h-[25rem] p-3 justify-center">
-              <div className="flex w-[50rem] mx-auto items-center h-fit  p-3 gap-4 flex-wrap">
+            <div className="flex flex-col min-h-[20rem] p-3 justify-center">
+              <div className="flex w-full md:w-[50rem] mx-auto items-center h-fit  p-3 gap-4 flex-wrap">
                 <PhoneInput
                   className="flex h-fit"
                   defaultCountry={"CO"}
@@ -270,9 +270,9 @@ export default function  (props?: CheckoutProps) {
                 }
               </div>
               {
-                sended || $user && <hr className="flex  mx-auto my-3 w-[50rem]" />
+                sended || $user && <hr className="flex  mx-auto my-3 w-full md:w-[50rem]" />
               }
-              <div className="flex flex-col justify-center  mx-auto w-[50rem]">
+              <div className="flex flex-col justify-center  mx-auto w-full md:w-[50rem]">
                 {
                   sended && !$user?
                   <div className="flex flex-col items-center">
@@ -366,7 +366,7 @@ export default function  (props?: CheckoutProps) {
             <div className="flex p-3 justify-center">
               {
                 $brand?.zenit?.quote_only ? 
-                  <div className="flex w-[50rem] flex-col mx-auto">
+                  <div className="flex w-full md:w-[50rem] flex-col mx-auto">
                     <span className="flex mb-3">De momento solo manejamos contizaciones</span>
                     <span className="flex mb-3 font-bold">¿Deseas continuar?</span>
                   </div>
