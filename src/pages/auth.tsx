@@ -30,7 +30,7 @@ export default function  (props?: AuthProps) {
           home: response.home
         })
       }
-      location(`/${response.home}`)
+      location(`/home`)
     } else {
 
     }
