@@ -255,7 +255,7 @@ export default function  (props?: ProductsProps) {
             <div className="flex justify-center gap-3 flex-wrap mt-4 w-full">
               {
                 products.map((_product:any)=>{ return (
-                  <Card className="flex w-44 md:w-60 border dark:border-gray-200 dark:bg-white dark:text-gray-900 shadow-sm text-grey-900 hover:shadow-md" shadow="sm" padding="lg" radius="md" onClick={() =>{setVariations([]); setProduct(_product); setTimeout(()=>scrollTo({ y: 0 }),300)}} withBorder>
+                  <Card className="flex w-44 cursor-pointer md:w-60 border dark:border-gray-200 dark:bg-white dark:text-gray-900 shadow-sm text-grey-900 hover:shadow-md" shadow="sm" padding="lg" radius="md" onClick={() =>{setVariations([]); setProduct(_product); setTimeout(()=>scrollTo({ y: 0 }),300)}} withBorder>
                     <Card.Section>
                       <Image
                         src={_product?.avatar}
