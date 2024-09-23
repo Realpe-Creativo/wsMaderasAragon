@@ -8,8 +8,8 @@ export default function  (props?: KnowProps) {
   const os = useOs();
   return (
     <div className="flex relative">
-      <div className="fixed top-0 w-[100vw] h-[100vh]">
-        <video src="https://satorie.s3.amazonaws.com/maderasaragon.com-us.mp4" muted autoPlay={!os.toLowerCase().includes('ios') || !os.toLowerCase().includes('android') }  loop className="absolute top-0"></video>
+      <div className="fixed top-0 w-[100vw] h-[100vh] bg-fixed bg-stone-900/50 z-0">
+        <video src="https://satorie.s3.amazonaws.com/maderasaragon.com-us.mp4" muted autoPlay={!os.toLowerCase().includes('ios') || !os.toLowerCase().includes('android') }  loop className="absolute top-0 hero-video"></video>
       </div>
       <Timeline data={[
         {

@@ -35,13 +35,16 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full bg-stone-900/50 font-sans md:px-10 flex flex-col md:flex-row"
       ref={containerRef}
     >
-      <div className="w-full md:w-1/4 mx-auto py-20 px-4 md:px-8 lg:px-10 mt-10">
-        <h2 className="text-4xl md:text-4xl mb-4 text-white max-w-4xl font-bold">
-          Conocenos
-        </h2>
-        <p className="text-white dark:text-neutral-300 text-lg font-semibold md:text-base max-w-sm">
-          Una breve descripción de nuestro proyecto
-        </p>
+      <div className="z-10 w-full md:w-1/4 mx-auto py-20 px-4 md:px-8 lg:px-10 mt-10 ">
+        <div className="bg-stone-900/75 p-4 rounded-xl">
+          <h2 className="text-4xl md:text-4xl mb-4 text-white max-w-4xl font-bold">
+            Conocenos
+          </h2>
+          <p className="text-white dark:text-neutral-300 text-lg font-semibold md:text-base max-w-sm">
+            Una breve descripción de nuestro proyecto
+          </p>
+
+        </div>
       </div>
 
       <div ref={ref} className="relative w-full md:w-3/4 mx-auto pb-20">
