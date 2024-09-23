@@ -8,7 +8,7 @@ export default function  (props?: KnowProps) {
   const os = useOs();
   return (
     <div className="relative">
-      <video src="/us.mp4" muted autoPlay={!os.toLowerCase().includes('ios') || !os.toLowerCase().includes('android') }  loop className="absolute hero-video top-0"></video>
+      <video src="https://satorie.s3.amazonaws.com/maderasaragon.com-us.mp4" muted autoPlay={!os.toLowerCase().includes('ios') || !os.toLowerCase().includes('android') }  loop className="absolute hero-video top-0"></video>
       <div className="w-screen overflow-y-scroll scroll-smooth  mt-4 flex justify-center  h-screen bg-fixed p-2 md:p-6">
         
         <div className="flex-col mt:20 md:mt-10  p-2 md:p-4 w-full justify-center z-10 rounded-xl bg-stone-900/10 h-fit">
