@@ -4,7 +4,8 @@ import React from "react";
 import { LuArrowRight, LuBadgeCheck, LuMessageCircle, LuNewspaper } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { useOs } from "@mantine/hooks";
-
+import {BackgroundLines} from "@/components/ui/background-lines";
+import {  Highlight } from "@/components/ui/hero-highlight";
 export interface LoadingProps {
 }
 
@@ -71,7 +72,23 @@ export default function  (props?: LoadingProps) {
       
     </div>
     <div className="flex">
-        productos 100% resforestados
+      <BackgroundLines >
+        <div className="flex justify-center items-center h-full w-full">
+          <div className="flex flex-col md:w-1/2 text-center justify-center">
+            <h1 className="text-white text-[3rem] font-title-bold">
+              Mitigamos el &nbsp;
+              <Highlight className="text-white">
+                cambio climático
+              </Highlight>
+            </h1>
+            <p className="text-white text-[1rem] p-3">
+              Nos abastecemos únicamente de bosques comerciales registrados ante el ICA, garantizando sostenibilidad y trazabilidad. Como empresa comprometida con mitigar el cambio climático, nuestras plantaciones absorben CO2 y aplicamos prácticas forestales sostenibles, minimizando nuestro impacto ambiental.
+            </p>
+
+          </div>
+
+        </div>
+      </BackgroundLines>
     </div>
     
     
