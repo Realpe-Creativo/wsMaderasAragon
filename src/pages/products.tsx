@@ -11,7 +11,7 @@ import { LuArrowBigLeft, LuSearch } from "react-icons/lu";
 
 import './products.scss'
 import { useWindowScroll } from "@mantine/hooks";
-
+import 'react-quill/dist/quill.snow.css';
 export interface ProductsProps {
 }
 
@@ -197,7 +197,7 @@ export default function  (props?: ProductsProps) {
                 <div className="flex flex-col p-4 w-full md:w-2/3">
                   {
                     product?.content?.map((_c:any)=>{return (
-                      <div className="flex p-1.5 content__editor" key={_c._id}>
+                      <div className="flex p-1.5 content__editor ql-editor" key={_c._id}>
                         <div dangerouslySetInnerHTML={{__html: _c.value}}></div>
                       </div>
                     )})
