@@ -75,7 +75,7 @@ export default function  (props?: LoadingProps) {
       <BackgroundLines >
         <div className="flex justify-center items-center h-full w-full">
           <div className="flex flex-col md:w-1/2 text-center justify-center">
-            <h1 className="text-white text-[3rem] font-title-bold">
+            <h1 className="text-white text-[2.6rem] font-title-bold">
               Mitigamos el &nbsp;
               <Highlight className="text-white">
                 cambio climático
