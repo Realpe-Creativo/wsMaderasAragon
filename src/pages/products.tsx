@@ -12,6 +12,7 @@ import { LuArrowBigLeft, LuSearch } from "react-icons/lu";
 import './products.scss'
 import { useWindowScroll } from "@mantine/hooks";
 import 'react-quill/dist/quill.snow.css';
+import { useTranslation } from "react-i18next";
 export interface ProductsProps {
 }
 
@@ -63,6 +64,19 @@ export default function  (props?: ProductsProps) {
     if(_products.code === 200){
       setProducts(_products.list)
     }
+  }
+
+  const handleTotalProduct = (_i?:any) => {
+    let _ = 0
+    variations?.forEach((_v:any)=>{
+      const _vvv = product?.variations.find((_vv:any)=>{return _vv._id === _v})
+      if(_vvv){
+        _ += _vvv.increase
+      }
+    })
+
+    let total = product?.price + _
+    return total
   }
 
   const toggleVariation = async(_variation:string) =>{
@@ -118,6 +132,8 @@ export default function  (props?: ProductsProps) {
     bringData()
   }, [])
 
+  const {t} = useTranslation()
+
   props
   return (
     <div className="flex w-full h-fit pt-[120px] min-h-[88vh] pb-6">
@@ -157,7 +173,7 @@ export default function  (props?: ProductsProps) {
                   {
                     product?.types?.map((_t:string)=>{return (
                       <div className="flex p-1 align-middle flex-wrap" key={_t}>
-                        <span className="flex bg-stone-100 text-stone-800 text-sm font-medium me-2 px-3.5 py-1 h-fit rounded">{_t}</span>
+                        <span className="flex bg-stone-100 text-stone-800 text-sm font-medium me-2 px-3.5 py-1 h-fit rounded">{t(`product.${_t}`)}</span>
                         {
                           _t === 'size' && product?.variations?.filter((_v:any)=>{return _v.type === _t}).map((_v:any)=>{return (
                             <div className="flex mb-2" key={_v._id}>
@@ -188,6 +204,10 @@ export default function  (props?: ProductsProps) {
                       </div>
                     )})
                   }
+                  <div className="flex p-3 text-xl font-medium">
+                    {new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(handleTotalProduct(product) || 0)}    
+                  </div>
+                  
 
                   </div>
                   <div className="flex w-full justify-center">
@@ -240,7 +260,7 @@ export default function  (props?: ProductsProps) {
                       <Image
                         src={_product?.avatar}
                         height={160}
-                        alt="Norway"
+                        alt={_product?.name}
                       />
                     </Card.Section>
                     <h5 className="text-md md:text-xl line-clamp-2 font-semibold tracking-tight text-gray-900">
