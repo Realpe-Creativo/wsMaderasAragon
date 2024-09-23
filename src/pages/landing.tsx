@@ -70,6 +70,9 @@ export default function  (props?: LoadingProps) {
       </div>
       
     </div>
+    <div className="flex">
+        productos 100% resforestados
+    </div>
     
     
     </>

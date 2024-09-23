@@ -40,16 +40,16 @@ export default function  (props:props) {
             <div className="flex w-1/2 min-h-8 text-sm justify-end pe-6">
               {
                 window.location.href.includes("products") ? 
-                  <Button onClick={() => car.set({...car.get(), open: !$car.open})}  bg="green" className="min-w-24 mx-1">Carrito <LuShoppingBag className="ms-2"/></Button>
+                  <Button onClick={() => car.set({...car.get(), open: !$car.open})}  bg="green" className="min-w-24 mx-1"><span className="md:flex hidden">Carrito</span> <LuShoppingBag className="ms-2"/></Button>
                 : null
               }
               {
                 $token && 
                 <>
                   <Link to={'/orders'}>
-                    <Button bg="stone" className="min-w-24 mx-1">Ordenes <BsClipboardHeart className="ms-2"/></Button>
+                    <Button bg="stone" className="min-w-24 mx-1"><span className="md:flex hidden">Ordenes</span> <BsClipboardHeart className="ms-2"/></Button>
                   </Link>
-                  <Button onClick={() => authService.logout()}  bg="sky" className="min-w-24 mx-1">Cerrar Sesión <LuLogOut className="ms-2"/></Button>
+                  <Button onClick={() => authService.logout()}  bg="sky" className="min-w-24 mx-1"><span className="md:flex hidden">Cerrar Sesión</span> <LuLogOut className="ms-2"/></Button>
                 </>
               }
               {/* <Link bg="blue" className="min-w-24 mx-1">Pagos <LuCreditCard className="ms-2"/></Link> */}
