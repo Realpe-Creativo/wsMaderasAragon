@@ -17,7 +17,7 @@ export default function  (props?: LoadingProps) {
     <>
     <div className="relative" id="init">
       <video src="https://satorie.s3.amazonaws.com/maderasaragon.com-banner.mp4" muted autoPlay={!os.toLowerCase().includes('ios') || !os.toLowerCase().includes('android') } loop className="absolute hero-video z-0"></video>
-      <div className="w-[100vw] mt-4 flex justify-center items-center align-middle h-[98vh] md:h-[100vh] bg-stone-900 bg-fixed p-6">
+      <div className="w-[100vw] mt-4 flex z-50 justify-center items-center align-middle h-[98vh] md:h-[100vh] bg-stone-900 bg-fixed p-6">
         <div
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
@@ -48,7 +48,7 @@ export default function  (props?: LoadingProps) {
             <span className="text-[3.0rem] md:text-[6.5rem] leading-10 z-50 flex font-title-bold text-white">Productos</span>
             <br />
             <p className="flex w-10/12 md:w-8/12  z-50  text-white font-normal text-sm md:text-2xl">Elige sostenibilidad con nuestra madera reforestada. Calidad y consciencia en cada producto</p>
-            <Link to={`/products`}  className="hidden  bg-green-700 rounded-full text-white 0 group-hover:flex z-50 text-4xl absolute bottom-8 right-8">
+            <Link to={`/products`}  className="hidden  bg-green-500 rounded-full text-white p-2 group-hover:flex z-50 text-4xl absolute bottom-8 right-8">
               <LuArrowRight />
             </Link>
         </div>
@@ -71,7 +71,7 @@ export default function  (props?: LoadingProps) {
       </div>
       
     </div>
-    <div className="flex">
+    <div className="flex relative">
       <BackgroundLines >
         <div className="flex justify-center items-center h-full w-full">
           <div className="flex flex-col md:w-1/2 text-center justify-center">
