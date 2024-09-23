@@ -77,7 +77,7 @@ export default function  (props:props) {
               </Link>
               <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to="/contact"  className={`flex bg-stone-600 h-fit transition-all px-2 items-center align-middle rounded-3xl justify-center py-1 hover:drop-shadow-md hover:bg-stone-800 text-stone-200 hover:text-white mx-2 ${props.tab === 'contact'?'bg-stone-800/75 text-white':''}`}> 
                 <LuMessageCircle className="flex m-1" />
-                <span className="md:flex hidden">Conócenos</span>
+                <span className="md:flex hidden">Contáctanos</span>
               </Link>
             </div>
             <div className="flex w-1/12 md:w-3/12 ms-12">
