@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "../components/Reveal";
 import React from "react";
-import { LuArrowRight, LuBadgeCheck, LuMessageCircle, LuNewspaper } from "react-icons/lu";
+import { LuArrowRight, LuBadgeCheck, LuConstruction, LuMessageCircle, LuNewspaper } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { useOs, useWindowScroll } from "@mantine/hooks";
 import {BackgroundLines} from "@/components/ui/background-lines";
@@ -17,7 +17,18 @@ export default function  (props?: LoadingProps) {
   props
   return (
     <>
-    <div className="relative" id="init">
+    <div className="flex w-[100vw] h-[100vh] flex-col justify-center items-center">
+        <LuConstruction className="text-zinc-600 flex text-[5rem] w-fit" />
+      <div className="flex justify-center items-center">
+        <span className="text-zinc-600 text-[2rem] md:text-[4rem] text-center">
+          <br />
+          <br />
+            El proyecto está en construcción
+          </span>
+      </div>
+
+    </div>
+    {/* <div className="relative" id="init">
       <video src="https://satorie.s3.amazonaws.com/maderasaragon.com-banner.mp4" muted autoPlay={!os.toLowerCase().includes('ios') || !os.toLowerCase().includes('android') } loop className="absolute hero-video z-0"></video>
       <div className="w-[100vw] mt-4 flex z-50 justify-center items-center align-middle h-[98vh] md:h-[100vh] bg-stone-900 bg-fixed p-6">
         <div
@@ -92,7 +103,7 @@ export default function  (props?: LoadingProps) {
         </div>
       </BackgroundLines>
     </div>
-    
+     */}
     
     </>
   )
