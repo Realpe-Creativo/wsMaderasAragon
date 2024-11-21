@@ -25,7 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <RouterProvider router={router} />
     </MantineProvider> */}
     <div className="flex w-[100vw] h-[100vh] flex-col bg-zinc-800 justify-center items-center">
-        <LuConstruction className="text-yellow-300 flex text-[5rem] w-fit" />
+        <LuConstruction className="text-pink-600 flex text-[5rem] w-fit" />
       <div className="flex justify-center items-center">
         <span className="text-zinc-500 text-[2rem] md:text-[4rem] text-center">
           <br />
@@ -35,7 +35,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <br />
           
       </div>
-      <a className='text-white flex' href="https://atorie.co">Atorie CO</a>
+      <a className='text-white flex font-bold' href="https://atorie.co">Atorie CO</a>
 
     </div>
   </React.StrictMode>,
