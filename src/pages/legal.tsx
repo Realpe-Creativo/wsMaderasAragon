@@ -1,9 +1,20 @@
+import { useWindowScroll } from "@mantine/hooks"
+import { useEffect } from "react"
 
 export interface LegalProps {
 }
 
 export default function  (props?: LegalProps) {
   props
+
+  const [scroll, scrollTo] = useWindowScroll()
+  scroll
+  useEffect(()=>{
+    setTimeout(()=>{
+      scrollTo({ y: 0 })
+    },200)
+  },[])
+
   return (
     <div id="init" className="pt-28 md:pt-10 relative">
       <div className="p-3 relative">

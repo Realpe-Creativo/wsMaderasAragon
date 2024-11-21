@@ -63,7 +63,7 @@ export default  function Orders() {
               <BreadcrumbList>
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
-                    <Link className="text-teal-700" to="/commerce/orders">{t('orders.title')}</Link>
+                    <Link className="text-teal-700" to="/trade/orders">{t('orders.title')}</Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
