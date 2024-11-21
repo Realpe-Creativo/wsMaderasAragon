@@ -32,7 +32,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <br />
             El proyecto está en construcción
           </span>
+          <br />
+          
       </div>
+      <a className='text-white flex' href="https://atorie.co">Atorie CO</a>
 
     </div>
   </React.StrictMode>,
