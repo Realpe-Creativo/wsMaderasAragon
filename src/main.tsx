@@ -24,10 +24,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     {/* <MantineProvider>
       <RouterProvider router={router} />
     </MantineProvider> */}
-    <div className="flex w-[100vw] h-[100vh] flex-col justify-center items-center">
+    <div className="flex w-[100vw] h-[100vh] flex-col bg-zinc-800 justify-center items-center">
         <LuConstruction className="text-yellow-300 flex text-[5rem] w-fit" />
       <div className="flex justify-center items-center">
-        <span className="text-zinc-600 text-[2rem] md:text-[4rem] text-center">
+        <span className="text-zinc-500 text-[2rem] md:text-[4rem] text-center">
           <br />
           <br />
             El proyecto está en construcción
