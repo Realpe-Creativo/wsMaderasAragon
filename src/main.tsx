@@ -21,10 +21,10 @@ import { LuConstruction } from 'react-icons/lu';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    {/* <MantineProvider>
+    <MantineProvider>
       <RouterProvider router={router} />
-    </MantineProvider> */}
-    <div className="flex w-[100vw] h-[100vh] flex-col bg-zinc-800 justify-center items-center">
+    </MantineProvider>
+    {/* <div className="flex w-[100vw] h-[100vh] flex-col bg-zinc-800 justify-center items-center">
         <LuConstruction className="text-pink-600 flex text-[5rem] w-fit" />
       <div className="flex justify-center items-center">
         <span className="text-zinc-500 text-[2rem] md:text-[4rem] text-center">
@@ -37,6 +37,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       </div>
       <a className='text-white flex font-bold' href="https://atorie.co">Atorie CO</a>
 
-    </div>
+    </div> */}
   </React.StrictMode>,
 )
