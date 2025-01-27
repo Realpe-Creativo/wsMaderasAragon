@@ -1,6 +1,6 @@
 export const config = {
-  api: 'https://server.atorie.co',
-  socket: 'server.atorie.co',
+  api: 'https://satorie.atorie.co',
+  socket: 'satorie.atorie.co',
 }
 
 // export const config = {
