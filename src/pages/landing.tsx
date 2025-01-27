@@ -17,7 +17,7 @@ export default function  (props?: LoadingProps) {
   props
   return (
     <>
-    <div className="flex w-[100vw] h-[100vh] flex-col justify-center items-center">
+    {/* <div className="flex w-[100vw] h-[100vh] flex-col justify-center items-center">
         <LuConstruction className="text-zinc-600 flex text-[5rem] w-fit" />
       <div className="flex justify-center items-center">
         <span className="text-zinc-600 text-[2rem] md:text-[4rem] text-center">
@@ -27,8 +27,8 @@ export default function  (props?: LoadingProps) {
           </span>
       </div>
 
-    </div>
-    {/* <div className="relative" id="init">
+    </div> */}
+    <div className="relative" id="init">
       <video src="https://satorie.s3.amazonaws.com/maderasaragon.com-banner.mp4" muted autoPlay={!os.toLowerCase().includes('ios') || !os.toLowerCase().includes('android') } loop className="absolute hero-video z-0"></video>
       <div className="w-[100vw] mt-4 flex z-50 justify-center items-center align-middle h-[98vh] md:h-[100vh] bg-stone-900 bg-fixed p-6">
         <div
@@ -103,7 +103,7 @@ export default function  (props?: LoadingProps) {
         </div>
       </BackgroundLines>
     </div>
-     */}
+    
     
     </>
   )
