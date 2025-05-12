@@ -16,24 +16,24 @@ export default function (props?: LoadingProps) {
 
   const items = [
     {
-      title: "IMPACTO CLIMATICO POSITIVO",
+      title: "Impacto climatico positivo",
       subtitle: "Reforestación, captura de carbono y manejo de agua",
-      image: "/img/forest.jpg",
+      image: "/img/landing/forest.jpg",
     },
     {
       title: "Amamos la tierra",
       subtitle: "Cuidamos el suelo, la biodiversidad y la comunidad",
-      image: "/img/land.jpg",
+      image: "/img/landing/land.jpg",
     },
     {
       title: "Impacto social real",
       subtitle: "Generamos empleo digno en zonas rurales",
-      image: "/img/wood.jpg",
+      image: "/img/landing/wood.jpg",
     },
     {
       title: "Artesanos de la madera",
       subtitle: "Nuestro equipo transforma la madera con conocimiento y respeto",
-      image: "/img/climate.jpg",
+      image: "/img/landing/climate.jpg",
     },
   ];
   return (

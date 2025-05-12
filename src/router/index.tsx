@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import PublicLayout from "../layouts/PublicLayout";
-import Landing from './../pages/landing'
+import Landing from '../pages/landing'
 import { lazy, Suspense } from "react";
 
 const Auth = lazy(() => import("../pages/auth"));
@@ -12,6 +12,10 @@ const Checkout = lazy(() => import("../pages/checkout"));
 const News = lazy(() => import("../pages/news"));
 const NotFound = lazy(() => import("../pages/notFound"));
 const Orders  = lazy(() => import("../pages/orders/orders"));
+const Categories = lazy(() => import("../pages/categories"));
+const Livestock = lazy(() => import("../pages/livestock"));
+const Structural = lazy(() => import("../pages/structural"));
+const Fences = lazy(() => import("../pages/products/fences"));
 
 
 const router = createBrowserRouter([
@@ -93,6 +97,42 @@ const router = createBrowserRouter([
       <PublicLayout tab="auth">
         <Suspense fallback={<div className="flex h-full">Loading...</div>}>
           <Orders/>
+        </Suspense>
+      </PublicLayout>
+  },
+  {
+    path: "/categories",
+    element: 
+      <PublicLayout tab="auth">
+        <Suspense fallback={<div className="flex h-full">Loading...</div>}>
+          <Categories/>
+        </Suspense>
+      </PublicLayout>
+  },
+  {
+    path: "/categories/livestock",
+    element: 
+      <PublicLayout tab="auth">
+        <Suspense fallback={<div className="flex h-full">Loading...</div>}>
+          <Livestock/>
+        </Suspense>
+      </PublicLayout>
+  },
+  {
+    path: "/categories/structural",
+    element: 
+      <PublicLayout tab="auth">
+        <Suspense fallback={<div className="flex h-full">Loading...</div>}>
+          <Structural/>
+        </Suspense>
+      </PublicLayout>
+  },
+  {
+    path: "/categories/livestock/fences",
+    element: 
+      <PublicLayout tab="auth">
+        <Suspense fallback={<div className="flex h-full">Loading...</div>}>
+          <Fences/>
         </Suspense>
       </PublicLayout>
   },

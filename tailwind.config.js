@@ -11,6 +11,7 @@ export default {
   },
   plugins: [
     flowbite.content(),
+    require('@tailwindcss/aspect-ratio'),
   ]
 }
 

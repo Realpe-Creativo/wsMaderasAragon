@@ -1,5 +1,5 @@
 
-import {  LuFacebook, LuInfo, LuInstagram, LuLogOut, LuMessageCircle, LuShoppingBag } from "react-icons/lu";
+import {  LuFacebook, LuInfo, LuInstagram, LuLogOut, LuMessageCircle, LuShoppingBag, LuNewspaper } from "react-icons/lu";
 import { Link } from "react-router-dom"
 import { car, token } from "../../atoms/context";
 import { useStore } from "@nanostores/react";
@@ -65,15 +65,18 @@ export default function  (props:props) {
               </Link>
             </div>
             <div className="flex w-7/12 md:w-6/12 p-2 justify-center">
-              <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to="/products" className={`flex bg-stone-600 h-fit transition-all px-2 items-center align-middle rounded-3xl justify-center py-1 hover:drop-shadow-md hover:bg-stone-800 text-stone-200 hover:text-white mx-2 ${props.tab === 'products'?'bg-stone-800/75 text-white':''}`}>
+              <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to="/categories" className={`flex bg-stone-600 h-fit transition-all px-2 items-center align-middle rounded-3xl justify-center py-1 hover:drop-shadow-md hover:bg-stone-800 text-stone-200 hover:text-white mx-2 ${props.tab === 'products'?'bg-stone-800/75 text-white':''}`}>
                 <LuShoppingBag className="flex m-1" />
                 <span className="md:flex hidden">Productos</span>
-                
               </Link>
               {/* <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to="/services" className="mx-2"> Servicios </Link> */}
               <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to="/know"  className={`flex bg-stone-600 h-fit transition-all px-2 items-center align-middle rounded-3xl justify-center py-1 hover:drop-shadow-md hover:bg-stone-800 text-stone-200 hover:text-white mx-2 ${props.tab === 'know'?'bg-stone-800/75 text-white':''}`}> 
                 <LuInfo className="flex m-1" />
                 <span className="md:flex hidden">Conócenos</span>
+              </Link>
+              <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to="/contact"  className={`flex bg-stone-600 h-fit transition-all px-2 items-center align-middle rounded-3xl justify-center py-1 hover:drop-shadow-md hover:bg-stone-800 text-stone-200 hover:text-white mx-2 ${props.tab === 'contact'?'bg-stone-800/75 text-white':''}`}> 
+                <LuNewspaper className="flex m-1" />
+                <span className="md:flex hidden">Bitácora</span>
               </Link>
               <Link onClick={()=> setTimeout(()=>scrollTo({ y: 0 }),300)} to="/contact"  className={`flex bg-stone-600 h-fit transition-all px-2 items-center align-middle rounded-3xl justify-center py-1 hover:drop-shadow-md hover:bg-stone-800 text-stone-200 hover:text-white mx-2 ${props.tab === 'contact'?'bg-stone-800/75 text-white':''}`}> 
                 <LuMessageCircle className="flex m-1" />

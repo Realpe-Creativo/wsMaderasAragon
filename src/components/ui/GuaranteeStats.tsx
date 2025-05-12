@@ -1,5 +1,11 @@
-// GuaranteeStatsSlider.tsx
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+// components/GuaranteeStatsSlider.tsx
+
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useCallback
+} from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 type StatSlide = {
@@ -15,73 +21,86 @@ type LogoSlide = {
   type: 'logo';
   image: string;
 };
-type Slide = StatSlide | LogoSlide;
 
-/** Cuenta de 0 a `end` en `duration` seg, solo si `start===true`. */
 const useCountUp = (end: number, duration = 2, start = false) => {
   const [count, setCount] = useState(0);
-  const startTime = useRef<number|null>(null);
+  const startTime = useRef<number | null>(null);
+
   useEffect(() => {
     if (!start) return;
+    setCount(0);
     const step = (ts: number) => {
       if (startTime.current === null) startTime.current = ts;
       const progress = ts - startTime.current;
       const ratio = Math.min(progress / (duration * 1000), 1);
       setCount(Math.floor(ratio * end));
-      if (progress < duration * 1000) requestAnimationFrame(step);
-      else setCount(end);
+      if (progress < duration * 1000) {
+        requestAnimationFrame(step);
+      } else {
+        setCount(end);
+      }
     };
     requestAnimationFrame(step);
     return () => { startTime.current = null; };
   }, [end, duration, start]);
+
   return count;
 };
 
-const GuaranteeStatsSlider: React.FC = () => {
+interface GuaranteeStatsSliderProps {
+  /** Si es false, muestra valores finales y no hace autoplay */
+  animate?: boolean;
+}
+
+const GuaranteeStatsSlider: React.FC<GuaranteeStatsSliderProps> = ({
+  animate = true
+}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [hasStarted, setHasStarted] = useState(false);
 
-  // Inicia contadores al entrar en viewport
+  // Solo arrancar observer si queremos animar
   useEffect(() => {
+    if (!animate) return;
     const obs = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting) {
+      ([entry]) => {
+        if (entry.isIntersecting) {
           setHasStarted(true);
           obs.disconnect();
         }
       },
       { threshold: 0.3 }
     );
-    containerRef.current && obs.observe(containerRef.current);
+    if (containerRef.current) obs.observe(containerRef.current);
     return () => obs.disconnect();
-  }, []);
+  }, [animate]);
 
-  // Valores animados
-  const hectareas  = useCountUp(1000, 2, hasStarted);
-  const años       = useCountUp(20,   2, hasStarted);
-  const postes     = useCountUp(15000,2, hasStarted);
-  const sostenible = useCountUp(100,  2, hasStarted);
-  const clientes   = useCountUp(1200, 2, hasStarted);
+  // cuenta en crudo; si animate=false luego lo sobreescribimos
+  const rawHectareas  = useCountUp(1000, 2, hasStarted);
+  const rawAños       = useCountUp(20,   2, hasStarted);
+  const rawPostes     = useCountUp(15000,2, hasStarted);
+  const rawSostenible = useCountUp(100,  2, hasStarted);
+  const rawClientes   = useCountUp(1200, 2, hasStarted);
 
-  // Tus 5 stats
+  // si no animamos, devolvemos el final inmediatamente
+  const hectareas  = animate ? rawHectareas  : 1000;
+  const años       = animate ? rawAños       : 20;
+  const postes     = animate ? rawPostes     : 15000;
+  const sostenible = animate ? rawSostenible : 100;
+  const clientes   = animate ? rawClientes   : 1200;
+
   const stats: StatSlide[] = [
-    { key:'h', type:'stat', prefix:'+', value:hectareas,  highlight:' hectáreas',        rest:' de cultivos de pino y eucalipto' },
-    { key:'a', type:'stat', prefix:'+', value:años,       highlight:' años',             rest:' de experiencia' },
-    { key:'p', type:'stat', prefix:'+', value:postes,     highlight:' postes mensuales', rest:' entregados en todo el país' },
-    { key:'s', type:'stat', prefix:'%',  value:sostenible, highlight:' sostenible',     rest:' y libre de deforestación' },
-    { key:'c', type:'stat', prefix:'+', value:clientes,   highlight:' clientes satisfechos', rest:' a nivel nacional' },
+    { key:'h', type:'stat', prefix:'+', value:hectareas,  highlight:' hectáreas',          rest:' de cultivos de pino y eucalipto' },
+    { key:'a', type:'stat', prefix:'+', value:años,       highlight:' años',                rest:' de experiencia' },
+    { key:'p', type:'stat', prefix:'+', value:postes,     highlight:' postes mensuales',    rest:' entregados en todo el país' },
+    { key:'s', type:'stat', prefix:'%', value:sostenible, highlight:' sostenible',         rest:' y libre de deforestación' },
+    { key:'c', type:'stat', prefix:'+', value:clientes,   highlight:' clientes satisfechos',rest:' a nivel nacional' },
   ];
-
-  const logos: LogoSlide[] = [
-    // Puedes añadir aquí logos de certificación
-  ];
-
-  // Combina y duplica
-  const combined: Slide[] = [...stats, ...logos];
+  const logos: LogoSlide[] = [ /* …logos si tienes */ ];
+  const combined = [...stats, ...logos];
   const extended = [...combined, ...combined];
-  const length = combined.length;
+  const length   = combined.length;
 
-  // Detecta cuántos ítems mostrar según ancho
+  // cálculo de items por vista
   const getItemsPerView = () => {
     if (window.innerWidth < 640) return 1;
     if (window.innerWidth < 768) return 2;
@@ -95,6 +114,7 @@ const GuaranteeStatsSlider: React.FC = () => {
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
+  // índice de scroll
   const [startIndex, setStartIndex] = useState(0);
   const handleNext = useCallback(() => {
     setStartIndex(i => (i + 1) % length);
@@ -103,13 +123,13 @@ const GuaranteeStatsSlider: React.FC = () => {
     setStartIndex(i => (i - 1 + length) % length);
   }, [length]);
 
-  // Auto-play cada 10s
+  // autoplay solo si animate=true
   useEffect(() => {
+    if (!animate) return;
     const iv = setInterval(handleNext, 10000);
     return () => clearInterval(iv);
-  }, [handleNext]);
+  }, [handleNext, animate]);
 
-  // Cálculo de translateX
   const shiftPct = -(startIndex * (100 / itemsPerView));
 
   return (
@@ -119,7 +139,6 @@ const GuaranteeStatsSlider: React.FC = () => {
       className="py-12"
     >
       <div className="relative max-w-6xl mx-auto px-4">
-        {/* Botones laterales */}
         <button
           onClick={handlePrev}
           aria-label="Anterior"
@@ -136,21 +155,22 @@ const GuaranteeStatsSlider: React.FC = () => {
         </button>
 
         <div className="relative overflow-hidden">
-          {/* Gradientes laterales */}
+          {/* degradados laterales */}
           <div
             className="absolute left-0 top-0 h-full w-20 pointer-events-none z-10"
             style={{
-              background: 'linear-gradient(to right, #f6f4f2 90%, rgba(246,244,242,0))'
+              background:
+                'linear-gradient(to right, #f6f4f2 90%, rgba(246,244,242,0))'
             }}
           />
           <div
             className="absolute right-0 top-0 h-full w-20 pointer-events-none z-10"
             style={{
-              background: 'linear-gradient(to left, #f6f4f2 90%, rgba(246,244,242,0))'
+              background:
+                'linear-gradient(to left, #f6f4f2 90%, rgba(246,244,242,0))'
             }}
           />
 
-          {/* Carril animado */}
           <div
             className="flex transition-transform duration-1000 ease-in-out"
             style={{ transform: `translateX(${shiftPct}%)` }}
@@ -163,11 +183,9 @@ const GuaranteeStatsSlider: React.FC = () => {
               >
                 {item.type === 'stat' ? (
                   <>
-                    {/* Cifra más grande */}
                     <p className="text-5xl md:text-6xl font-bold">
                       {item.prefix}{item.value}
                     </p>
-                    {/* Texto descriptivo normal */}
                     <p className="mt-5 text-center text-base text-gray-700">
                       {item.highlight}{item.rest}
                     </p>
@@ -175,7 +193,7 @@ const GuaranteeStatsSlider: React.FC = () => {
                 ) : (
                   <img
                     src={item.image}
-                    alt="Certificación"
+                    alt="Logo"
                     className="h-24 object-contain"
                   />
                 )}
