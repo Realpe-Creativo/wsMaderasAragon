@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import ContactUsButton from '@/components/ui/contactUsButton';
 import GuaranteeStatsSlider from '@/components/ui/GuaranteeStats';
+import ThreeDModel from '@/components/ui/ThreeDModel';
 
 function shuffleArray<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -81,11 +82,14 @@ const Fences: React.FC = () => {
         </h1>
 
         <div className="flex flex-col md:flex-row items-center gap-12">
-          <img
+          {/* <img
             src="/img/livestock/postesRollizos/fences.jpg"
             alt="Postes Rollizos"
             className="w-full max-w-lg md:w-3/4 md:max-w-2xl h-auto object-contain rounded-lg shadow-lg"
-          />
+          /> */}
+          <div className="w-full max-w-lg md:w-3/4 md:max-w-2xl h-[500px] object-contain rounded-lg shadow-lg">
+            <ThreeDModel />
+          </div>
           <div className="w-full md:w-2/4 text-gray-700 text-lg md:text-xl leading-relaxed">
             <p className="text-center md:text-left">
               Los postes rollizos son ideales para cercas rurales de bajo costo...
@@ -117,7 +121,9 @@ const Fences: React.FC = () => {
 
       <div className="mt-10 max-w-screen-xl mx-auto px-8">
         <p className="text-gray-700 text-lg md:text-xl mb-8 text-center">
-          Lorem ipsum dolor sit amet...
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Recusandae illum sapiente repellendus hic quasi! Dolor est dignissimos inventore,
+          quia, ipsa quae molestias dolorum tempora quasi culpa sint, eos aliquam labore!
         </p>
       </div>
 
@@ -134,7 +140,9 @@ const Fences: React.FC = () => {
           POR QUE ELEGIRNOS?
         </h3>
         <p className="text-gray-700 text-lg md:text-xl mb-8">
-          Ideales para delimitar pastizales...
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Recusandae illum sapiente repellendus hic quasi! Dolor est dignissimos inventore,
+          quia, ipsa quae molestias dolorum tempora quasi culpa sint, eos aliquam labore!
         </p>
       </div>
 

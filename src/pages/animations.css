@@ -1,0 +1,81 @@
+/* src/styles/animations.css */
+
+/* Keyframes: suben constantemente y se reinician */
+@keyframes moveCloudsUp {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-130vh); }
+}
+
+/* Base de nube */
+.cloud {
+  position: absolute;
+  bottom: -250px;               /* arrancan bajo el viewport */
+  background: rgba(255,255,255,0.45);
+  filter: blur(35px);
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+  animation-name: moveCloudsUp;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Cada nube con tamaño, posición, duración y delay NEGATIVO */
+.cloud.one {
+  left:  5%;
+  width: 220px;  height: 110px;
+  animation-duration: 30s;
+  animation-delay:   -5s;
+}
+.cloud.two {
+  left: 20%;
+  width: 180px;  height: 100px;
+  animation-duration: 35s;
+  animation-delay:  -15s;
+}
+.cloud.three {
+  left: 40%;
+  width: 250px;  height: 120px;
+  animation-duration: 40s;
+  animation-delay:  -25s;
+}
+.cloud.four {
+  left: 60%;
+  width: 200px;  height: 110px;
+  animation-duration: 28s;
+  animation-delay:  -10s;
+}
+.cloud.five {
+  left: 80%;
+  width: 230px;  height: 115px;
+  animation-duration: 33s;
+  animation-delay:  -20s;
+}
+.cloud.six {
+  left: 30%;
+  width: 210px;  height: 130px;
+  animation-duration: 38s;
+  animation-delay:  -30s;
+}
+
+/* en src/styles/animations.css (o tu CSS global) */
+
+/* 1) Oculta scrollbar en IE/Edge */
+.hide-scrollbar {
+  -ms-overflow-style: none;     /* IE y Edge */
+  scrollbar-width: none;        /* Firefox */
+}
+
+/* 2) Oculta scrollbar en Chrome/Safari/Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+/* 3) (Opcional) si quieres también ocultar el track/thumb explícitamente */
+.hide-scrollbar::-webkit-scrollbar-track,
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+

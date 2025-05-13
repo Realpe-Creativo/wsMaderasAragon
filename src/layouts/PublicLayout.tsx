@@ -35,7 +35,9 @@ export default function  (props: PublicLayoutProps) {
           <ImWhatsapp className='flex' />
         </a>
       </>
-      <Footer tab={props?.tab}/>
+      {props.tab !== 'know' && (
+        <Footer tab={props.tab}/>
+      )}
     </div>
   )
 }

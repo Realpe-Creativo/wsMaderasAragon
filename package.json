@@ -19,7 +19,8 @@
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.1",
-    "@react-three/fiber": "^8.16.2",
+    "@react-three/drei": "^9.56.0",
+    "@react-three/fiber": "^8.18.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tanstack/react-table": "^8.20.5",
     "axios": "^1.6.8",
@@ -44,7 +45,7 @@
     "shortid": "^2.2.16",
     "socket.io-client": "^4.7.5",
     "tailwind-merge": "^2.3.0",
-    "three": "^0.164.1"
+    "three": "^0.176.0"
   },
   "devDependencies": {
     "@types/node": "^22.5.4",
