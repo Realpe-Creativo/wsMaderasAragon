@@ -1,114 +1,227 @@
+import React, { useRef, useState } from 'react';
+import emailjs from 'emailjs-com';
+import "./contact.css";
 
-import { useState } from "react";
-import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import PhoneInput from 'react-phone-number-input'
-import 'react-phone-number-input/style.css'
-import { leadService } from "../services/leadService";
-export interface ContactProps {
-}
+interface ContactProps { }
 
-import { useToast } from "@/hooks/use-toast"
+const Contact: React.FC<ContactProps> = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [sending, setSending] = useState(false);
+  const [statusMsg, setStatusMsg] = useState<string | null>(null);
 
-export default function  (props?: ContactProps) {
-  props
-  const { toast } = useToast()
-  const [lead, setLead] = useState<any>({})
-  const handleSend = async(_params?:any) =>{
-    const response = await leadService.external({...(_params || lead), brand: JSON.parse(localStorage.getItem('brand')||'{}')?._id})
-    if(response.status === 200){
-      toast({
-        title: "Tu mensaje ha sido enviado",
-        description: "Gracias por contactarnos"
-      })
-    }
-  }
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+
+    setSending(true);
+    setStatusMsg(null);
+
+    emailjs.sendForm(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      formRef.current,
+      USER_ID
+    ).then(
+      () => {
+        setStatusMsg('¡Mensaje enviado con éxito!');
+        formRef.current!.reset();
+      },
+      (error) => {
+        console.error('EmailJS error:', error);
+        setStatusMsg('Error al enviar el mensaje. Intenta de nuevo.');
+      }
+    ).finally(() => setSending(false));
+  };
 
   return (
-    <div className="flex flex-col mt-32 mb-20">
-      <div className="flex p-4 justify-center w-full bg-stone-700 flex-row">
-        <div className="flex w-fit content-center">
-          <span className="text-5xl my-4 text-white font-title-bold">Contáctanos</span>
+    <section className="w-full bg-white min-h-screen">
+      {/* Sección promocional */}
+      <div className="w-full h-48 sm:h-64 overflow-hidden mt-16">
+        <img
+          src="/img/contact_us/propaganda_postes.png"
+          alt="Promoción"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: '68% center' }}
+        />
+      </div>
+
+      {/* Título */}
+      <h2 className="text-center font-bold text-xl sm:text-2xl lg:text-3xl mt-8 px-4">
+        ¿Prefieres escribirnos o llamarnos directamente?
+      </h2>
+
+      {/* Info de contacto */}
+      <div className="mt-8 flex flex-col md:flex-row justify-center items-start md:items-center px-4 sm:px-6 md:px-0">
+        <div className="w-full md:w-1/2 flex md:justify-end mb-6 md:mb-0">
+          <div>
+            <p className="mb-2 text-left flex items-center text-sm sm:text-base">
+              <span className="mr-2">📍</span>
+              <span className="font-semibold">Villanueva, Casanare, Colombia</span>
+            </p>
+            <p className="text-left flex items-center text-sm sm:text-base">
+              <span className="mr-2">📞</span>
+              <span className="font-semibold">WhatsApp: +57 300 XXX XXXX</span>
+            </p>
+          </div>
+        </div>
+
+        <div className="hidden md:block w-[2px] bg-black h-24 mx-6" />
+
+        <div className="w-full md:w-1/2 flex md:justify-start">
+          <div>
+            <p className="mb-2 text-left flex items-center text-sm sm:text-base">
+              <span className="mr-2">📧</span>
+              <span className="font-semibold">contacto@maderasaragon.com</span>
+            </p>
+            <p className="text-left flex items-center text-sm sm:text-base">
+              <span className="mr-2">🕒</span>
+              <span className="font-semibold">Lunes a viernes | 8:00 a.m. – 5:00 p.m.</span>
+            </p>
+          </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row p-4 justify-center">
-        <div className="flex flex-col p-2 md:w-5/12">
-          <img src="/contact.png" className="rounded-xl drop-shadow-lg" alt="Foto" />
+
+      {/* Mapa */}
+      <div className="mt-16 px-4 sm:px-6 lg:px-0">
+        <div className="w-full max-w-md sm:max-w-xl md:max-w-2xl mx-auto h-48 sm:h-64 rounded-lg overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7952.717445098842!2d-72.938779!3d4.707597!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e15305a3fa2fc7d%3A0x7988e05d7d764b2e!2sMaderas%20Aragon!5e0!3m2!1ses!2sco!4v1747267127960!5m2!1ses!2sco"
+            width="100%"
+            height="100%"
+            className="border-0"
+            allowFullScreen={false}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
-        <div className="flex flex-col p-1 md:p-4 md:w-3/12">
-          <div className="flex flex-col mb-2">
-            <label htmlFor="first_name">Nombres</label>
-            <input id="first_name" onChange={(_e)=>{ setLead({...lead, first_name: _e.target.value})}} type="text" value={lead?.first_name} className={`flex w-[95%] mb-3 outline-none px-2 py-1 disabled:bg-stone-50 shadow-md border-[1pt] border-solid border-stone-200 bg-white rounded-lg`}/>
-          </div>
-          <div className="flex flex-col mb-2">
-            <label htmlFor="last_name">Apellidos</label>
-            <input id="last_name" onChange={(_e)=>{ setLead({...lead, last_name: _e.target.value})}} type="text" value={lead?.last_name} className={`flex w-[95%] mb-3 outline-none px-2 py-1 disabled:bg-stone-50 shadow-md border-[1pt] border-solid border-stone-200 bg-white rounded-lg`}/>
-          </div>
-          <div className="flex flex-col mb-2">
-            <label htmlFor="last_name" className="mb-1">Telefono</label>
-              <PhoneInput
-                className="flex h-fit"
-                defaultCountry={"CO"}
-                countries={['CO']}
-                placeholder="Ingresa tu número"
-                value={lead.number}
-                onChange={(e)=>{setLead({...lead, number: e || ''})}}
-                limitMaxLength={true}
-              />
-          </div>
-          <div className="flex flex-col mb-2 w-full">
-            <label htmlFor="content">Mensaje</label>
-            <textarea id="content" onChange={(_e)=>{ setLead({...lead, content: _e.target.value}) }} value={lead?.content} className={`flex  mb-3 outline-none px-2 py-1 disabled:bg-stone-50 shadow-md border-[1pt] border-solid border-stone-200 bg-white rounded-lg`}/>
-          </div>
-          <div className="flex flex-col mb-2">
-            <button onClick={()=>handleSend(lead)} className="flex  justify-center bg-stone-600 hover:bg-stone-800 text-white font-semibold py-2 px-4 rounded-lg">Enviar</button>
+      </div>
+
+      {/* Formulario */}
+      <div className="mt-16 px-4 sm:px-6 lg:px-0">
+        <h3 className="text-center font-bold text-lg sm:text-xl mb-6">
+          Déjanos tu mensaje y te contactamos en menos de 24 horas
+        </h3>
+
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="grid grid-cols-1 gap-6 max-w-md sm:max-w-lg md:max-w-2xl w-full mx-auto p-4 sm:p-6 rounded-lg contact-form"
+        >
+          {/* Nombre completo */}
+          <div className="relative w-full">
+            <input
+              id="fullName"
+              name="from_name"
+              type="text"
+              placeholder=" "
+              required
+              className="peer w-full border-2 border-black rounded-full px-4 py-2 sm:px-2 sm:py-3 bg-white placeholder-transparent text-black text-left focus:outline-none focus:border-black transition-all duration-200"
+            />
+            <label
+              htmlFor="fullName"
+              className="absolute left-4 sm:left-6 top-3 bg-white px-1 sm:px-0 transform origin-left transition-all duration-200 -translate-y-3 scale-75 text-xs peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-base peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-xs"
+            >
+              Nombre completo
+            </label>
           </div>
 
-        </div>
-      </div>
-      <hr className="border-stone-200 mx-10 my-4" />
-      <div className="flex flex-col md:flex-row p-4 justify-center">
-        <div className="flex flex-col p-2 w-full text-start md:w-8/12">
-          <span className="flex text-2xl">Sedes</span>
-        </div>
-      </div>
-      <div className="flex flex-col my-3 md:flex-row p-4 justify-center">
-        <div className="flex flex-col px-6 py-2 w-full mb-3 md:w-4/12">
-          <span className="flex text-3xl font-title-bold mt-4">Villanueva</span>
-          <span className="flex text-xl">Casanare - Colombia</span>
-          <div className="flex mt-2 align-middle items-center">
-            <span className="flex h-fit mx-2"><FaMapMarkerAlt /></span>
-            <span className="flex mx-2">Km 19 via Villanueva - Monterrey</span>
+          {/* Empresa + Teléfono */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="relative w-full">
+              <input
+                id="company"
+                name="company"
+                type="text"
+                placeholder=" "
+                className="peer w-full border-2 border-black rounded-full px-4 py-2 sm:px-2 sm:py-3 bg-white placeholder-transparent text-black text-left focus:outline-none focus:border-black transition-all duration-200"
+              />
+              <label
+                htmlFor="company"
+                className="absolute left-4 sm:left-6 top-3 bg-white px-1 sm:px-2 transform origin-left transition-all duration-200 -translate-y-3 scale-75 text-xs peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-base peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-xs"
+              >
+                Empresa (Opcional)
+              </label>
+            </div>
+
+            <div className="relative w-full">
+              <input
+                id="phone"
+                name="phone"
+                type="text"
+                placeholder=" "
+                className="peer w-full border-2 border-black rounded-full px-4 py-2 sm:px-2 sm:py-3 bg-white placeholder-transparent text-black text-left focus:outline-none focus:border-black transition-all duration-200"
+              />
+              <label
+                htmlFor="phone"
+                className="absolute left-4 sm:left-6 top-3 bg-white px-1 sm:px-2 transform origin-left transition-all duration-200 -translate-y-3 scale-75 text-xs peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-base peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-xs"
+              >
+                Teléfono o WhatsApp
+              </label>
+            </div>
           </div>
-          <div className="flex mt-2 align-middle items-center">
-            <span className="flex h-fit mx-2"><FaPhoneAlt /></span>
-            <span className="flex mx-2">+57 312 5085185</span>
+
+          {/* Correo electrónico */}
+          <div className="relative w-full">
+            <input
+              id="email"
+              name="from_email"
+              type="email"
+              placeholder=" "
+              required
+              className="peer w-full border-2 border-black rounded-full px-4 py-2 sm:px-2 sm:py-3 bg-white placeholder-transparent text-black text-left focus:outline-none focus:border-black transition-all duration-200"
+            />
+            <label
+              htmlFor="email"
+              className="absolute left-4 sm:left-6 top-3 bg-white px-1 sm:px-2 transform origin-left transition-all duration-200 -translate-y-3 scale-75 text-xs peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-base peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-xs"
+            >
+              Correo electrónico
+            </label>
           </div>
-          
-        </div>
-        <div className="flex w-full md:w-4/12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.3586937365403!2d-72.94135392433216!3d4.707602041596263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e15305a3fa2fc7d%3A0x7988e05d7d764b2e!2sMaderas%20Aragon!5e0!3m2!1ses!2sco!4v1716168797813!5m2!1ses!2sco" width="100%" height="450" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-xl drop-shadow-md"></iframe>
-        </div>
+
+          {/* Mensaje */}
+          <div className="relative w-full sm:w-3/4 lg:w-2/3 mx-auto">
+            <textarea
+              id="message"
+              name="message"
+              placeholder=" "
+              required
+              rows={8}
+              className="peer w-full h-48 sm:h-56 resize-none border-2 border-black rounded-md px-4 py-2 sm:px-5 sm:py-4 bg-white placeholder-transparent text-black text-left focus:outline-none focus:border-black transition-all duration-200"
+            />
+            <label
+              htmlFor="message"
+              className="absolute left-4 sm:left-6 top-3 bg-white px-1 sm:px-2 transform origin-left transition-all duration-200 -translate-y-3 scale-75 text-xs peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-base peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-xs"
+            >
+              Mensaje o tipo de proyecto
+            </label>
+          </div>
+
+          {/* Botón y estado */}
+          <div className="text-center">
+            <button
+              type="submit"
+              disabled={sending}
+              className={`px-6 py-2 sm:px-8 sm:py-3 font-semibold rounded-full focus:outline-none ${sending
+                  ? 'bg-gray-400 cursor-not-allowed text-white'
+                  : 'bg-green-600 hover:bg-green-700 text-white'
+                }`}
+            >
+              {sending ? 'Enviando...' : 'Enviar'}
+            </button>
+            {statusMsg && (
+              <p className="mt-4 text-sm text-center text-gray-700">
+                {statusMsg}
+              </p>
+            )}
+          </div>
+        </form>
       </div>
-      <div className="flex flex-col my-3 md:flex-row p-4 justify-center">
-        <div className="hidden md:flex w-full md:w-4/12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3979.8096611371197!2d-73.50840822502444!3d4.059194395914552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwMDMnMzMuMSJOIDczwrAzMCcyMS4wIlc!5e0!3m2!1ses-419!2sco!4v1723420086100!5m2!1ses-419!2sco" width="100%" height="450" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-xl drop-shadow-md"></iframe>
-        </div>
-        <div className="flex flex-col px-6 py-2 w-full mb-3 md:w-4/12">
-          <span className="flex text-3xl font-title-bold mt-4">Villavicencio</span>
-          <span className="flex text-xl">Meta - Colombia</span>
-          <div className="flex mt-2 align-middle items-center">
-            <span className="flex h-fit mx-2"><FaMapMarkerAlt /></span>
-            <span className="flex mx-2">Km 13 via Villavicencio - Puerto Lopez</span>
-          </div>
-          <div className="flex mt-2 align-middle items-center">
-            <span className="flex h-fit mx-2"><FaPhoneAlt /></span>
-            <span className="flex mx-2">+57 312 5085185</span>
-          </div>
-        </div>
-        <div className="flex md:hidden w-full md:w-4/12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3979.8096611371197!2d-73.50840822502444!3d4.059194395914552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwMDMnMzMuMSJOIDczwrAzMCcyMS4wIlc!5e0!3m2!1ses-419!2sco!4v1723420086100!5m2!1ses-419!2sco" width="100%" height="450" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-xl drop-shadow-md"></iframe>
-        </div>
-      </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
+
+export default Contact;

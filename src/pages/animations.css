@@ -79,3 +79,18 @@
   background: transparent;
 }
 
+/* Ajustes para móvil */
+@media (max-width: 768px) {
+  /* 1) Empuja cada sección snap-start hacia abajo para 
+        que no choque con la navbar semitransparente */
+  .snap-start {
+    padding-top: 5rem;          /* Ajusta este valor a la altura de tu navbar */
+    box-sizing: border-box;     /* Para que el padding no rompa el snap-height */
+  }
+  /* 2) Si quieres ocultar el navbar sólo en móvil y solo en esta página,
+        ponle a tu <body> una clase .know-page cuando estés en /know,
+        y luego: */
+  .know-page .navbar {
+    display: none !important;
+  }
+}

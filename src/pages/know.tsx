@@ -1,5 +1,5 @@
 // src/pages/know.tsx
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import './animations.css'
 
 interface TimelineItem {
@@ -37,7 +37,7 @@ const timelineData: TimelineItem[] = [
     date: 'April 4, 2025',
     title: '20 Aniversario',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate eum impedit hic similique esse consequatur unde, molestias voluptate corrupti odit maiores nisi libero expedita fugiat nostrum saepe ad dolor!',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate eum impedit hic similique esse consequatur unde, molestias voluptate corrupti odit mayores nisi libero expedita fugiat nostrum saepe ad dolor!',
     bgColor: '#b09bff',
   },
 ]
@@ -54,7 +54,7 @@ export default function Know() {
   return (
     <div
       ref={containerRef}
-      className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth hide-scrollbar"
+      className="pt-16 md:pt-0 h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth hide-scrollbar"
     >
       {/* === Sección principal con fondo negro + nubes === */}
       <section className="relative isolate h-screen snap-start overflow-hidden bg-black text-white">
@@ -70,14 +70,14 @@ export default function Know() {
           <img
             src="/logo-white.png"
             alt="Logo"
-            className="mb-8 w-40 h-auto"
+            className="mb-8 w-32 sm:w-40 h-auto"
           />
-          <h1 className="text-5xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Celebrando 20 años de historia
           </h1>
           <button
             onClick={() => scrollTo(0)}
-            className="mt-6 bg-white text-black px-8 py-4 rounded-full text-lg hover:opacity-90 transition"
+            className="mt-6 bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:opacity-90 transition"
           >
             Comenzar
           </button>
@@ -88,7 +88,7 @@ export default function Know() {
       {timelineData.map((item, i) => (
         <section
           key={i}
-          className="relative isolate h-screen snap-start overflow-hidden"
+          className="relative isolate h-screen snap-start overflow-hidden bg-[length:cover]"
           style={{ backgroundColor: item.bgColor }}
         >
           {/* Nubes detrás */}
@@ -99,50 +99,55 @@ export default function Know() {
           <div className="cloud five  absolute -z-10" />
           <div className="cloud six   absolute -z-10" />
 
-          {/* Línea vertical */}
-          <div className="absolute left-12 top-0 w-1 h-full bg-black z-20" />
+          {/* Contenedor responsive */}
+          <div className="relative flex flex-col md:flex-row items-start md:items-center h-full px-6 md:px-16">
 
-          {/* Fecha y punto */}
-          <div className="absolute top-40 left-16 font-semibold text-lg text-black z-20">
-            {item.date}
-          </div>
-          <div className="absolute top-40 left-[50px] w-3 h-3 bg-black rounded-full z-20" />
+            {/* Línea vertical y punto (solo en md+) */}
+            <div className="hidden md:block absolute left-12 top-0 w-1 h-full bg-black z-10" />
+            <div className="hidden md:block absolute top-40 left-11 w-3 h-3 bg-black rounded-full z-10" />
 
-          {/* Imagen a la derecha */}
-          {item.imageSrc && (
-            <div className="absolute right-16 top-1/2 transform -translate-y-1/2 z-20">
-              <img
-                src={item.imageSrc}
-                alt={item.title}
-                className="max-w-xs lg:max-w-md rounded-2xl shadow-lg object-cover"
-              />
+            {/* Fecha */}
+            <div className="mt-8 md:mt-0 font-semibold text-lg text-black z-20 self-start md:absolute md:top-40 md:left-16">
+              {item.date}
             </div>
-          )}
 
-          {/* Contenido */}
-          <div className="absolute left-16 top-1/2 transform -translate-y-1/2 w-1/2 px-6 text-left z-20">
-            <h2 className="text-4xl font-bold text-black mb-4">{item.title}</h2>
-            <p className="text-lg text-black">{item.content}</p>
-
-            {/* Botones */}
-            <div className="mt-8 flex space-x-4">
-              {i >= 0 && (
-                <button
-                  onClick={() => scrollTo(i - 1)}
-                  className="bg-black text-white px-8 py-4 rounded-full text-lg hover:opacity-90 transition z-20"
-                >
-                  ← Anterior
-                </button>
-              )}
-              {i <= timelineData.length - 1 && (
-                <button
-                  onClick={() => scrollTo(i + 1)}
-                  className="bg-black text-white px-8 py-4 rounded-full text-lg hover:opacity-90 transition z-20"
-                >
-                  Siguiente →
-                </button>
-              )}
+            {/* Contenido */}
+            <div className="mt-4 md:mt-0 md:ml-32 md:w-1/2 px-4 text-left z-20">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4">
+                {item.title}
+              </h2>
+              <p className="text-base sm:text-lg text-black">
+                {item.content}
+              </p>
+              <div className="mt-6 flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
+                {i >= 0 && (
+                  <button
+                    onClick={() => scrollTo(i - 1)}
+                    className="bg-black text-white px-6 py-2 sm:px-8 sm:py-4 rounded-full text-base hover:opacity-90 transition"
+                  >
+                    ← Anterior
+                  </button>
+                )}
+                {i <= timelineData.length - 1 && (
+                  <button
+                    onClick={() => scrollTo(i + 1)}
+                    className="bg-black text-white px-6 py-2 sm:px-8 sm:py-4 rounded-full text-base hover:opacity-90 transition"
+                  >
+                    Siguiente →
+                  </button>
+                )}
+              </div>
             </div>
+
+            {item.imageSrc && (
+              <div className="mt-6 md:mt-0 md:ml-auto md:mr-16 w-full md:w-auto flex justify-center z-20">
+                <img
+                  src={item.imageSrc}
+                  alt={item.title}
+                  className="w-64 sm:w-80 lg:w-96 rounded-2xl shadow-lg object-cover"
+                />
+              </div>
+            )}
           </div>
         </section>
       ))}
@@ -161,7 +166,7 @@ export default function Know() {
         <img
           src="/logo-white.png"
           alt="Logo final"
-          className="w-80 h-auto"
+          className="w-56 sm:w-64 md:w-80 h-auto"
         />
       </section>
     </div>

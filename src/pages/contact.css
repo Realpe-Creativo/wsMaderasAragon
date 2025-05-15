@@ -1,0 +1,11 @@
+/* Fuerza el borde negro en todos los inputs y textareas */
+.contact-form input, 
+.contact-form textarea {
+  border: 2px solid #000 !important;
+}
+
+/* Asegura que los placeholders no interfieran */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  opacity: 0;
+}
