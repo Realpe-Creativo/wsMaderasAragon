@@ -14,15 +14,15 @@ interface CategoryItem {
 const items: CategoryItem[] = [
     {
         title: "COLUMNAS Y VIGAS",
-        subtitle: "",
+        subtitle: "Resistencia, naturalidad y adaptabilidad para tus estructuras campestres.",
         image: "/img/structural/column.jpg",
-        href: "/",
+        href: "/products/columnas&vigas",
     },
     {
         title: "ACABADOS",
-        subtitle: "",
+        subtitle: "Belleza natural, suavidad al tacto y precisión para tus proyectos especiales.",
         image: "/img/structural/finishes.jpg",
-        href: "/",
+        href: "/products/acabadosPersonalizados",
     },
 ];
 
@@ -33,7 +33,7 @@ const CategoriesPage: React.FC = () => {
           <GalleryGrid items={items} />
         </div>
 
-        <div className="bg-stone-100 py-1 px-1">
+        <div className="bg-[#F8F7DD] py-1 px-1">
           <div className="max-w-6xl mx-auto">
             <GuaranteeStatsSlider animate={false}/>
           </div>

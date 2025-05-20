@@ -11,16 +11,16 @@ const items: ProductItem[] = [
     subtitle: 'Explora nuestras cercas disponibles',
     products: [
       {
-        label: 'Poste Acerrado',
-        href: '/categories/livestock/fences',
+        label: 'Poste Aserrado',
+        href: '/products/posteAserrado',
       },
       {
         label: 'Poste Cilindrado',
-        href: '/products/fence/wood',
+        href: '/products/posteCilindrado',
       },
       {
         label: 'Poste Rollizo',
-        href: '/products/fence/wire',
+        href: '/products/posteRollizo',
       },
       // …añade más productos de la categoría “CERCAS”
     ],
@@ -32,16 +32,15 @@ const items: ProductItem[] = [
     products: [
       {
         label: 'Postes Ganaderos',
-        href: '/products/pen/simple',
+        href: '/products/postesGanaderos',
       },
       {
         label: 'Varetas de Eucalipto',
-        href: '/products/pen/premium',
+        href: '/products/varetaEucalipto',
       },
-      // …más productos de “CORRALES”
     ],
   },
-  // …puedes añadir nuevas categorías siguiendo el mismo esquema
+  
 ];
 
 const CategoriesPage: React.FC = () => {
@@ -51,7 +50,7 @@ const CategoriesPage: React.FC = () => {
         <ProductGrid items={items} />
       </div>
 
-      <div className="bg-stone-100 py-1 px-1">
+      <div className="bg-[#F8F7DD] py-1 px-1">
         <div className="max-w-6xl mx-auto">
           <GuaranteeStatsSlider animate={false} />
         </div>

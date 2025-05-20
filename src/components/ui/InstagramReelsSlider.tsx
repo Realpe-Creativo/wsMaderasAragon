@@ -4,12 +4,12 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const InstagramReelsSlider = () => {
   const reels = [
-    { id: 1, thumbnail: "/thumbs/reels1.jpg", video: "/videos/reels1.mp4", igProfile: "https://www.instagram.com/timothydhalleine/", username: "timothydhalleine" },
-    { id: 2, thumbnail: "/thumbs/reels2.jpg", video: "/videos/reels2.mp4", igProfile: "https://www.instagram.com/timothydhalleine/", username: "timothydhalleine" },
-    { id: 3, thumbnail: "/thumbs/reels3.jpg", video: "/videos/reels3.mp4", igProfile: "https://www.instagram.com/timothydhalleine/", username: "timothydhalleine" },
-    { id: 4, thumbnail: "/thumbs/reels4.jpg", video: "/videos/reels4.mp4", igProfile: "https://www.instagram.com/timothydhalleine/", username: "timothydhalleine" },
-    { id: 5, thumbnail: "/thumbs/reels5.jpg", video: "/videos/reels5.mp4", igProfile: "https://www.instagram.com/timothydhalleine/", username: "timothydhalleine" },
-    { id: 6, thumbnail: "/thumbs/reels6.jpg", video: "/videos/reels6.mp4", igProfile: "https://www.instagram.com/timothydhalleine/", username: "timothydhalleine" },
+    { id: 1, thumbnail: "/thumbs/reels1.jpg", video: "/videos/reels1.mp4", igProfile: "https://www.instagram.com/maderasaragon/", username: "maderasaragon" },
+    { id: 2, thumbnail: "/thumbs/reels2.jpg", video: "/videos/reels2.mp4", igProfile: "https://www.instagram.com/maderasaragon/", username: "maderasaragon" },
+    { id: 3, thumbnail: "/thumbs/reels3.jpg", video: "/videos/reels3.mp4", igProfile: "https://www.instagram.com/maderasaragon/", username: "maderasaragon" },
+    { id: 4, thumbnail: "/thumbs/reels4.jpg", video: "/videos/reels4.mp4", igProfile: "https://www.instagram.com/maderasaragon/", username: "maderasaragon" },
+    { id: 5, thumbnail: "/thumbs/reels5.jpg", video: "/videos/reels5.mp4", igProfile: "https://www.instagram.com/maderasaragon/", username: "maderasaragon" },
+    { id: 6, thumbnail: "/thumbs/reels6.jpg", video: "/videos/reels6.mp4", igProfile: "https://www.instagram.com/maderasaragon/", username: "maderasaragon" },
   ];
 
   const length = reels.length;
@@ -75,14 +75,14 @@ const InstagramReelsSlider = () => {
   );
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 py-12">
+    <div className="max-w-screen-xl mx-auto px-4 py-32">
       {/* Transparent container—no background, no shadow, no rounded corners */}
       <div className="relative">
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-stone-800 mb-12">
-          Conoce nuestras{' '}
-          <span className="bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-            redes
+          CONOCE NUESTRAS{' '}
+          <span className="text-[#BADF72]">
+            REDES
           </span>
         </h2>
 

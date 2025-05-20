@@ -15,26 +15,26 @@ const items: CategoryItem[] = [
     {
         title: "GANADERIA",
         subtitle: "Postes y rollizos resistentes para cercas, corrales y potreros. Aguantan clima, peso y tiempo",
-        image: "/img/categories/corrales.jpg",
+        image: "/img/categories/ganaderia.jpg",
         href: "/categories/livestock",
     },
     {
         title: "ESTRUCTURAL",
         subtitle: "Madera técnica para pérgolas, cubiertas, estrucuturas y construcciones campestres",
-        image: "/img/categories/strucutural.jpg",
+        image: "/img/categories/estructural.jpg",
         href: "/categories/structural",
     },
     {
         title: "JARDINERÍA Y ACABADOS",
         subtitle: "No hacemos los muebles, pero si vendemos la madera lista, cortada y tratada como la necesites para jardines, terrazas o espacios al aire libre",
         image: "/img/categories/garden.jpg",
-        href: "/",
+        href: "/products/jardineria",
     },
     {
         title: "LEÑA",
         subtitle: "Nuestro equipo transforma la madera con conocimiento y respeto",
         image: "/img/categories/firewood.jpg",
-        href: "/",
+        href: "/products/lenna",
     },
 ];
 
@@ -45,7 +45,7 @@ const Categories: React.FC = () => {
                 <GalleryGrid items={items} />
             </div>
 
-            <div className="bg-stone-100 py-1 px-1">
+            <div className="bg-[#F8F7DD] py-4 px-1">
                 <div className="max-w-6xl mx-auto">
                     <GuaranteeStatsSlider />
                 </div>

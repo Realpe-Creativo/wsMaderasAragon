@@ -16,24 +16,24 @@ export default function (props?: LoadingProps) {
 
   const items = [
     {
-      title: "Impacto climatico positivo",
-      subtitle: "Reforestación, captura de carbono y manejo de agua",
-      image: "/img/landing/forest.jpg",
+      title: "Impacto climático positivo",
+      subtitle: "Reforestación, captura de carbono y manejo de agua.",
+      image: "/img/landing/forest2.jpg",
     },
     {
       title: "Amamos la tierra",
-      subtitle: "Cuidamos el suelo, la biodiversidad y la comunidad",
-      image: "/img/landing/land.jpg",
+      subtitle: "Cuidamos el suelo, la biodiversidad y la comunidad.",
+      image: "/img/landing/land2.jpg",
     },
     {
       title: "Impacto social real",
-      subtitle: "Generamos empleo digno en zonas rurales",
-      image: "/img/landing/wood.jpg",
+      subtitle: "Generamos empleo digno en zonas rurales.",
+      image: "/img/landing/social_impact.jpg",
     },
     {
       title: "Artesanos de la madera",
-      subtitle: "Nuestro equipo transforma la madera con conocimiento y respeto",
-      image: "/img/landing/climate.jpg",
+      subtitle: "Nuestro equipo transforma la madera con conocimiento y respeto.",
+      image: "/img/landing/climate2.jpg",
     },
   ];
   return (
@@ -64,22 +64,22 @@ export default function (props?: LoadingProps) {
       </div>
 
       <div className="-mt-4">
-        <div className="bg-stone-950 z-50 flex text-white text-3xl flex-row mt-3 justify-center p-3">
-          <Link to={"/products"} onClick={() => setTimeout(() => scrollTo({ y: 0 }), 300)} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
-            <LuShoppingBag className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" />
-            <span className="flex text-sm md:text-2xl">Productos</span>
+        <div className="bg-[#394930] z-50 flex text-white text-3xl flex-row mt-3 justify-center p-20" >
+          <Link to={"/categories"} onClick={() => setTimeout(() => scrollTo({ y: 0 }), 300)} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
+            <LuShoppingBag className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" style={{ color: '#BADF72' }}/>
+            <span className="flex text-sm md:text-2xl" style={{ color: '#BADF72' }}>Productos</span>
           </Link>
           <Link to={"/know"} onClick={() => setTimeout(() => scrollTo({ y: 0 }), 300)} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
-            <LuBadgeCheck className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" />
-            <span className="flex text-sm md:text-2xl">Nosotros</span>
+            <LuBadgeCheck className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" style={{ color: '#BADF72' }}/>
+            <span className="flex text-sm md:text-2xl" style={{ color: '#BADF72' }}>Nosotros</span>
           </Link>
           <Link to={"/news"} onClick={() => setTimeout(() => scrollTo({ y: 0 }), 300)} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
-            <LuNewspaper className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" />
-            <span className="flex text-sm md:text-2xl">Bitácora</span>
+            <LuNewspaper className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" style={{ color: '#BADF72' }}/>
+            <span className="flex text-sm md:text-2xl" style={{ color: '#BADF72' }}>Bitácora</span>
           </Link>
           <Link to={"/contact"} onClick={() => setTimeout(() => scrollTo({ y: 0 }), 300)} className="flex w-3/12 flex-col justify-center align-middle items-center p-4">
-            <LuMessageCircle className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" />
-            <span className="flex text-sm md:text-2xl">Contactanos</span>
+            <LuMessageCircle className="flex text-stone-400 text-[2.5rem] md:text-[4.5rem]" style={{ color: '#BADF72' }}/>
+            <span className="flex text-sm md:text-2xl" style={{ color: '#BADF72' }}>Contáctanos</span>
           </Link>
         </div>
       </div>
@@ -102,26 +102,27 @@ export default function (props?: LoadingProps) {
           </div>
         ))}
       </div>
-      <div className="w-full bg-black py-10 flex justify-center items-center">
-        <p className="text-white text-center text-lg md:text-3xl font-extrabold">
-          EN MADERAS ARAGON TRABAJAMOS CON LA TIERRA Y NO CONTRA ELLA
+      <div className="w-full bg-[#F8F7DD] min-h-96 flex justify-center items-center ">
+        <p className="text-white text-center text-lg md:text-3xl font-extrabold" style={{ color: '#394930' }}>
+          ¡EN MADERAS ARAGÓN TRABAJAMOS CON LA TIERRA Y NO CONTRA ELLA!
         </p>
       </div>
-      <div className="relative z-10 mt-4 flex justify-center">
-        <YoutubeModal videoId="y8UWOLDCO3g" /> {/* Cambia este ID por el de tu video */}
+      
+      <div className="relative z-10 mt-0 py-0 flex justify-center">
+        <YoutubeModal videoId="y8UWOLDCO3g" /> 
       </div>
-      {/* Sección de testimonios - Agregada aquí */}
-      <div className="bg-stone-100 py-1 px-1">
+      
+      <div className="bg-[#394930] py-1 px-1">
         <div className="max-w-7xl mx-auto">
           <TestimonialSlider />
         </div>
       </div>
-      <div className="bg-stone-100 py-1 px-1">
+      <div className="bg-[#F8F7DD] py-1 px-1">
         <div className="max-w-6xl mx-auto">
           <InstagramReelsSlider />
         </div>
       </div>
-      <div className="bg-stone-100 py-1 px-1">
+      <div className="bg-[#F8F7DD] py-1 px-1">
         <div className="max-w-6xl mx-auto">
           <GuaranteeStats />
         </div>

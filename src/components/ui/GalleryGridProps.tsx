@@ -32,8 +32,8 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({
   gridClassName     = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0',
   itemClassName     = 'relative group overflow-hidden h-[700px] cursor-pointer',
   imageClassName    = 'w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out',
-  overlayClassName  = 'absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center p-4 text-white',
-  titleClassName    = 'font-bold text-2xl md:text-3xl',
+  overlayClassName  = 'absolute inset-0 bg-black bg-opacity-30 flex flex-col p-4 text-white',
+  titleClassName    = 'mt-96 font-bold text-2xl md:text-3xl',
   subtitleClassName = 'mt-2 text-lg md:text-xl font-semibold tracking-wide',
 }) => {
   // Si solo hay 2 items, cada uno ocupará 2 de las 4 columnas en lg

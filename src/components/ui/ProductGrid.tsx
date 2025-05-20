@@ -34,10 +34,10 @@ const ProductGrid: React.FC<ProductGridProps> = ({
   cardClassName             = 'relative group overflow-hidden h-[700px] cursor-pointer',
   imageClassName            = 'w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out',
   overlayClassName          = 'absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center p-4 text-white',
-  titleClassName            = 'font-bold text-2xl md:text-3xl',
+  titleClassName            = 'mt-96 font-bold text-2xl md:text-3xl',
   subtitleClassName         = 'mt-2 text-lg md:text-xl font-semibold tracking-wide',
   buttonsContainerClassName = 'mt-4 flex flex-col space-y-2 items-start',
-  buttonClassName           = 'flex w-45 bg-stone-600 h-fit transition-all px-3 py-2 items-center rounded-3xl justify-center text-stone-200 text-lg hover:drop-shadow-md hover:bg-stone-800 hover:text-white',
+  buttonClassName           = 'flex w-45 bg-[#394930] h-fit transition-all px-3 py-2 items-center rounded-3xl justify-center font-semibold  text-stone-200 text-lg hover:drop-shadow-md hover:bg-[#BADF72] hover:text-[#394930]',
 }) => {
   const spanClass = items.length === 2 ? 'lg:col-span-2' : '';
 

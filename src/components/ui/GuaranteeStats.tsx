@@ -1,4 +1,4 @@
-// components/GuaranteeStatsSlider.tsx
+// src/components/GuaranteeStatsSlider.tsx
 
 import React, {
   useState,
@@ -50,15 +50,17 @@ const useCountUp = (end: number, duration = 2, start = false) => {
 interface GuaranteeStatsSliderProps {
   /** Si es false, muestra valores finales y no hace autoplay */
   animate?: boolean;
+  /** Clase CSS a aplicar en vez de 'py-12' */
+  className?: string;
 }
 
 const GuaranteeStatsSlider: React.FC<GuaranteeStatsSliderProps> = ({
-  animate = true
+  animate = true,
+  className
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [hasStarted, setHasStarted] = useState(false);
 
-  // Solo arrancar observer si queremos animar
   useEffect(() => {
     if (!animate) return;
     const obs = new IntersectionObserver(
@@ -74,14 +76,12 @@ const GuaranteeStatsSlider: React.FC<GuaranteeStatsSliderProps> = ({
     return () => obs.disconnect();
   }, [animate]);
 
-  // cuenta en crudo; si animate=false luego lo sobreescribimos
   const rawHectareas  = useCountUp(1000, 2, hasStarted);
   const rawAños       = useCountUp(20,   2, hasStarted);
   const rawPostes     = useCountUp(15000,2, hasStarted);
   const rawSostenible = useCountUp(100,  2, hasStarted);
   const rawClientes   = useCountUp(1200, 2, hasStarted);
 
-  // si no animamos, devolvemos el final inmediatamente
   const hectareas  = animate ? rawHectareas  : 1000;
   const años       = animate ? rawAños       : 20;
   const postes     = animate ? rawPostes     : 15000;
@@ -89,18 +89,17 @@ const GuaranteeStatsSlider: React.FC<GuaranteeStatsSliderProps> = ({
   const clientes   = animate ? rawClientes   : 1200;
 
   const stats: StatSlide[] = [
-    { key:'h', type:'stat', prefix:'+', value:hectareas,  highlight:' hectáreas',          rest:' de cultivos de pino y eucalipto' },
-    { key:'a', type:'stat', prefix:'+', value:años,       highlight:' años',                rest:' de experiencia' },
-    { key:'p', type:'stat', prefix:'+', value:postes,     highlight:' postes mensuales',    rest:' entregados en todo el país' },
-    { key:'s', type:'stat', prefix:'%', value:sostenible, highlight:' sostenible',         rest:' y libre de deforestación' },
-    { key:'c', type:'stat', prefix:'+', value:clientes,   highlight:' clientes satisfechos',rest:' a nivel nacional' },
+    { key:'h', type:'stat', prefix:'+', value:hectareas,  highlight:' Hectáreas',          rest:' de cultivos de pino y eucalipto' },
+    { key:'a', type:'stat', prefix:'+', value:años,       highlight:' Años',                rest:' de experiencia' },
+    { key:'p', type:'stat', prefix:'+', value:postes,     highlight:' Postes mensuales',    rest:' entregados en todo el país' },
+    { key:'s', type:'stat', prefix:'%', value:sostenible, highlight:' Sostenible',         rest:' y libre de deforestación' },
+    { key:'c', type:'stat', prefix:'+', value:clientes,   highlight:' Clientes satisfechos',rest:' a nivel nacional' },
   ];
-  const logos: LogoSlide[] = [ /* …logos si tienes */ ];
+  const logos: LogoSlide[] = [];
   const combined = [...stats, ...logos];
   const extended = [...combined, ...combined];
   const length   = combined.length;
 
-  // cálculo de items por vista
   const getItemsPerView = () => {
     if (window.innerWidth < 640) return 1;
     if (window.innerWidth < 768) return 2;
@@ -114,7 +113,6 @@ const GuaranteeStatsSlider: React.FC<GuaranteeStatsSliderProps> = ({
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
-  // índice de scroll
   const [startIndex, setStartIndex] = useState(0);
   const handleNext = useCallback(() => {
     setStartIndex(i => (i + 1) % length);
@@ -123,7 +121,6 @@ const GuaranteeStatsSlider: React.FC<GuaranteeStatsSliderProps> = ({
     setStartIndex(i => (i - 1 + length) % length);
   }, [length]);
 
-  // autoplay solo si animate=true
   useEffect(() => {
     if (!animate) return;
     const iv = setInterval(handleNext, 10000);
@@ -135,39 +132,38 @@ const GuaranteeStatsSlider: React.FC<GuaranteeStatsSliderProps> = ({
   return (
     <div
       ref={containerRef}
-      style={{ backgroundColor: '#f6f4f2' }}
-      className="py-12"
+      style={{ backgroundColor: '#F8F7DD' }}
+      className={className ?? 'py-12'}
     >
       <div className="relative max-w-6xl mx-auto px-4">
         <button
           onClick={handlePrev}
           aria-label="Anterior"
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow z-20 hover:bg-gray-100 transition"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full z-20 hover:bg-gray-100 transition"
         >
           <FaChevronLeft />
         </button>
         <button
           onClick={handleNext}
           aria-label="Siguiente"
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow z-20 hover:bg-gray-100 transition"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full z-20 hover:bg-gray-100 transition"
         >
           <FaChevronRight />
         </button>
 
         <div className="relative overflow-hidden">
-          {/* degradados laterales */}
           <div
             className="absolute left-0 top-0 h-full w-20 pointer-events-none z-10"
             style={{
               background:
-                'linear-gradient(to right, #f6f4f2 90%, rgba(246,244,242,0))'
+                'linear-gradient(to right, #F8F7DD 90%, rgba(246,244,242,0))'
             }}
           />
           <div
             className="absolute right-0 top-0 h-full w-20 pointer-events-none z-10"
             style={{
               background:
-                'linear-gradient(to left, #f6f4f2 90%, rgba(246,244,242,0))'
+                'linear-gradient(to left, #F8F7DD 90%, rgba(246,244,242,0))'
             }}
           />
 

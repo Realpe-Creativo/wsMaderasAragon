@@ -1,9 +1,14 @@
-// pages/fences.tsx
-
-import React, { useState } from 'react';
+// src/pages/ProductPage.tsx
+import React, { useState, useMemo } from 'react';
+import { useParams } from 'react-router-dom';
+import rawData from '@/data/products.json';
 import ContactUsButton from '@/components/ui/contactUsButton';
 import GuaranteeStatsSlider from '@/components/ui/GuaranteeStats';
 import ThreeDModel from '@/components/ui/ThreeDModel';
+import { Products, Product } from '@/types/Product';
+
+// 1) Casteamos el JSON a nuestro tipo fuerte
+const productsData = (rawData as unknown) as Products;
 
 function shuffleArray<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -14,32 +19,41 @@ function shuffleArray<T>(arr: T[]): T[] {
   return a;
 }
 
-const Fences: React.FC = () => {
-  const collageImages = [
-    '/img/livestock/postesRollizos/fences.jpg',
-    '/img/livestock/postesRollizos/fences.jpg',
-    '/img/livestock/postesRollizos/fences.jpg',
-    '/img/livestock/postesRollizos/fences.jpg',
-    '/img/livestock/postesRollizos/fences.jpg',
-    '/img/livestock/postesRollizos/fences.jpg',
-    '/img/livestock/postesRollizos/fences.jpg',
-    '/img/livestock/postesRollizos/fences.jpg',
-    '/img/livestock/postesRollizos/fences.jpg',
-    '/img/livestock/postesRollizos/fences.jpg',
-    '/img/livestock/postesRollizos/fences.jpg',
-    '/img/livestock/postesRollizos/fences.jpg',
-  ];
+const ProductPage: React.FC = () => {
+  // 2) Tipamos inline el parámetro slug
+  const { slug } = useParams<{ slug: string }>();
 
-  const shuffled = React.useMemo(() => shuffleArray(collageImages), []);
+  if (!slug) {
+    return <div>Falta el parámetro “slug” en la URL.</div>;
+  }
 
+  // 3) TS sabe que productsData[slug] es Product | undefined
+  const product: Product | undefined = productsData[slug];
+  if (!product) {
+    return <div>Producto “{slug}” no encontrado.</div>;
+  }
+
+  // 4) Destructuramos — collageImages ya es string[]
+  const {
+    title,
+    description,
+    collageImages,
+    recommendedUses,
+    additionalText,
+    advantagesImage,
+    whyChoose,
+  } = product;
+
+  // 5) Shuffle de galerías
+  const shuffled = useMemo(() => shuffleArray(collageImages), [collageImages]);
+
+  // 6) Estado y handlers para el modal
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  const handleImageClick = (image: string) => {
-    setSelectedImage(image);
+  const openModal = (img: string) => {
+    setSelectedImage(img);
     setIsModalOpen(true);
   };
-
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedImage(null);
@@ -54,9 +68,8 @@ const Fences: React.FC = () => {
         >
           <div
             className="relative max-w-3xl w-full mx-4"
-            onClick={(e) => e.stopPropagation()}
+            onClick={e => e.stopPropagation()}
           >
-            {/* Botón cerrar (X) */}
             <button
               onClick={closeModal}
               className="absolute top-2 right-2 text-white text-3xl font-bold hover:text-red-400 focus:outline-none"
@@ -64,8 +77,6 @@ const Fences: React.FC = () => {
             >
               &times;
             </button>
-
-            {/* Imagen */}
             <img
               src={selectedImage}
               alt="Imagen ampliada"
@@ -75,25 +86,14 @@ const Fences: React.FC = () => {
         </div>
       )}
 
-      {/* Sección principal */}
       <div className="mt-16 max-w-screen-xl mx-auto px-8 py-14">
-        <h1 className="text-5xl md:text-6xl font-bold text-center mb-12">
-          POSTES ROLLIZOS
-        </h1>
-
+        <h1 className="text-5xl md:text-6xl font-bold text-center mb-12">{title}</h1>
         <div className="flex flex-col md:flex-row items-center gap-12">
-          {/* <img
-            src="/img/livestock/postesRollizos/fences.jpg"
-            alt="Postes Rollizos"
-            className="w-full max-w-lg md:w-3/4 md:max-w-2xl h-auto object-contain rounded-lg shadow-lg"
-          /> */}
           <div className="w-full max-w-lg md:w-3/4 md:max-w-2xl h-[500px] object-contain rounded-lg shadow-lg">
             <ThreeDModel />
           </div>
           <div className="w-full md:w-2/4 text-gray-700 text-lg md:text-xl leading-relaxed">
-            <p className="text-center md:text-left">
-              Los postes rollizos son ideales para cercas rurales de bajo costo...
-            </p>
+            <p className="text-center md:text-left">{description}</p>
             <div className="mt-6 flex justify-center">
               <ContactUsButton>Contáctanos</ContactUsButton>
             </div>
@@ -101,48 +101,46 @@ const Fences: React.FC = () => {
         </div>
       </div>
 
-      {/* Sección: USOS RECOMENDADOS */}
+      {/* USOS RECOMENDADOS */}
       <div className="mt-20 max-w-screen-xl mx-auto px-8">
         <h3 className="text-2xl md:text-3xl font-semibold text-left mb-4">
-          USOS RECOMENDADOS
+          {recommendedUses.title}
         </h3>
         <p className="text-gray-700 text-lg md:text-xl mb-8">
-          Ideales para delimitar pastizales...
+          {recommendedUses.text}
         </p>
       </div>
-
       <div className="w-full h-60 md:h-100 overflow-hidden">
         <img
-          src="/img/livestock/postesRollizos/fences.jpg"
-          alt="Usos recomendados"
+          src={recommendedUses.image}
+          alt={recommendedUses.title}
           className="w-full h-full object-cover"
         />
       </div>
 
+      {/* TEXTO ADICIONAL */}
       <div className="mt-10 max-w-screen-xl mx-auto px-8">
         <p className="text-gray-700 text-lg md:text-xl mb-8 text-center">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Recusandae illum sapiente repellendus hic quasi! Dolor est dignissimos inventore,
-          quia, ipsa quae molestias dolorum tempora quasi culpa sint, eos aliquam labore!
+          {additionalText}
         </p>
       </div>
 
+      {/* VENTAJAS */}
       <div className="w-full h-60 md:h-100 overflow-hidden">
         <img
-          src="/img/livestock/postesRollizos/ventajas_producto.jpg"
+          src={advantagesImage}
           alt="Ventajas"
           className="w-full h-full object-cover"
         />
       </div>
 
+      {/* POR QUÉ ELEGIRNOS */}
       <div className="mt-20 max-w-screen-xl mx-auto px-8">
         <h3 className="text-2xl md:text-3xl font-semibold text-right mb-4">
-          POR QUE ELEGIRNOS?
+          {whyChoose.title}
         </h3>
         <p className="text-gray-700 text-lg md:text-xl mb-8">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Recusandae illum sapiente repellendus hic quasi! Dolor est dignissimos inventore,
-          quia, ipsa quae molestias dolorum tempora quasi culpa sint, eos aliquam labore!
+          {whyChoose.text}
         </p>
       </div>
 
@@ -152,43 +150,40 @@ const Fences: React.FC = () => {
         </div>
       </div>
 
-      {/* COLLAGE */}
+      {/* GALERÍA */}
       <div className="mt-12 max-w-screen-xl mx-auto px-8">
         <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6">
-          GALERÍA DE IMAGENES
+          GALERÍA DE IMÁGENES
         </h3>
-
         <div className="grid grid-cols-3 grid-rows-3 gap-0">
-          {shuffled.slice(0, 10).map((img, index) => (
+          {shuffled.slice(0, 10).map((img, idx) => (
             <div
-              key={index}
-              className={`aspect-square overflow-hidden ${index === 0 ? 'col-span-2' : index === 6 ? 'col-span-2' : ''
-                }`}
+              key={idx}
+              className={`aspect-square overflow-hidden ${
+                idx === 0 ? 'col-span-2' : idx === 6 ? 'col-span-2' : ''
+              }`}
             >
               <img
                 src={img}
-                alt={`Galería ${index + 1}`}
+                alt={`Galería ${idx + 1}`}
                 className="w-full h-full object-cover cursor-pointer"
-                onClick={() => handleImageClick(img)}
+                onClick={() => openModal(img)}
               />
             </div>
           ))}
         </div>
       </div>
 
-      {/* Sección: Cotización */}
+      {/* COTIZACIÓN */}
       <div className="mt-16 mb-28 max-w-screen-md mx-auto px-8 text-center">
-        <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-          ¿QUIERES COTIZAR?
-        </h3>
+        <h3 className="text-2xl md:text-3xl font-semibold mb-4">¿QUIERES COTIZAR?</h3>
         <p className="text-gray-700 text-lg md:text-xl mb-6">
           Contáctanos para recibir una cotización personalizada para tu proyecto.
         </p>
         <ContactUsButton>COTIZAR</ContactUsButton>
       </div>
-
     </>
   );
 };
 
-export default Fences;
+export default ProductPage;

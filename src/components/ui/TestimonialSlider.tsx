@@ -110,39 +110,38 @@ const TestimonialSlider = () => {
     };
   }, []);
 
-  const { name, role, content, avatar } = testimonials[currentIndex];
+  const { name, role, content } = testimonials[currentIndex];
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       {/* Contenedor transparente (sin bg-white, sin sombra, sin bordes) */}
       <div className="relative p-6 md:p-8">
         {/* Título centrado */}
-        <h2 className="text-3xl font-bold mb-8 text-center">
+        <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: "white" }}>
           Lo que dicen nuestros{" "}
-          <span className="text-blue-600">clientes</span>
+          <span className="text-[#BADF72]">clientes</span>
         </h2>
 
         {/* Testimonio con animación de fade */}
         <div
-          className={`flex flex-col md:flex-row items-center gap-8 transition-opacity duration-500 ${
-            isFading ? "opacity-0" : "opacity-100"
-          }`}
+          className={`flex flex-col md:flex-row items-center gap-8 transition-opacity duration-500 ${isFading ? "opacity-0" : "opacity-100"
+            }`}
         >
-          <div className="w-32 h-32 flex-shrink-0 rounded-full overflow-hidden border-4 border-blue-100">
+          {/* <div className="w-32 h-32 flex-shrink-0 rounded-full overflow-hidden border-4 border-blue-100">
             <img
               src={avatar}
               alt={name}
               className="w-full h-full object-cover"
               loading="lazy"
             />
-          </div>
+          </div> */}
           <div className="flex-1">
-            <blockquote className="text-lg md:text-xl italic text-gray-600 mb-6">
+            <blockquote className="text-lg md:text-xl italic text-gray-600 mb-6" style={{ color: "white" }}>
               "{content}"
             </blockquote>
             <div className="text-right">
-              <p className="font-bold text-gray-900">{name}</p>
-              <p className="text-blue-600">{role}</p>
+              <p className="font-bold text-gray-900" style={{ color: "white" }}>{name}</p>
+              <p className="text-blue-600" style={{ color: "white" }}>{role}</p>
             </div>
           </div>
         </div>
@@ -151,7 +150,12 @@ const TestimonialSlider = () => {
         <div className="flex justify-between items-center mt-8">
           <button
             onClick={handlePrev}
-            className="p-2 rounded-full bg-transparent text-blue-600 hover:bg-gray-100 transition"
+            className="
+                        p-2 rounded-full bg-transparent 
+                        text-white               /* color por defecto */
+                        hover:text-[#BADF72]     /* color al estar “parado” (hover) */
+                        transition-colors
+                      "
             aria-label="Testimonio anterior"
           >
             <FaChevronLeft size={20} />
@@ -162,23 +166,24 @@ const TestimonialSlider = () => {
               <button
                 key={index}
                 onClick={() => handleIndicator(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentIndex
-                    ? "bg-blue-600"
-                    : "bg-gray-300 hover:bg-gray-400"
-                }`}
+                className={`w-3 h-3 rounded-full transition-colors ${index === currentIndex
+                  ? "bg-[#BADF72]"
+                  : "bg-white hover:bg-gray-200"
+                  }`}
                 aria-label={`Ir al testimonio ${index + 1}`}
               />
             ))}
           </div>
 
           <button
-            onClick={() => {
-              handleNext();
-              resetAutoPlay();
-            }}
-            className="p-2 rounded-full bg-transparent text-blue-600 hover:bg-gray-100 transition"
-            aria-label="Siguiente testimonio"
+            onClick={handlePrev}
+            className="
+                        p-2 rounded-full bg-transparent 
+                        text-white               /* color por defecto */
+                        hover:text-[#BADF72]     /* color al estar “parado” (hover) */
+                        transition-colors
+                      "
+            aria-label="Testimonio anterior"
           >
             <FaChevronRight size={20} />
           </button>

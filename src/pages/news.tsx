@@ -1,82 +1,109 @@
-import {  useEffect, useState } from "react"
-import { brand } from "../atoms/context"
-import { postService } from "../services/postServices"
-import { useStore } from "@nanostores/react"
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import moment from "moment";
-import { LuArrowBigLeft } from "react-icons/lu";
 
-export interface PostsProps {
+export interface NewsItem {
+  id: string;
+  title: string;
+  created_at: string;
+  imageUrl: string;
+  body: string;
+  images: string[];
 }
 
-export default function  (props?: PostsProps) {
-  props
+export default function NewsList() {
+  // JSON interno con body e imágenes de apoyo
+  const newsData: NewsItem[] = [
+    {
+      id: "1",
+      title: "Lanzamiento de nuevo producto",
+      created_at: "2025-05-01",
+      imageUrl: "/img/news/news.png",
+      body: `<p>Hoy hemos presentado nuestro producto estrella con funcionalidades de última generación.</p>
+             <p>Entre otras novedades, incluye integración con IA y mejoras de rendimiento.</p>`,
+      images: [
+        "/img/news/news.png",
+        "/img/news/news.png",
+        "/img/news/news.png"
+      ]
+    },
+    {
+      id: "2",
+      title: "Actualización de seguridad",
+      created_at: "2025-04-28",
+      imageUrl: "/img/news/news.png",
+      body: `<p>Hemos parcheado varias vulnerabilidades críticas en nuestra plataforma.</p>
+             <ul><li>CVE-2025-1234</li><li>CVE-2025-5678</li></ul>`,
+      images: ["/images/sec1.jpg", "/images/sec2.jpg"]
+    },
+    {
+      id: "3",
+      title: "Actualización de seguridad",
+      created_at: "2025-04-28",
+      imageUrl: "/img/news/news.png",
+      body: `<p>Hemos parcheado varias vulnerabilidades críticas en nuestra plataforma.</p>
+             <ul><li>CVE-2025-1234</li><li>CVE-2025-5678</li></ul>`,
+      images: ["/images/sec1.jpg", "/images/sec2.jpg"]
+    },
+    {
+      id: "4",
+      title: "Actualización de seguridad",
+      created_at: "2025-04-28",
+      imageUrl: "/img/news/news.png",
+      body: `<p>Hemos parcheado varias vulnerabilidades críticas en nuestra plataforma.</p>
+             <ul><li>CVE-2025-1234</li><li>CVE-2025-5678</li></ul>`,
+      images: ["/images/sec1.jpg", "/images/sec2.jpg"]
+    },
+    {
+      id: "5",
+      title: "Actualización de seguridad",
+      created_at: "2025-04-28",
+      imageUrl: "/img/news/news.png",
+      body: `<p>Hemos parcheado varias vulnerabilidades críticas en nuestra plataforma.</p>
+             <ul><li>CVE-2025-1234</li><li>CVE-2025-5678</li></ul>`,
+      images: ["/images/sec1.jpg", "/images/sec2.jpg"]
+    },
+  ];
 
-  const $brand = useStore(brand)
-  const [posts, setPosts] = useState([])
-  const [post, setPost] = useState<any>(null)
-
-  const init = async () => {
-    const response = await postService.list({brand:  $brand._id, status: "public", limit:25})
-    if(response.code === 200){
-      setPosts(response.list)
-    }
-  }
-
-  useEffect(()=>{
-    init()
-  }, [])
+  const [posts] = useState<NewsItem[]>(newsData);
 
   return (
     <div className="flex flex-col items-center mt-32 mb-20">
-      <div className="flex p-4 justify-center w-full bg-stone-700 flex-row">
-        <div className="flex w-fit content-center">
-          <span className="text-5xl my-4 text-white font-title-bold">Noticias y Articulos</span>
-        </div>
+      <div className="w-full bg-stone-700 py-4 flex justify-center">
+        <span className="text-5xl text-white font-title-bold">
+          Noticias y Anuncios
+        </span>
       </div>
-      {
-        !post ?
-          <div className="flex flex-col w-9/12 p-6">
-            {
-              posts.map((post:any, index:number)=>{
-                return (
-                  <div key={index} onClick={()=>setPost(post)} className="flex rounded-3xl border-[1pt] border-solid border-stone-200 hover:border-stone-500 hover:shadow-md mb-3 cursor-pointer flex-col p-4 w-full">
-                    <div className="w-full flex flex-row justify-between">
-                      <div className="w-fit">
-                        <span className="text-2xl font-title-bold">{post.title}</span>
-                      </div>
-                      <div className="flex text-start text-sm text-stone-500">
-                        {moment.utc(post.created_at).format('DD/MM/YYYY')}
-                      </div>
-                      </div>
-                      <div className="flex">
-                        <div className="flex text-start min-h-14">
-                          <div  dangerouslySetInnerHTML={{__html: post.body}} className="line-clamp-3 text-start">
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                )
-              })
-            }
-          </div>
-        : 
-          <div className="flex my-3 flex-col w-9/12 p-6">
-            <span onClick={()=>{setPost(null)}} className="flex absolute top-32 left-2 hover mx-1 cursor-pointer items-center justify-center text-stone-700 bg-white hover:bg-stone-600 hover:text-stone-50 p-2 rounded-full mt-3">
-              <LuArrowBigLeft className='inline mx-1'/>
-            </span>
-            <div className="flex">
-              <span className="flex text-4xl text-stone-700 font-title-bold">{post?.title}</span>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-9/12 px-4 mt-8">
+        {posts.map((post) => (
+          <Link
+            key={post.id}
+            to={`/news/newsDetail/${post.id}`}
+            state={{
+              title: post.title,
+              created_at: post.created_at,
+              body: post.body,
+              images: post.images
+            }}
+            className="block bg-white rounded-3xl border border-stone-200 hover:border-stone-500 hover:shadow-md overflow-hidden"
+          >
+            <img
+              src={post.imageUrl}
+              alt={post.title}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-2xl font-title-bold mb-2">
+                {post.title}
+              </h3>
+              <p className="text-sm text-stone-500">
+                {moment.utc(post.created_at).format("DD/MM/YYYY")}
+              </p>
             </div>
-            <div className="flex mb-4 text-start text-sm text-stone-500">
-              {moment.utc(post.created_at).format('DD/MM/YYYY')}
-            </div>
-            <div className="flex">
-              <div  dangerouslySetInnerHTML={{__html: post.body}} className="text-start">
-              </div>
-            </div>
-          </div>
-      }
-      
+          </Link>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
