@@ -2,7 +2,7 @@
 
 import i18n from "@/util/i18n"
 import { ColumnDef } from "@tanstack/react-table"
-import { LuArrowUpDown, LuMoreHorizontal } from "react-icons/lu"  
+import { LuArrowUpDown, LuMoveHorizontal } from "react-icons/lu"  
 
 export type Order = {
   _id: string
@@ -75,7 +75,7 @@ export const columns: ColumnDef<Order>[] = [
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="h-8 w-8 p-0">
                 <span className="sr-only">Open menu</span>
-                <LuMoreHorizontal className="h-4 w-4" />
+                <LuMoveHorizontal className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
