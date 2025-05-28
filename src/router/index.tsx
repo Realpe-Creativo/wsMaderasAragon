@@ -103,7 +103,7 @@ const router = createBrowserRouter([
   {
     path: "/categories",
     element: 
-      <PublicLayout tab="auth">
+      <PublicLayout tab="categories">
         <Suspense fallback={<div className="flex h-full">Loading...</div>}>
           <Categories/>
         </Suspense>
@@ -112,7 +112,7 @@ const router = createBrowserRouter([
   {
     path: "/categories/livestock",
     element: 
-      <PublicLayout tab="auth">
+      <PublicLayout tab="categories">
         <Suspense fallback={<div className="flex h-full">Loading...</div>}>
           <Livestock/>
         </Suspense>

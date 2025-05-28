@@ -9,7 +9,6 @@ import { MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css'
 
 import i18n from './util/i18n';
-import { LuConstruction } from 'react-icons/lu';
 
 (async () => {
   await i18n.init({

@@ -27,7 +27,7 @@ export default function  (props: PublicLayoutProps) {
   }, [])
 
   return(
-    <div className='relative bg-stone-200'>
+    <div className='relative bg-stone-200 w-full overflow-x-hidden'>
       <Navbar tab={props?.tab}/>
       {props.children}
       <>

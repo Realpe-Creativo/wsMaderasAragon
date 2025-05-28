@@ -31,7 +31,6 @@ const ProductPage: React.FC = () => {
     return <div>Producto “{slug}” no encontrado.</div>;
   }
 
-  // Desestructuramos incluyendo el nuevo campo modelPath
   const {
     title,
     description,
@@ -46,6 +45,19 @@ const ProductPage: React.FC = () => {
   } = product;
 
   const shuffled = useMemo(() => shuffleArray(collageImages), [collageImages]);
+
+  const columns = 3;
+
+  const imagesWithSpan = useMemo(() => {
+    const base = shuffled.map((src, idx) => ({
+      src,
+      span: idx === 0 || idx === 6 ? 2 : 1,
+    }));
+    const sumSpans = base.reduce((sum, img) => sum + img.span, 0);
+    const missingSpans = (columns - (sumSpans % columns)) % columns;
+    const padding = base.slice(0, missingSpans).map(img => ({ src: img.src, span: 1 }));
+    return [...base, ...padding];
+  }, [shuffled, columns]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -85,8 +97,8 @@ const ProductPage: React.FC = () => {
         </div>
       )}
 
-      <div className="mt-16 bg-[#F8F7DD] w-full">
-        <div className="max-w-screen-xl mx-auto px-8 py-14">
+      <div className="mt-16 bg-white w-full">
+        <div className="max-w-screen-xl mx-auto px-8 py-28">
           <h1 className="text-5xl md:text-6xl font-bold text-center mb-12" style={{ color: '#394930' }}>{title}</h1>
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full max-w-lg md:w-3/4 md:max-w-2xl h-[500px] object-contain rounded-lg shadow-lg">
@@ -265,21 +277,28 @@ const ProductPage: React.FC = () => {
       {/* GALERÍA */}
       <div className="bg-[#394930] w-full">
         <div className="max-w-screen-xl mx-auto px-8 py-14">
-          <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6" style={{ color: "white" }}>
+          <h3
+            className="text-2xl md:text-3xl font-semibold text-center mb-6"
+            style={{ color: "white" }}
+          >
             GALERÍA DE IMÁGENES
           </h3>
-          <div className="grid grid-cols-3 grid-rows-3 gap-0">
-            {shuffled.slice(0, 10).map((img, idx) => (
+          <div
+            className="grid gap-0 grid-flow-row-dense"
+            style={{
+              gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
+            }}
+          >
+            {imagesWithSpan.map(({ src, span }, idx) => (
               <div
                 key={idx}
-                className={`aspect-square overflow-hidden ${idx === 0 ? 'col-span-2' : idx === 6 ? 'col-span-2' : ''
-                  }`}
+                className={`aspect-square overflow-hidden ${span === 2 ? "col-span-2" : ""}`}
               >
                 <img
-                  src={img}
+                  src={src}
                   alt={`Galería ${idx + 1}`}
                   className="w-full h-full object-cover cursor-pointer"
-                  onClick={() => openModal(img)}
+                  onClick={() => openModal(src)}
                 />
               </div>
             ))}
