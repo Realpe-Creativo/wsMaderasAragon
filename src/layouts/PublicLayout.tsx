@@ -32,7 +32,7 @@ export default function  (props: PublicLayoutProps) {
       {props.children}
       <>
         <a target='_blank' className='flex bg-green-500 animate-pulse hover:animate-none transition-all text-white text-3x2 p-6 rounded-full fixed bottom-4 right-4 z-50' href='https://wa.me/573125085185'>
-          <ImWhatsapp className='flex text-5xl' />
+          <ImWhatsapp className='flex text-4xl' />
         </a>
       </>
       {props.tab !== 'know' && (
