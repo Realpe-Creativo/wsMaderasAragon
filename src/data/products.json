@@ -3,8 +3,8 @@
         "slug": "posteAserrado",
         "title": "POSTES ASERRADOS",
         "description": "Nuestros postes aserrados son una opción más económica para alambrados rurales. No están inmunizados, pero su corte recto permite una instalación rápida y estética. Disponibles en dos presentaciones: 3 filos (más rústico) y 4 caras cuadrado (más parejo y simétrico).",
-        "modelPath": "/models/blue_whale.glb",
-        "mainImage": "/img/livestock/postesRollizos/fences.jpg",
+        "modelPath": null,
+        "mainImage": "/img/products/postes_aserrados/postes_aserrado05.jpg",
         "collageImages": [
             "/img/products/postes_aserrados/postes_aserrado01.jpg",
             "/img/products/postes_aserrados/postes_aserrado02.jpg",
@@ -68,7 +68,7 @@
         "title": "POSTES CILINDRADOS",
         "description": "Los postes cilindrados son postes torneados con un diámetro uniforme, tratados con inmunización al vacío-presión para resistir el clima, la humedad y el paso del tiempo. Son ideales para cercas duraderas, alambrados fuertes y templetes en zonas ganaderas.",
         "modelPath": null,
-        "mainImage": "/img/livestock/postesRollizos/fences.jpg",
+        "mainImage": "/img/products/postes_cilindrados/postes_cilindrados03.jpg",
         "collageImages": [
             "/img/products/postes_cilindrados/postes_cilindrados01.jpg",
             "/img/products/postes_cilindrados/postes_cilindrados02.jpg",
@@ -341,20 +341,13 @@
         "title": "ACABADOS EN MADERA PERSONALIZADA",
         "description": "Ofrecemos madera para todo tipo de aplicaciones personalizadas: desde acabados decorativos, hasta usos estructurales o funcionales que requieren un corte limpio, uniforme y con mejor apariencia.<br><br> Cada pieza es trabajada bajo pedido, de acuerdo con las dimensiones y necesidades específicas de tu proyecto. No es un producto estándar, sino un servicio de valor agregado que incluye asesoría técnica directa.",
         "modelPath": null,
-        "mainImage": "/img/livestock/postesRollizos/fences.jpg",
+        "mainImage": "/img/products/acabados_madera/acabados_madera01.jpg",
         "collageImages": [
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg"
+            "/img/products/acabados_madera/acabados_madera01.jpg",
+            "/img/products/acabados_madera/acabados_madera02.jpg",
+            "/img/products/acabados_madera/acabados_madera03.jpg",
+            "/img/products/acabados_madera/acabados_madera04.jpg",
+            "/img/products/acabados_madera/acabados_madera05.jpg"
         ],
         "recommendedUses": {
             "title": "USOS RECOMENDADOS",
@@ -387,20 +380,13 @@
         "title": "COLUMNAS Y VIGAS EN MADERA CILINDRADA O ROLLIZA",
         "description": "Columnas y vigas elaboradas en madera de pino o eucalipto, disponibles tanto en presentación cilindrada (torneada) como rolliza (natural descortezada). Según el uso y diseño, puedes elegir entre madera inmunizada para mayor durabilidad, o natural, si buscas una opción más económica o estética rústica. <br><br> Disponibles en diámetros desde 8 hasta 20 cm y longitudes de hasta 9 metros.",
         "modelPath": null,
-        "mainImage": "/img/livestock/postesRollizos/fences.jpg",
+        "mainImage": "/img/products/columnas_vigas/columnas_vigas01.jpg",
         "collageImages": [
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg"
+            "/img/products/columnas_vigas/columnas_vigas01.jpg",
+            "/img/products/columnas_vigas/columnas_vigas02.jpg",
+            "/img/products/columnas_vigas/columnas_vigas03.jpg",
+            "/img/products/columnas_vigas/columnas_vigas04.jpg",
+            "/img/products/columnas_vigas/columnas_vigas05.jpg"
         ],
         "recommendedUses": {
             "title": "USOS RECOMENDADOS",

@@ -6,7 +6,7 @@ import {
   LuFacebook,
   LuMenu,
   LuShoppingBag,
-  LuInfo,
+  // LuInfo,
   LuNewspaper,
   LuMessageCircle,
 } from "react-icons/lu";
@@ -95,7 +95,7 @@ const menuItems: MenuItem[] = [
       { key: "lenna", label: "Leña", to: "/products/lenna" },
     ],
   },
-  { key: "know", label: "Conócenos", Icon: LuInfo, to: "/know" },
+  // { key: "know", label: "Conócenos", Icon: LuInfo, to: "/know" },
   { key: "news", label: "Bitácora", Icon: LuNewspaper, to: "/news" },
   { key: "contact", label: "Contáctanos", Icon: LuMessageCircle, to: "/contact" },
 ];

@@ -108,7 +108,7 @@ const ProductPage: React.FC = () => {
                 <img
                   src={mainImage}
                   alt={title}
-                  className="w-full h-full"
+                  className="w-full h-full object-contain rounded-lg shadow-lg"
                 />
               )}
             </div>
