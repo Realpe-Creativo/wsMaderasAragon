@@ -86,6 +86,17 @@ export default function InstagramReelsSlider() {
     touchStartX.current = null;
   };
 
+  // Cerrar modal con tecla Escape
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setModalReel(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   return (
     <div className="max-w-screen-xl mx-auto px-4 py-12">
       <h2 className="text-2xl md:text-3xl font-bold text-center text-stone-800 mb-6">
@@ -159,11 +170,17 @@ export default function InstagramReelsSlider() {
 
       {/* Modal */}
       {modalReel && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-          <div className="relative w-[90%] md:w-[60%] lg:w-[50%]">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+          onClick={() => setModalReel(null)}
+        >
+          <div
+            className="relative w-full max-w-[400px] aspect-video mx-auto bg-black rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={() => setModalReel(null)}
-              className="absolute top-2 right-2 text-white text-3xl"
+              className="absolute top-2 right-2 text-white text-3xl z-10"
               aria-label="Cerrar modal"
             >
               &times;
@@ -172,7 +189,7 @@ export default function InstagramReelsSlider() {
               src={modalReel.video}
               controls
               autoPlay
-              className="w-full h-auto rounded-lg"
+              className="w-full h-full rounded-lg object-cover"
             />
           </div>
         </div>

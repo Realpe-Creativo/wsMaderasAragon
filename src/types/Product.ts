@@ -10,6 +10,8 @@ export interface Product {
   title: string;
   modelPath: string;
   mainImage: string;
+  cameraPosition?: [number, number, number];
+  lookAt?: [number, number, number];
   description: string;
   collageImages: string[];
   recommendedUses: {
@@ -24,7 +26,7 @@ export interface Product {
     columns: number;
   };
   additionalText: string;
-  advantages: string[]; 
+  advantages: string[];
   whyChoose: {
     title: string;
     text: string;

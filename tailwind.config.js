@@ -1,6 +1,7 @@
 // tailwind.config.js (con "type": "module")
 import flowbite from 'flowbite-react/tailwind';
 import aspectRatio from '@tailwindcss/aspect-ratio';
+import typography from '@tailwindcss/typography';
 
 export default {
   content: [
@@ -14,5 +15,6 @@ export default {
   plugins: [
     flowbite.plugin(),
     aspectRatio,
+    typography,
   ],
 };

@@ -64,7 +64,7 @@ const Contact: React.FC<ContactProps> = () => {
             </p>
             <p className="text-left flex items-center text-sm sm:text-base">
               <span className="mr-2">📞</span>
-              <span className="font-semibold">WhatsApp: +57 300 XXX XXXX</span>
+              <span className="font-semibold">WhatsApp: +57 315 508 5185</span>
             </p>
           </div>
         </div>
@@ -75,7 +75,7 @@ const Contact: React.FC<ContactProps> = () => {
           <div>
             <p className="mb-2 text-left flex items-center text-sm sm:text-base">
               <span className="mr-2">📧</span>
-              <span className="font-semibold">contacto@maderasaragon.com</span>
+              <span className="font-semibold">maderasaragonsas@yahoo.es</span>
             </p>
             <p className="text-left flex items-center text-sm sm:text-base">
               <span className="mr-2">🕒</span>

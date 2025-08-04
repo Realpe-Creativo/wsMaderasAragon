@@ -2,9 +2,19 @@
     "posteAserrado": {
         "slug": "posteAserrado",
         "title": "POSTES ASERRADOS",
-        "description": "Nuestros postes aserrados son una opción más económica para alambrados rurales. No están inmunizados, pero su corte recto permite una instalación rápida y estética. Disponibles en dos presentaciones: 3 filos (más rústico) y 4 caras cuadrado (más parejo y simétrico).",
-        "modelPath": null,
+        "description": "Nuestros postes aserrados son una opción un poco más económica para alambrados rurales. Su corte recto permite una instalación rápida y estética. Disponibles en dos presentaciones: 3 filos (más rústico) y 4 caras cuadrado (más parejo y simétrico).",
         "mainImage": "/img/products/postes_aserrados/postes_aserrado05.jpg",
+        "modelPath": null,    
+        "cameraPosition": [
+            30,
+            10,
+            10
+        ],
+        "lookAt": [
+            0,
+            10,
+            0
+        ],
         "collageImages": [
             "/img/products/postes_aserrados/postes_aserrado01.jpg",
             "/img/products/postes_aserrados/postes_aserrado02.jpg",
@@ -52,15 +62,15 @@
         },
         "additionalText": null,
         "advantages": [
-            "Más económicos que los postes inmunizados",
-            "Corte limpio y fácil de trabajar",
-            "Ideales para cercas de mediana duración",
-            "Disponibles para entrega rápida",
-            "Buena resistencia mecánica natural del eucalipto"
+            "Madera inmunizada con garantía de 20 años",
+            "Alta durabilidad y resistencia estructural",
+            "Fácil de cortar, manejar e instalar",
+            "Disponibilidad inmediata para entrega",
+            "Ideal para cercas, corrales y cerramientos agrícolas"
         ],
         "whyChoose": {
             "title": "POR QUE ELEGIRNOS?",
-            "text": "Porque sabemos que no todos los terrenos ni presupuestos son iguales. Este tipo de poste permite cercar bien, rápido y sin gastar de más. Además, si en el futuro quieres mejorarlos, los puedes reemplazar fácilmente por versiones inmunizadas."
+            "text": "Porque ofrecemos madera inmunizada con garantía de 20 años, lista para resistir el paso del tiempo y las condiciones más exigentes. Cercar con nosotros es invertir en calidad, respaldo y tranquilidad desde el primer día."
         }
     },
     "posteCilindrado": {
@@ -107,7 +117,7 @@
         "characteristics": {
             "specs": [
                 "<strong>Tipo de madera:</strong> pino o eucalipto (según disponibilidad)",
-                "<strong>Tratamiento:</strong> sin inmunizar (natural descascarado)",
+                "<strong>Tratamiento:</strong> Inmunizado con sales CCA, protección garantizada por más de 20 años contra hongos, insectos y humedad.",
                 "<strong>Acabado:</strong> rústico, descortezado manual"
             ],
             "columns": 3
@@ -128,7 +138,7 @@
     "posteRollizo": {
         "slug": "posteRollizo",
         "title": "POSTES ROLLIZOS",
-        "description": "Los postes rollizos son ideales para cercas rurales de bajo costo. Se trata de postes sin inmunizar, solo descascarados, con apariencia rústica y buena resistencia estructural para usos de corta y mediana duración.",
+        "description": "Los postes rollizos son ideales para cercas rurales, ganaderas o agrícolas. Tienen un acabado rústico y natural, y están inmunizados para garantizar alta durabilidad y resistencia estructural. Son una solución eficiente y confiable para usos de corta, mediana y larga duración.",
         "modelPath": null,
         "mainImage": "/img/livestock/postesRollizos/fences.jpg",
         "collageImages": [
@@ -167,8 +177,8 @@
         "characteristics": {
             "specs": [
                 "<strong>Tipo de madera:</strong> Pino o eucalipto",
-                "<strong>Tratamiento:</strong>  Sin inmunizar (natural descascarado)",
-                "<strong>Acabado:</strong> Rústico, descortezado manual"
+                "<strong>Tratamiento:</strong>  Inmunizado con sales CCA, protección garantizada por más de 20 años",
+                "<strong>Acabado:</strong> Cilindrado y Aserrado"
             ],
             "columns": 3
         },
@@ -207,25 +217,22 @@
         ],
         "recommendedUses": {
             "title": "USOS RECOMENDADOS",
-            "text": "Nuestras varetas de eucalipto son ideales para barandas y pasamanos en corrales, refuerzo de cercas ganaderas, cerramientos móviles o divisiones internas, elementos estructurales ligeros en potreros y construcciones rústicas campestres.",
+            "text": "Nuestras varetas de eucalipto inmunizado son ideales para barandas, pasamanos, refuerzo de cercas ganaderas, cerramientos móviles, divisiones internas y estructuras ligeras en potreros o construcciones rústicas campestres.",
             "specs": [
                 "<strong>Tipo de Vareta</strong>",
                 "<strong>Tratamiento</strong>",
-                "<strong>Diámetro</strong>",
-                "<strong>Largo</strong>",
+                "<strong>Medidas disponibles</strong>",
                 "<strong>Uso recomendado</strong>",
-                "<strong>Natural<strong>",
-                "Sin inmunizar",
-                "8-20 cm",
-                "1-9 m",
-                "Cercas y estructuras de bajo presupuesto",
-                "<strong>Inmunizada<strong>",
-                "Vacio - presión",
-                "8-20 cm",
-                "1-9 m",
-                "Proyectos ganaderos de larga duración"
+                "<strong>Redonda (descortezada)<strong>",
+                "Inmunización por vacío-presión",
+                "Diámetro: 8–20cm <br> Largo: 1–9 m",
+                "Cercas, pasamanos, estructuras rurales",
+                "<strong>Cuadrada<strong>",
+                "Inmunización por vacío-presión",
+                "4 cm espesor 12 cm x 3 m",
+                "Refuerzo de estructuras, acabados, barandas"
             ],
-            "columns": 5
+            "columns": 4
         },
         "characteristics": {
             "specs": [
@@ -306,10 +313,7 @@
                         "Mayor soporte",
                         "15 x 15 cm",
                         "2.5 – 3 m",
-                        "Bases principales",
-                        "20 x 20 cm",
-                        "2.5 – 3 m",
-                        "Postes estructurales o de entrada"
+                        "Bases principales"
                     ],
                     "columns": 3
                 }
@@ -317,9 +321,9 @@
         },
         "characteristics": {
             "specs": [
-                "<strong>Tipo de madera:</strong> Eucalipto",
-                "<strong>Tratamiento:</strong> inmunizado o natural (según pedido)",
-                "<strong>Acabado:</strong> corte aserrado"
+                "<strong>Tipo de madera:</strong> Pino o eucalipto",
+                "<strong>Tratamiento:</strong> Inmunización por vacío-presión (garantía de 20 años)",
+                "<strong>Acabado:</strong> Cilindrado o aserrado"
             ],
             "columns": 3
         },
@@ -378,7 +382,7 @@
     "columnas&vigas": {
         "slug": "columnas&vigas",
         "title": "COLUMNAS Y VIGAS EN MADERA CILINDRADA O ROLLIZA",
-        "description": "Columnas y vigas elaboradas en madera de pino o eucalipto, disponibles tanto en presentación cilindrada (torneada) como rolliza (natural descortezada). Según el uso y diseño, puedes elegir entre madera inmunizada para mayor durabilidad, o natural, si buscas una opción más económica o estética rústica. <br><br> Disponibles en diámetros desde 8 hasta 20 cm y longitudes de hasta 9 metros.",
+        "description": "Columnas y vigas elaboradas en madera de pino o eucalipto, disponibles tanto en presentación cilindrada (torneada) como rolliza (rústica descortezada). Toda nuestra madera es inmunizada para máxima durabilidad estructural, ideal para construcciones rurales, techos, pérgolas o estructuras personalizadas. <br><br> <strong>Disponibles en diámetros de 12 a 20 cm y longitudes de 1 a 8 metros.</strong>",
         "modelPath": null,
         "mainImage": "/img/products/columnas_vigas/columnas_vigas01.jpg",
         "collageImages": [
@@ -403,17 +407,14 @@
                 "Vigas intermedias o techos medianos",
                 "12 cm",
                 "Hasta 9 m",
-                "Vigas principales o cubiertas amplias",
-                "14–20 cm",
-                "Bajo pedido",
-                "Columnas estructurales o entradas"
+                "Vigas principales o cubiertas amplias"
             ],
             "columns": 3
         },
         "characteristics": {
             "specs": [
-                "<strong>Presentación:</strong> Cilindrada (torneada) o Rolliza (natural)",
-                "<strong>Tratamiento:</strong> Inmunizada o sin inmunizar (natural)",
+                "<strong>Presentación:</strong> Cilindrada (torneada) o Rolliza (descortezada)",
+                "<strong>Tratamiento:</strong> Solo inmunizada (con garantía de 20 años)",
                 "<strong>Madera:</strong> Pino o eucalipto",
                 "<strong>Acabado:</strong>  Extremos planos o en punta (según necesidad)"
             ],
@@ -422,8 +423,8 @@
         "additionalText": null,
         "advantages": [
             "Opciones adaptadas a cada tipo de estructura",
-            "Largos especiales de hasta 9 metros",
-            "Madera legal, cultivada y con garantía (si es inmunizada)",
+            "Largos especiales de hasta 8 metros",
+            "Madera legal, cultivada e inmunizada con garantía de 20 años",
             "Estética rústica o acabada según el estilo del proyecto",
             "Asesoría personalizada en elección de tipo, tratamiento y medidas"
         ],
@@ -435,7 +436,7 @@
     "jardineria": {
         "slug": "jardineria",
         "title": "POSTES CILINDRADOS PARA JARDINERÍA Y CERCAMIENTO",
-        "description": "Ofrecemos postes cilindrados en madera inmunizada o natural, con un acabado uniforme y presentaciones adaptadas tanto para cerramientos funcionales como para proyectos de jardinería decorativa. <br><br> Puedes elegir las dimensiones según el uso, ya que fabricamos desde postes pequeños de 0.5 m hasta postes robustos de 2.1 m y 20 cm de diámetro. Todo el proceso se puede personalizar según tu necesidad.",
+        "description": "Ofrecemos postes cilindrados en madera inmunizada, con acabado uniforme y presentaciones adaptadas tanto para cerramientos funcionales como para proyectos de jardinería decorativa. <br><br> Puedes elegir las dimensiones según el uso, ya que fabricamos postes desde 1 m hasta 2.5 m de largo, con diámetros entre 8 y 12 cm. Son livianos, versátiles y resistentes, ideales para cercas de jardines, divisiones campestres, delimitación de espacios y detalles paisajísticos. Todo el proceso se puede personalizar según tu necesidad.",
         "modelPath": null,
         "mainImage": "/img/livestock/postesRollizos/fences.jpg",
         "collageImages": [
@@ -457,23 +458,17 @@
             "text": "Nuestros postes cilindrados para jardinería y cerramiento son perfectos para cercas eléctricas decorativas o funcionales, delimitación de jardines y huertas, señalización en caminos campestres, marcos para entradas o cercas vivas, y encajan de maravilla en proyectos de bio-construcción o turismo rural.",
             "specs": [
                 "<strong>Diámetro</strong>",
-                "<strong>Largo</strong>",
+                "<strong>Largo recomendado</strong>",
                 "<strong>Uso sugerido</strong>",
                 "8 cm",
-                "0.5 m",
-                "Cercas decorativas o señalización",
-                "8 cm",
-                "1.5 m",
-                "Cerramientos bajos o huertas",
-                "8 cm",
+                "1 m – 1.5 m",
+                "Cercas decorativas, señalización o huertas",
+                "8 – 10 cm",
                 "2.1 m",
-                "Cercas eléctricas estándar",
-                "10 cm",
-                "2.1 m",
-                "Alambrados ligeros o cercas delimitantes",
-                "Hasta 20 cm",
-                "2.1 m",
-                "Entradas, portones, o cercas de impacto visual"
+                "Cercas eléctricas estándar o cerramientos funcionales",
+                "10 – 12 cm",
+                "2.5 m",
+                "Entradas, portones o cercas de mayor resistencia"
             ],
             "columns": 3
         },
@@ -496,13 +491,13 @@
         ],
         "whyChoose": {
             "title": "POR QUE ELEGIRNOS?",
-            "text": "Porque entendemos que no todo es ganadería: a veces necesitas cercar, decorar o diseñar con madera que se vea bien y que dure. Nosotros te ayudamos a escoger el poste correcto, en la medida perfecta para tu idea."
+            "text": "Porque entendemos que no todo es trabajo: a veces se trata de disfrutar el entorno, de embellecer un espacio o de crear algo que se vea bien y dure en el tiempo. Te ayudamos a escoger el poste ideal, en la medida perfecta para tu proyecto."
         }
     },
     "lenna": {
         "slug": "lenna",
-        "title": "LEÑA NATURAL EN CAJAS DE 10 KG",
-        "description": "Vendemos leña seca, empacada en cajas de 10 kg, lista para uso inmediato en cocinas, hornos de leña, fogones campestres o chimeneas. Proveniente de nuestros cultivos responsables, sin residuos tóxicos ni químicos añadidos. <br><br> Puedes elegir entre leña de pino o eucalipto, según disponibilidad y preferencia. Cada caja es manejable, fácil de transportar y almacenar.",
+        "title": "LEÑA NATURAL EN CAJAS DE 10 LB",
+        "description": "Vendemos leña seca de eucalipto, empacada en cajas de 10 libras, lista para uso inmediato en cocinas, hornos de leña, fogones, fogatas o chimeneas. Proviene de cultivos sostenibles y responsables, sin químicos añadidos ni residuos tóxicos. <br><br> El empaque es práctico, manejable y fácil de almacenar. Ideal para uso doméstico, turístico o recreativo. Cada caja contiene piezas de tamaño variado, listas para encender.",
         "modelPath": null,
         "mainImage": "/img/livestock/postesRollizos/fences.jpg",
         "collageImages": [
@@ -521,9 +516,9 @@
         ],
         "recommendedUses": {
             "title": "USOS RECOMENDADOS",
-            "text": "Nuestra leña en cajas de 10 kg es perfecta para cocinas y fogones de leña, chimeneas y estufas a leña, hornos de pan o pizza, ambientes de fincas turísticas o glamping, así como para asados, parrilladas y eventos rurales.",
+            "text": "Nuestra leña en cajas de 10 lb es perfecta para fogones, cocinas de leña, chimeneas, estufas, hornos de pan o pizza, fogatas, asados y eventos al aire libre en fincas, glamping o turismo rural.",
             "specs": [
-                "<strong>Presentación:</strong> Caja de 10 kg",
+                "<strong>Presentación:</strong> Caja de 10 lb",
                 "<strong>Tipo de madera:</strong> Pino o eucalipto",
                 "<strong>Estado:</strong> Seca, lista para encender",
                 "<strong>Tamaño de piezas:</strong> Variado, según el corte",
@@ -537,7 +532,7 @@
             "Ideal para uso alimenticio y doméstico",
             "Fácil de transportar y almacenar",
             "Seca al punto justo para encendido rápido",
-            "Cultivada con prácticas sostenibles"
+            "Producción sostenible, sin químicos ni aditivos"
         ],
         "whyChoose": {
             "title": "POR QUE ELEGIRNOS?",

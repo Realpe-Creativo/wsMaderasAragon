@@ -35,6 +35,8 @@ const ProductPage: React.FC = () => {
     title,
     description,
     modelPath,
+    cameraPosition,
+    lookAt,
     mainImage,
     collageImages,
     recommendedUses,
@@ -103,7 +105,11 @@ const ProductPage: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full max-w-lg md:w-3/4 md:max-w-2xl h-[500px] object-contain rounded-lg shadow-lg">
               {modelPath ? (
-                <ThreeDModel modelPath={modelPath} />
+                <ThreeDModel
+                  modelPath={modelPath}
+                  cameraPosition={cameraPosition}
+                  lookAt={lookAt}
+                />
               ) : (
                 <img
                   src={mainImage}

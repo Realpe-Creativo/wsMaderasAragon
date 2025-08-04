@@ -1,4 +1,4 @@
-import { LuBadgeCheck, LuMessageCircle, LuNewspaper, LuShoppingBag } from "react-icons/lu";
+import { LuMessageCircle, LuNewspaper, LuShoppingBag } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { useWindowScroll } from "@mantine/hooks";
 import { useEffect, useRef } from "react";
@@ -70,7 +70,7 @@ export default function Hero(props?: LoadingProps) {
       <div className="bg-[#394930] z-50 flex justify-center items-center text-white text-3xl p-6 md:p-20 overflow-x-auto whitespace-nowrap">
         {[
           { to: '/categories', Icon: LuShoppingBag, label: 'Productos' },
-          { to: '/know',       Icon: LuBadgeCheck,   label: 'Nosotros' },
+          // { to: '/know',       Icon: LuBadgeCheck,   label: 'Nosotros' },
           { to: '/news',       Icon: LuNewspaper,    label: 'Bitácora' },
           { to: '/contact',    Icon: LuMessageCircle, label: 'Contáctanos' },
         ].map(({ to, Icon, label }, idx) => (
