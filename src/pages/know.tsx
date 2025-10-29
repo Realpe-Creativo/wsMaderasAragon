@@ -16,7 +16,7 @@ const timelineData: TimelineItem[] = [
     title: 'Maderas Aragon es fundado',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate eum impedit hic similique esse consequatur unde, molestias voluptate corrupti odit maiores nisi libero expedita fugiat nostrum saepe ad dolor!',
-    bgColor: '#ffcaa2',
+    bgColor: '#BADF72',
     imageSrc: '/img/about_us/cows.png',
   },
   {
@@ -24,7 +24,7 @@ const timelineData: TimelineItem[] = [
     title: 'Lanzamos nuestro primer bosque',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate eum impedit hic similique esse consequatur unde, molestias voluptate corrupti odit maiores nisi libero expedita fugiat nostrum saepe ad dolor!',
-    bgColor: '#249ce9',
+    bgColor: '#394930',
   },
   {
     date: 'November 10, 2001',
