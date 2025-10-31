@@ -1,17 +1,21 @@
 import { createBrowserRouter } from "react-router-dom";
 import PublicLayout from "../layouts/PublicLayout";
-import Landing from './../pages/landing'
+import Landing from '../pages/landing'
 import { lazy, Suspense } from "react";
 
 const Auth = lazy(() => import("../pages/auth"));
 const Know = lazy(() => import("../pages/know"));
-const Products = lazy(() => import("../pages/products"));
+const Products = lazy(() => import("../pages/productPage"));
 const Legal = lazy(() => import("../pages/legal"));
 const Contact = lazy(() => import("../pages/contact"));
 const Checkout = lazy(() => import("../pages/checkout"));
 const News = lazy(() => import("../pages/news"));
+const NewsDetail = lazy(() => import("../pages/newsDetail"));
 const NotFound = lazy(() => import("../pages/notFound"));
 const Orders  = lazy(() => import("../pages/orders/orders"));
+const Categories = lazy(() => import("../pages/categories"));
+const Livestock = lazy(() => import("../pages/livestock"));
+const Structural = lazy(() => import("../pages/structural"));
 
 
 const router = createBrowserRouter([
@@ -54,7 +58,7 @@ const router = createBrowserRouter([
   {
     path: "/news",
     element: 
-      <PublicLayout tab="know">
+      <PublicLayout tab="news">
         <Suspense fallback={<div className="flex h-full">Loading...</div>}>
           <News/>
         </Suspense>
@@ -93,6 +97,51 @@ const router = createBrowserRouter([
       <PublicLayout tab="auth">
         <Suspense fallback={<div className="flex h-full">Loading...</div>}>
           <Orders/>
+        </Suspense>
+      </PublicLayout>
+  },
+  {
+    path: "/categories",
+    element: 
+      <PublicLayout tab="categories">
+        <Suspense fallback={<div className="flex h-full">Loading...</div>}>
+          <Categories/>
+        </Suspense>
+      </PublicLayout>
+  },
+  {
+    path: "/categories/livestock",
+    element: 
+      <PublicLayout tab="categories">
+        <Suspense fallback={<div className="flex h-full">Loading...</div>}>
+          <Livestock/>
+        </Suspense>
+      </PublicLayout>
+  },
+  {
+    path: "/products/:slug",
+    element:
+      <PublicLayout tab="products">
+        <Suspense fallback={<div className="flex h-full">Loading...</div>}>
+          <Products />
+        </Suspense>
+      </PublicLayout>
+  },
+  {
+    path: "/categories/structural",
+    element: 
+      <PublicLayout tab="auth">
+        <Suspense fallback={<div className="flex h-full">Loading...</div>}>
+          <Structural/>
+        </Suspense>
+      </PublicLayout>
+  },
+  {
+    path: "/news/newsDetail/:id",
+    element: 
+      <PublicLayout tab="auth">
+        <Suspense fallback={<div className="flex h-full">Loading...</div>}>
+          <NewsDetail/>
         </Suspense>
       </PublicLayout>
   },

@@ -1,16 +1,20 @@
-/** @type {import('tailwindcss').Config} */
-const flowbite = require("flowbite-react/tailwind");
+// tailwind.config.js (con "type": "module")
+import flowbite from 'flowbite-react/tailwind';
+import aspectRatio from '@tailwindcss/aspect-ratio';
+import typography from '@tailwindcss/typography';
+
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
     flowbite.content(),
   ],
   theme: {
     extend: {},
   },
   plugins: [
-    flowbite.content(),
-  ]
-}
-
+    flowbite.plugin(),
+    aspectRatio,
+    typography,
+  ],
+};

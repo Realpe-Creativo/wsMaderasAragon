@@ -27,15 +27,17 @@ export default function  (props: PublicLayoutProps) {
   }, [])
 
   return(
-    <div className='relative bg-stone-200'>
+    <div className='relative bg-stone-200 w-full overflow-x-hidden'>
       <Navbar tab={props?.tab}/>
       {props.children}
       <>
-        <a target='_blank' className='flex bg-green-500 animate-pulse hover:animate-none transition-all text-white text-2xl p-3 rounded-full fixed bottom-4 right-4 z-50' href='https://wa.me/573125085185'>
-          <ImWhatsapp className='flex' />
+        <a target='_blank' className='flex bg-green-500 animate-pulse hover:animate-none transition-all text-white text-3x2 p-6 rounded-full fixed bottom-4 right-4 z-50' href='https://wa.me/573125085185'>
+          <ImWhatsapp className='flex text-4xl' />
         </a>
       </>
-      <Footer tab={props?.tab}/>
+      {props.tab !== 'know' && (
+        <Footer tab={props.tab}/>
+      )}
     </div>
   )
 }

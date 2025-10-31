@@ -1,0 +1,527 @@
+{
+    "posteAserrado": {
+        "slug": "posteAserrado",
+        "title": "POSTES ASERRADOS",
+        "description": "Nuestros postes aserrados son una opción un poco más económica para alambrados rurales. Su corte recto permite una instalación rápida y estética. Disponibles en dos presentaciones: 3 filos (más rústico) y 4 caras cuadrado (más parejo y simétrico).",
+        "mainImage": "/img/products/postes_aserrados/postes_aserrado05.jpg",
+        "modelPath": null,    
+        "cameraPosition": [
+            30,
+            10,
+            10
+        ],
+        "lookAt": [
+            0,
+            10,
+            0
+        ],
+        "collageImages": [
+            "/img/products/postes_aserrados/postes_aserrado01.jpg",
+            "/img/products/postes_aserrados/postes_aserrado02.jpg",
+            "/img/products/postes_aserrados/postes_aserrado03.jpg",
+            "/img/products/postes_aserrados/postes_aserrado04.jpg",
+            "/img/products/postes_aserrados/postes_aserrado05.jpg"
+        ],
+        "recommendedUses": {
+            "title": "USOS RECOMENDADOS",
+            "text": "Nuestros postes son ideales para alambrados tradicionales, cercas perimetrales rurales, proyectos ganaderos de bajo presupuesto, reemplazo rápido de postes y cercas temporales o de media duración.",
+            "groups": [
+                {
+                    "title": "Poste 3 Filos (triangular plano)",
+                    "text": "Solo disponible en eucalipto",
+                    "specs": [
+                        "<strong>Dimensiones</strong>",
+                        "<strong>Largo</strong>",
+                        "<strong>Uso recomendado</strong>",
+                        "8 x 10 cm",
+                        "2.10 m",
+                        "Alambrados económicos",
+                        "10 x 12 cm",
+                        "2.10 m",
+                        "Alambrados con mayor soporte"
+                    ],
+                    "columns": 3
+                },
+                {
+                    "title": "Poste 4 Caras (cuadrado)",
+                    "text": "Solo disponible en eucalipto",
+                    "specs": [
+                        "<strong>Dimensiones</strong>",
+                        "<strong>Largo</strong>",
+                        "<strong>Uso recomendado</strong>",
+                        "10 x 10 cm",
+                        "2.10 m",
+                        "Alambrados estándar",
+                        "12 x 12 cm",
+                        "2.10 m",
+                        "Alambrados con mayor carga o durabilidad"
+                    ],
+                    "columns": 3
+                }
+            ]
+        },
+        "additionalText": null,
+        "advantages": [
+            "Madera inmunizada con garantía de 20 años",
+            "Alta durabilidad y resistencia estructural",
+            "Fácil de cortar, manejar e instalar",
+            "Disponibilidad inmediata para entrega",
+            "Ideal para cercas, corrales y cerramientos agrícolas"
+        ],
+        "whyChoose": {
+            "title": "POR QUE ELEGIRNOS?",
+            "text": "Porque ofrecemos madera inmunizada con garantía de 20 años, lista para resistir el paso del tiempo y las condiciones más exigentes. Cercar con nosotros es invertir en calidad, respaldo y tranquilidad desde el primer día."
+        }
+    },
+    "posteCilindrado": {
+        "slug": "posteCilindrado",
+        "title": "POSTES CILINDRADOS",
+        "description": "Los postes cilindrados son postes torneados con un diámetro uniforme, tratados con inmunización al vacío-presión para resistir el clima, la humedad y el paso del tiempo. Son ideales para cercas duraderas, alambrados fuertes y templetes en zonas ganaderas.",
+        "modelPath": null,
+        "mainImage": "/img/products/postes_cilindrados/postes_cilindrados06.jpg",
+        "collageImages": [
+            "/img/products/postes_cilindrados/postes_cilindrados01.jpg",
+            "/img/products/postes_cilindrados/postes_cilindrados02.jpg",
+            "/img/products/postes_cilindrados/postes_cilindrados03.jpg",
+            "/img/products/postes_cilindrados/postes_cilindrados04.jpg",
+            "/img/products/postes_cilindrados/postes_cilindrados05.jpg",
+            "/img/products/postes_cilindrados/postes_cilindrados06.jpg",
+            "/img/products/postes_cilindrados/postes_cilindrados07.jpg",
+            "/img/products/postes_cilindrados/postes_cilindrados08.jpg",
+            "/img/products/postes_cilindrados/postes_cilindrados09.jpg",
+            "/img/products/postes_cilindrados/postes_cilindrados10.jpg"
+        ],
+        "recommendedUses": {
+            "title": "USOS RECOMENDADOS",
+            "text": "Nuestros postes son ideales para cercas eléctricas de larga duración, alambrados tradicionales con alta resistencia, templetes o estructuras de mayor carga, proyectos ganaderos de mediana y gran escala e instalaciones rurales que requieren durabilidad.",
+            "specs": [
+                "",
+                "<strong>Diámetro:</strong>",
+                "<strong>Largo</strong>",
+                "<strong>Uso Recomendado</strong>",
+                "<strong>Poste pequeño</strong>",
+                "Diametro: 8 cm",
+                "Largo: 2.10 m",
+                "Cercas eléctricas",
+                "<strong>Poste mediano<strong>",
+                "Diametro: 10 cm",
+                "Largo: 2.10 m",
+                "Alambrados",
+                "<strong>Poste grueso</strong>",
+                "Diametro: 12 cm",
+                "Largo: 2.10 m",
+                "Templetes o estructuras <br>"
+            ],
+            "columns": 4
+        },
+        "characteristics": {
+            "specs": [
+                "<strong>Tipo de madera:</strong> pino o eucalipto (según disponibilidad)",
+                "<strong>Tratamiento:</strong> Inmunizado con sales CCA, protección garantizada por más de 20 años contra hongos, insectos y humedad.",
+                "<strong>Acabado:</strong> rústico, descortezado manual"
+            ],
+            "columns": 3
+        },
+        "additionalText": null,
+        "advantages": [
+            "Alta durabilidad y resistencia",
+            "Garantía de hasta 20 años",
+            "Corte exacto, estético y profesional",
+            "Resistencia comprobada en campo",
+            "Mantenimiento mínimo"
+        ],
+        "whyChoose": {
+            "title": "POR QUE ELEGIRNOS?",
+            "text": "Porque no solo vendemos madera, vendemos confianza. Cada poste es tratado y revisado con estándares técnicos exigentes para garantizar que el trabajo en campo se haga una sola vez y quede bien hecho."
+        }
+    },
+    "posteRollizo": {
+        "slug": "posteRollizo",
+        "title": "POSTES ROLLIZOS",
+        "description": "Los postes rollizos son ideales para cercas rurales, ganaderas o agrícolas. Tienen un acabado rústico y natural, y están inmunizados para garantizar alta durabilidad y resistencia estructural. Son una solución eficiente y confiable para usos de corta, mediana y larga duración.",
+        "modelPath": null,
+        "mainImage": "/img/products/postes_rollizos/postes_rollizos06.jpg",
+        "collageImages": [
+            "/img/products/postes_rollizos/postes_rollizos01.jpg",
+            "/img/products/postes_rollizos/postes_rollizos02.jpg",
+            "/img/products/postes_rollizos/postes_rollizos03.jpg",
+            "/img/products/postes_rollizos/postes_rollizos04.jpg",
+            "/img/products/postes_rollizos/postes_rollizos05.jpg",
+            "/img/products/postes_rollizos/postes_rollizos06.jpg",
+            "/img/products/postes_rollizos/postes_rollizos07.jpg",
+            "/img/products/postes_rollizos/postes_rollizos08.jpg"
+        ],
+        "recommendedUses": {
+            "title": "USOS RECOMENDADOS",
+            "text": "Nuestros postes son ideales para cercas eléctricas temporales o permanentes, alambrados de potrero, división de predios ganaderos, perímetros rurales y sustitución rápida de postes dañados.",
+            "specs": [
+                "<strong>Medida:</strong>",
+                "<strong>Diámetro:</strong>",
+                "<strong>Largo</strong>",
+                "<strong>Uso Recomendado</strong>",
+                "<strong>Poste pequeño</strong>",
+                "Diametro: 8-10 cm",
+                "Largo: 2.10 m",
+                "Cercas eléctricas",
+                "<strong>Poste mediano<strong>",
+                "Diametro: 10-12 cm",
+                "Largo: 2.10 m",
+                "Alambrados tradicionales"
+            ],
+            "columns": 4
+        },
+        "characteristics": {
+            "specs": [
+                "<strong>Tipo de madera:</strong> Pino o eucalipto",
+                "<strong>Tratamiento:</strong>  Inmunizado con sales CCA, protección garantizada por más de 20 años",
+                "<strong>Acabado:</strong> Cilindrado y Aserrado"
+            ],
+            "columns": 3
+        },
+        "additionalText": null,
+        "advantages": [
+            "Bajo costo y fácil instalación",
+            "Buen desempeño para cercas sencillas",
+            "Apariencia natural que se integra al entorno",
+            "Disponible para entrega inmediata",
+            "Ideal para proyectos rurales de bajo presupuesto"
+        ],
+        "whyChoose": {
+            "title": "POR QUE ELEGIRNOS?",
+            "text": "En Maderas Aragón entendemos el campo y sus necesidades reales. Sabemos que a veces se necesita una solución económica, rápida y funcional. Por eso ofrecemos este tipo de poste, listo para cercar sin complicaciones."
+        }
+    },
+    "varetaEucalipto": {
+        "slug": "varetaEucalipto",
+        "title": "VARETA DE EUCALIPTO",
+        "description": "Las varetas de eucalipto son piezas versátiles y resistentes utilizadas para la construcción de corrales, cercas y divisiones internas. Se ofrecen tanto en presentación natural como inmunizada, con una amplia variedad de diámetros y longitudes según tu necesidad.",
+        "modelPath": null,
+        "mainImage": "/img/products/vareta_eucalipto/vareta_eucalipto01.jpg",
+        "collageImages": [
+            "/img/products/vareta_eucalipto/vareta_eucalipto01.jpg",
+            "/img/products/vareta_eucalipto/vareta_eucalipto02.jpg",
+            "/img/products/vareta_eucalipto/vareta_eucalipto03.jpg",
+            "/img/products/vareta_eucalipto/vareta_eucalipto04.jpg",
+            "/img/products/vareta_eucalipto/vareta_eucalipto05.jpg"
+        ],
+        "recommendedUses": {
+            "title": "USOS RECOMENDADOS",
+            "text": "Nuestras varetas de eucalipto inmunizado son ideales para barandas, pasamanos, refuerzo de cercas ganaderas, cerramientos móviles, divisiones internas y estructuras ligeras en potreros o construcciones rústicas campestres.",
+            "specs": [
+                "<strong>Tipo de Vareta</strong>",
+                "<strong>Tratamiento</strong>",
+                "<strong>Medidas disponibles</strong>",
+                "<strong>Uso recomendado</strong>",
+                "<strong>Redonda (descortezada)<strong>",
+                "Inmunización por vacío-presión",
+                "Diámetro: 8–20cm <br> Largo: 1–9 m",
+                "Cercas, pasamanos, estructuras rurales",
+                "<strong>Cuadrada<strong>",
+                "Inmunización por vacío-presión",
+                "4 cm espesor 12 cm x 3 m",
+                "Refuerzo de estructuras, acabados, barandas"
+            ],
+            "columns": 4
+        },
+        "characteristics": {
+            "specs": [
+                "<strong>Madera</strong> 100% eucalipto",
+                "<strong>Acabado</strong> Rústico o semi-pulido",
+                "<strong>Presentación</strong> Individual o en haces",
+                "<strong>Corte</strong> Natural, no torneado"
+            ],
+            "columns": 4
+        },
+        "additionalText": null,
+        "advantages": [
+            "Gran variedad de tamaños para múltiples usos",
+            "Disponibilidad en versión natural o inmunizada",
+            "Fácil de trabajar, cortar y adaptar en campo",
+            "Buena resistencia estructural y flexibilidad",
+            "Ideal para proyectos funcionales y rústicos"
+        ],
+        "whyChoose": {
+            "title": "POR QUE ELEGIRNOS?",
+            "text": "Porque te entregamos la madera que realmente necesitas, en las medidas que tu proyecto exige. No todos los corrales son iguales, y por eso te damos opciones desde 1 metro hasta 9 metros de largo, con diferentes diámetros para que escojas lo que mejor te funciona."
+        }
+    },
+    "postesGanaderos": {
+        "slug": "postesGanadaros",
+        "title": "POSTES GANADEROS",
+        "description": "Nuestros postes para corrales ganaderos están diseñados para soportar el peso, el movimiento constante del ganado y las condiciones del campo. Disponibles en versión cilindrada e individual cuadrada, con medidas especiales para estructuras más robustas.",
+        "modelPath": null,
+        "mainImage": "/img/products/postes_ganaderos/postes_ganaderos01.jpg",
+        "collageImages": [
+            "/img/products/postes_ganaderos/postes_ganaderos03.jpg",
+            "/img/products/postes_ganaderos/postes_ganaderos04.jpg",
+            "/img/products/postes_ganaderos/postes_ganaderos05.jpg",
+            "/img/products/postes_ganaderos/postes_ganaderos06.jpg",
+            "/img/products/postes_ganaderos/postes_ganaderos07.jpg",
+            "/img/products/postes_ganaderos/postes_ganaderos08.jpg",
+            "/img/products/postes_ganaderos/postes_ganaderos02.jpg"
+        ],
+        "recommendedUses": {
+            "title": "USOS RECOMENDADOS",
+            "text": "Nuestros postes ganaderos son ideales para corrales de encierro, mangas y embudos, cargaderos, chutes de manejo, así como para establos y estructuras de trabajo pesado.",
+            "groups": [
+                {
+                    "title": "Poste Cilindrado Inmunizado",
+                    "text": null,
+                    "specs": [
+                        "<strong>Diámetro</strong>",
+                        "<strong>Largo</strong>",
+                        "<strong>Uso recomendado</strong>",
+                        "12 cm",
+                        "2.5 – 3 m",
+                        "Corrales medianos",
+                        "14 cm",
+                        "2.5 – 3 m",
+                        "Corrales con alta exigencia",
+                        "16 cm",
+                        "2.5 – 3 m",
+                        "Postes principales / esquineros",
+                        "18 cm",
+                        "2.5 – 3 m",
+                        "Soportes estructurales fuertes"
+                    ],
+                    "columns": 3
+                },
+                {
+                    "title": "Poste Cuadrado Aserrado",
+                    "text": null,
+                    "specs": [
+                        "<strong>Sección</strong>",
+                        "<strong>Largo</strong>",
+                        "<strong>Uso recomendado</strong>",
+                        "10 x 10 cm",
+                        "2.5 – 3 m",
+                        "Corrales estándar",
+                        "12 x 12 cm",
+                        "2.5 – 3 m",
+                        "Mayor soporte",
+                        "15 x 15 cm",
+                        "2.5 – 3 m",
+                        "Bases principales"
+                    ],
+                    "columns": 3
+                }
+            ]
+        },
+        "characteristics": {
+            "specs": [
+                "<strong>Tipo de madera:</strong> Pino o eucalipto",
+                "<strong>Tratamiento:</strong> Inmunización por vacío-presión (garantía de 20 años)",
+                "<strong>Acabado:</strong> Cilindrado o aserrado"
+            ],
+            "columns": 3
+        },
+        "additionalText": null,
+        "advantages": [
+            "Altísima resistencia estructural",
+            "Largos especiales hasta 3 metros",
+            "Soportan clima extremo y fuerza del ganado",
+            "Madera tratada con garantía hasta 20 años",
+            "Disponible en varias presentaciones y cortes"
+        ],
+        "whyChoose": {
+            "title": "POR QUE ELEGIRNOS?",
+            "text": "Porque te entregamos la madera que realmente necesitas, en las medidas que tu proyecto exige. No todos los corrales son iguales, y por eso te damos opciones desde 1 metro hasta 9 metros de largo, con diferentes diámetros para que escojas lo que mejor te funciona."
+        }
+    },
+    "acabadosPersonalizados": {
+        "slug": "acabadosPersonalizados",
+        "title": "ACABADOS EN MADERA PERSONALIZADA",
+        "description": "Ofrecemos madera para todo tipo de aplicaciones personalizadas: desde acabados decorativos, hasta usos estructurales o funcionales que requieren un corte limpio, uniforme y con mejor apariencia.<br><br> Cada pieza es trabajada bajo pedido, de acuerdo con las dimensiones y necesidades específicas de tu proyecto. No es un producto estándar, sino un servicio de valor agregado que incluye asesoría técnica directa.",
+        "modelPath": null,
+        "mainImage": "/img/products/acabados_madera/acabados_madera01.jpg",
+        "collageImages": [
+            "/img/products/acabados_madera/acabados_madera01.jpg",
+            "/img/products/acabados_madera/acabados_madera02.jpg",
+            "/img/products/acabados_madera/acabados_madera03.jpg",
+            "/img/products/acabados_madera/acabados_madera04.jpg",
+            "/img/products/acabados_madera/acabados_madera05.jpg",
+            "/img/products/acabados_madera/acabados06.jpg",
+            "/img/products/acabados_madera/acabados07.jpg",
+            "/img/products/acabados_madera/acabados08.jpg",
+            "/img/products/acabados_madera/acabados09.jpg",
+            "/img/products/acabados_madera/acabados10.jpg",
+            "/img/products/acabados_madera/acabados11.jpg",
+            "/img/products/acabados_madera/acabados12.jpg",
+            "/img/products/acabados_madera/acabados13.jpg",
+            "/img/products/acabados_madera/acabados14.jpg",
+            "/img/products/acabados_madera/acabados15.jpg"
+        ],
+        "recommendedUses": {
+            "title": "USOS RECOMENDADOS",
+            "text": "Nuestros acabados en madera personalizada aportan calidez y autenticidad a cualquier proyecto: son perfectos para revestimientos rústicos o decorativos, piezas visibles en construcciones campestres, techos, pérgolas y muebles artesanales; además, realzan detalles en kioscos, granjas turísticas o glamping, y encajan a la perfección en iniciativas de arquitectura natural o bio-construcción.",
+            "specs": [
+                "<strong>Tipo de madera:</strong> Pino o eucalipto",
+                "<strong>Presentación:</strong> Según diseño y necesidad del cliente",
+                "<strong>Acabado:</strong> Aserrado, cepillado liso, bordes definidos, superficie suave",
+                "<strong>Tratamiento:</strong> Natural o inmunizado (a elección del cliente)",
+                "<strong>Medidas:</strong> Definidas en la asesoría previa a cotización",
+                "<strong>Entrega:</strong> Bajo programación especial"
+            ],
+            "columns": 3
+        },
+        "additionalText": null,
+        "advantages": [
+            "Acabado profesional y uniforme",
+            "Aumenta la estética y el valor visual de cada pieza",
+            "Permite cortes y detalles precisos",
+            "Ideal para clientes exigentes y proyectos visibles",
+            "Disponible en varios tipos de madera y formatos"
+        ],
+        "whyChoose": {
+            "title": "POR QUE ELEGIRNOS?",
+            "text": "Porque en Maderas Aragón entendemos que los detalles también importan. Por eso ofrecemos madera cepillada de calidad, lista para proyectos que no solo deben durar, sino también lucir bien. <br><br> Te asesoramos personalmente para definir las medidas, tipo de madera, tratamiento y volumen necesario."
+        }
+    },
+    "columnas&vigas": {
+        "slug": "columnas&vigas",
+        "title": "COLUMNAS Y VIGAS EN MADERA CILINDRADA O ROLLIZA",
+        "description": "Columnas y vigas elaboradas en madera de pino o eucalipto, disponibles tanto en presentación cilindrada (torneada) como rolliza (rústica descortezada). Toda nuestra madera es inmunizada para máxima durabilidad estructural, ideal para construcciones rurales, techos, pérgolas o estructuras personalizadas. <br><br> <strong>Disponibles en diámetros de 12 a 20 cm y longitudes de 1 a 8 metros.</strong>",
+        "modelPath": null,
+        "mainImage": "/img/products/columnas_vigas/columnas_vigas01.jpg",
+        "collageImages": [
+            "/img/products/columnas_vigas/columnas_vigas01.jpg",
+            "/img/products/columnas_vigas/columnas_vigas02.jpg",
+            "/img/products/columnas_vigas/columnas_vigas03.jpg",
+            "/img/products/columnas_vigas/columnas_vigas04.jpg",
+            "/img/products/columnas_vigas/columnas_vigas05.jpg"
+        ],
+        "recommendedUses": {
+            "title": "USOS RECOMENDADOS",
+            "text": "Nuestras columnas y vigas de eucalipto combinan solidez y belleza natural, siendo ideales como columnas estructurales o decorativas y como vigas principales o secundarias en cubiertas. Su resistencia las hace perfectas para techos campestres y pérgolas, y encajan a la perfección en construcciones rústicas (granjas, fincas, restaurantes o glamping) así como en proyectos de turismo rural o de vivienda natural.",
+            "specs": [
+                "<strong>Diámetro</strong>",
+                "<strong>Largo recomendado</strong>",
+                "<strong>Uso sugerido</strong>",
+                "8 cm",
+                "Hasta 5 m",
+                "Columnas ligeras, vigas pequeñas",
+                "10 cm",
+                "Hasta 6 m",
+                "Vigas intermedias o techos medianos",
+                "12 cm",
+                "Hasta 9 m",
+                "Vigas principales o cubiertas amplias"
+            ],
+            "columns": 3
+        },
+        "characteristics": {
+            "specs": [
+                "<strong>Presentación:</strong> Cilindrada (torneada) o Rolliza (descortezada)",
+                "<strong>Tratamiento:</strong> Solo inmunizada (con garantía de 20 años)",
+                "<strong>Madera:</strong> Pino o eucalipto",
+                "<strong>Acabado:</strong>  Extremos planos o en punta (según necesidad)"
+            ],
+            "columns": 4
+        },
+        "additionalText": null,
+        "advantages": [
+            "Opciones adaptadas a cada tipo de estructura",
+            "Largos especiales de hasta 8 metros",
+            "Madera legal, cultivada e inmunizada con garantía de 20 años",
+            "Estética rústica o acabada según el estilo del proyecto",
+            "Asesoría personalizada en elección de tipo, tratamiento y medidas"
+        ],
+        "whyChoose": {
+            "title": "POR QUE ELEGIRNOS?",
+            "text": "Porque en el campo y la construcción no hay proyectos iguales. En Maderas Aragón fabricamos tus columnas y vigas a la medida, como tú las necesites: naturales o inmunizadas, torneadas o rústicas, listas para durar."
+        }
+    },
+    "jardineria": {
+        "slug": "jardineria",
+        "title": "POSTES CILINDRADOS PARA JARDINERÍA Y CERCAMIENTO",
+        "description": "Ofrecemos postes cilindrados en madera inmunizada, con acabado uniforme y presentaciones adaptadas tanto para cerramientos funcionales como para proyectos de jardinería decorativa. <br><br> Puedes elegir las dimensiones según el uso, ya que fabricamos postes desde 1 m hasta 2.5 m de largo, con diámetros entre 8 y 12 cm. Son livianos, versátiles y resistentes, ideales para cercas de jardines, divisiones campestres, delimitación de espacios y detalles paisajísticos. Todo el proceso se puede personalizar según tu necesidad.",
+        "modelPath": null,
+        "mainImage": "/img/products/jardineria/jardineria03.jpg",
+        "collageImages": [
+            "/img/products/jardineria/jardineria01.jpg",
+            "/img/products/jardineria/jardineria02.jpg",
+            "/img/products/jardineria/jardineria03.jpg",
+            "/img/products/jardineria/jardineria04.jpg"
+        ],
+        "recommendedUses": {
+            "title": "USOS RECOMENDADOS",
+            "text": "Nuestros postes cilindrados para jardinería y cerramiento son perfectos para cercas eléctricas decorativas o funcionales, delimitación de jardines y huertas, señalización en caminos campestres, marcos para entradas o cercas vivas, y encajan de maravilla en proyectos de bio-construcción o turismo rural.",
+            "specs": [
+                "<strong>Diámetro</strong>",
+                "<strong>Largo recomendado</strong>",
+                "<strong>Uso sugerido</strong>",
+                "8 cm",
+                "1 m – 1.5 m",
+                "Cercas decorativas, señalización o huertas",
+                "8 – 10 cm",
+                "2.1 m",
+                "Cercas eléctricas estándar o cerramientos funcionales",
+                "10 – 12 cm",
+                "2.5 m",
+                "Entradas, portones o cercas de mayor resistencia"
+            ],
+            "columns": 3
+        },
+        "characteristics": {
+            "specs": [
+                "<strong>Tipo de madera:</strong>  Pino o eucalipto",
+                "<strong>Tratamiento:</strong> Inmunizada (vacío-presión) o natural",
+                "<strong>Acabado:</strong> Cilindrado uniforme",
+                "<strong>Personalización:</strong> Cortes a la medida, extremos en punta o planos"
+            ],
+            "columns": 4
+        },
+        "additionalText": null,
+        "advantages": [
+            "Cortes exactos y presentación limpia",
+            "Acabado estético ideal para espacios visibles",
+            "Alta resistencia y durabilidad (inmunizada)",
+            "Disponible en varios diámetros y largos",
+            "Se adapta a cualquier tipo de proyecto"
+        ],
+        "whyChoose": {
+            "title": "POR QUE ELEGIRNOS?",
+            "text": "Porque entendemos que no todo es trabajo: a veces se trata de disfrutar el entorno, de embellecer un espacio o de crear algo que se vea bien y dure en el tiempo. Te ayudamos a escoger el poste ideal, en la medida perfecta para tu proyecto."
+        }
+    },
+    "lenna": {
+        "slug": "lenna",
+        "title": "LEÑA NATURAL EN CAJAS DE 10 LB",
+        "description": "Vendemos leña seca de eucalipto, empacada en cajas de 10 libras, lista para uso inmediato en cocinas, hornos de leña, fogones, fogatas o chimeneas. Proviene de cultivos sostenibles y responsables, sin químicos añadidos ni residuos tóxicos. <br><br> El empaque es práctico, manejable y fácil de almacenar. Ideal para uso doméstico, turístico o recreativo. Cada caja contiene piezas de tamaño variado, listas para encender.",
+        "modelPath": null,
+        "mainImage": "/img/products/caja_lena/caja_leña04.jpg",
+        "collageImages": [
+            "/img/products/caja_lena/caja_leña01.jpg",
+            "/img/products/caja_lena/caja_leña02.jpg",
+            "/img/products/caja_lena/caja_leña03.jpg",
+            "/img/products/caja_lena/caja_leña04.jpg",
+            "/img/products/caja_lena/caja_leña05.jpg",
+            "/img/products/caja_lena/caja_leña06.jpg",
+            "/img/products/caja_lena/caja_leña07.jpg"
+        ],
+        "recommendedUses": {
+            "title": "USOS RECOMENDADOS",
+            "text": "Nuestra leña en cajas de 10 lb es perfecta para fogones, cocinas de leña, chimeneas, estufas, hornos de pan o pizza, fogatas, asados y eventos al aire libre en fincas, glamping o turismo rural.",
+            "specs": [
+                "<strong>Presentación:</strong> Caja de 10 lb",
+                "<strong>Tipo de madera:</strong> Pino o eucalipto",
+                "<strong>Estado:</strong> Seca, lista para encender",
+                "<strong>Tamaño de piezas:</strong> Variado, según el corte",
+                "<strong>Empaque:</strong> Caja cerrada, fácil de manejar"
+            ],
+            "columns": 5
+        },
+        "additionalText": null,
+        "advantages": [
+            "Madera limpia y de origen controlado",
+            "Ideal para uso alimenticio y doméstico",
+            "Fácil de transportar y almacenar",
+            "Seca al punto justo para encendido rápido",
+            "Producción sostenible, sin químicos ni aditivos"
+        ],
+        "whyChoose": {
+            "title": "POR QUE ELEGIRNOS?",
+            "text": "Porque nuestra leña no viene de la tala, sino del cultivo. Al comprarla, apoyas una cadena sostenible que respeta la tierra, aprovecha cada parte del árbol y cuida el medio ambiente."
+        }
+    }
+}
