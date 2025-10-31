@@ -89,7 +89,7 @@ export default function Hero(props?: LoadingProps) {
                 className="bg-[#394930] z-50 flex justify-center items-center text-white text-3xl p-6 md:p-20 overflow-x-auto whitespace-nowrap">
                 {[
                     {to: '/categories', Icon: LuShoppingBag, label: 'Productos'},
-                    {to: '/know', Icon: LuBadgeCheck, label: 'Nosotros'},
+                    /*{to: '/know', Icon: LuBadgeCheck, label: 'Nosotros'},*/
                     {to: '/news', Icon: LuNewspaper, label: 'Bitácora'},
                     {to: '/contact', Icon: LuMessageCircle, label: 'Contáctanos'},
                 ].map(({to, Icon, label}, idx) => (
@@ -125,7 +125,7 @@ export default function Hero(props?: LoadingProps) {
                 </p>
             </div>
 
-            <div className="relative z-10 py-0 flex justify-center"><YoutubeModal videoId="y8UWOLDCO3g"/></div>
+            <div className="relative z-10 py-0 flex justify-center"><YoutubeModal videoId="VBdZrbaVzR0"/></div>
             <div className="bg-[#394930] py-1 px-1"><TestimonialSlider/></div>
             <div className="bg-[#F8F7DD] py-1 px-1"><InstagramReelsSlider/></div>
             <div className="bg-[#F8F7DD] py-1 px-1"><GuaranteeStats/></div>

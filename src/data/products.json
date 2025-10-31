@@ -78,7 +78,7 @@
         "title": "POSTES CILINDRADOS",
         "description": "Los postes cilindrados son postes torneados con un diámetro uniforme, tratados con inmunización al vacío-presión para resistir el clima, la humedad y el paso del tiempo. Son ideales para cercas duraderas, alambrados fuertes y templetes en zonas ganaderas.",
         "modelPath": null,
-        "mainImage": "/img/products/postes_cilindrados/postes_cilindrados11.jpg",
+        "mainImage": "/img/products/postes_cilindrados/postes_cilindrados06.jpg",
         "collageImages": [
             "/img/products/postes_cilindrados/postes_cilindrados01.jpg",
             "/img/products/postes_cilindrados/postes_cilindrados02.jpg",
@@ -339,7 +339,17 @@
             "/img/products/acabados_madera/acabados_madera02.jpg",
             "/img/products/acabados_madera/acabados_madera03.jpg",
             "/img/products/acabados_madera/acabados_madera04.jpg",
-            "/img/products/acabados_madera/acabados_madera05.jpg"
+            "/img/products/acabados_madera/acabados_madera05.jpg",
+            "/img/products/acabados_madera/acabados06.jpg",
+            "/img/products/acabados_madera/acabados07.jpg",
+            "/img/products/acabados_madera/acabados08.jpg",
+            "/img/products/acabados_madera/acabados09.jpg",
+            "/img/products/acabados_madera/acabados10.jpg",
+            "/img/products/acabados_madera/acabados11.jpg",
+            "/img/products/acabados_madera/acabados12.jpg",
+            "/img/products/acabados_madera/acabados13.jpg",
+            "/img/products/acabados_madera/acabados14.jpg",
+            "/img/products/acabados_madera/acabados15.jpg"
         ],
         "recommendedUses": {
             "title": "USOS RECOMENDADOS",
@@ -426,20 +436,12 @@
         "title": "POSTES CILINDRADOS PARA JARDINERÍA Y CERCAMIENTO",
         "description": "Ofrecemos postes cilindrados en madera inmunizada, con acabado uniforme y presentaciones adaptadas tanto para cerramientos funcionales como para proyectos de jardinería decorativa. <br><br> Puedes elegir las dimensiones según el uso, ya que fabricamos postes desde 1 m hasta 2.5 m de largo, con diámetros entre 8 y 12 cm. Son livianos, versátiles y resistentes, ideales para cercas de jardines, divisiones campestres, delimitación de espacios y detalles paisajísticos. Todo el proceso se puede personalizar según tu necesidad.",
         "modelPath": null,
-        "mainImage": "/img/livestock/postesRollizos/fences.jpg",
+        "mainImage": "/img/products/jardineria/jardineria03.jpg",
         "collageImages": [
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg",
-            "/img/livestock/postesRollizos/fences.jpg"
+            "/img/products/jardineria/jardineria01.jpg",
+            "/img/products/jardineria/jardineria02.jpg",
+            "/img/products/jardineria/jardineria03.jpg",
+            "/img/products/jardineria/jardineria04.jpg"
         ],
         "recommendedUses": {
             "title": "USOS RECOMENDADOS",
@@ -487,7 +489,7 @@
         "title": "LEÑA NATURAL EN CAJAS DE 10 LB",
         "description": "Vendemos leña seca de eucalipto, empacada en cajas de 10 libras, lista para uso inmediato en cocinas, hornos de leña, fogones, fogatas o chimeneas. Proviene de cultivos sostenibles y responsables, sin químicos añadidos ni residuos tóxicos. <br><br> El empaque es práctico, manejable y fácil de almacenar. Ideal para uso doméstico, turístico o recreativo. Cada caja contiene piezas de tamaño variado, listas para encender.",
         "modelPath": null,
-        "mainImage": "/img/products/caja_lena/caja_leña07.jpg",
+        "mainImage": "/img/products/caja_lena/caja_leña04.jpg",
         "collageImages": [
             "/img/products/caja_lena/caja_leña01.jpg",
             "/img/products/caja_lena/caja_leña02.jpg",
@@ -495,12 +497,7 @@
             "/img/products/caja_lena/caja_leña04.jpg",
             "/img/products/caja_lena/caja_leña05.jpg",
             "/img/products/caja_lena/caja_leña06.jpg",
-            "/img/products/caja_lena/caja_leña07.jpg",
-            "/img/products/caja_lena/caja_leña08.jpg",
-            "/img/products/caja_lena/caja_leña09.jpg",
-            "/img/products/caja_lena/caja_leña10.jpg",
-            "/img/products/caja_lena/caja_leña11.jpg",
-            "/img/products/caja_lena/caja_leña12.jpg"
+            "/img/products/caja_lena/caja_leña07.jpg"
         ],
         "recommendedUses": {
             "title": "USOS RECOMENDADOS",
