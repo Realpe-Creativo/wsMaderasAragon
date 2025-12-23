@@ -129,16 +129,10 @@ export default function Know() {
     return (
         <div
             ref={containerRef}
-            className="pt-16 md:pt-0 h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth hide-scrollbar"
+            className="h-screen w-full overflow-y-scroll snap-none md:snap-y md:snap-mandatory scroll-smooth hide-scrollbar"
         >
             {/* ================= HERO ================= */}
-            <section className="relative isolate h-screen snap-start bg-black text-white">
-                <div className="cloud one absolute -z-10" />
-                <div className="cloud two absolute -z-10" />
-                <div className="cloud three absolute -z-10" />
-                <div className="cloud four absolute -z-10" />
-                <div className="cloud five absolute -z-10" />
-                <div className="cloud six absolute -z-10" />
+            <section className="relative isolate h-screen md:snap-start bg-black text-white">
                 <div className="flex flex-col items-center justify-center h-full px-6 text-center">
                     <img src="/logo-white.png" className="mb-8 w-32 sm:w-40" />
                     <h1 className="text-3xl sm:text-5xl font-bold mb-6">Celebrando nuestra historia</h1>
@@ -153,15 +147,17 @@ export default function Know() {
                 <section
                     key={i}
                     // ✅ En mobile NO forzamos h-screen para que el alto sea el necesario y no se corten las imágenes
-                    className="relative isolate snap-start min-h-screen md:h-screen"
+                    className="relative isolate md:snap-start min-h-screen md:h-screen"
                     style={{ backgroundColor: item.bgColor }}
                 >
-                    <div className="cloud one absolute -z-10" />
-                    <div className="cloud two absolute -z-10" />
-                    <div className="cloud three absolute -z-10" />
-                    <div className="cloud four absolute -z-10" />
-                    <div className="cloud five absolute -z-10" />
-                    <div className="cloud six absolute -z-10" />
+                    <div className="cloud-layer">
+                        <div className="cloud one"></div>
+                        <div className="cloud two"></div>
+                        <div className="cloud three"></div>
+                        <div className="cloud four"></div>
+                        <div className="cloud five"></div>
+                        <div className="cloud six"></div>
+                    </div>
 
                     <div className="flex flex-col md:flex-row items-start md:items-center min-h-screen md:h-full px-6 md:px-16 py-10 md:py-0">
                         {/* Texto */}
@@ -195,7 +191,7 @@ export default function Know() {
             ))}
 
             {/* ================= FINAL ================= */}
-            <section className="h-screen snap-start bg-black flex items-center justify-center">
+            <section className="h-screen md:snap-start bg-black flex items-center justify-center">
                 <img src="/logo-white.png" className="w-64 md:w-80" />
             </section>
         </div>

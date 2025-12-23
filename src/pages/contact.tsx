@@ -40,7 +40,7 @@ const Contact: React.FC<ContactProps> = () => {
     return (
         <section className="w-full bg-white min-h-screen">
             {/* Sección promocional */}
-            <div className="w-full h-48 sm:h-72 overflow-hidden mt-16">
+            <div className="w-full h-72 sm:h-72 overflow-hidden mt-24">
                 {/* Imagen MOBILE */}
                 <img
                     src="/img/contact_us/portada_movil.jpg"

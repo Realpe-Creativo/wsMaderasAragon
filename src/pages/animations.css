@@ -1,162 +1,91 @@
-/* src/styles/animations.css */
+/* =========================================
+   FIX GLOBAL: evita scroll horizontal iOS
+   ========================================= */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* (Opcional pero recomendado) evita overscroll lateral iOS */
+body {
+    position: relative;
+}
+.cloud-layer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+
+    z-index: 0; /* fondo */
+}
+
+section > *:not(.cloud-layer) {
+    position: relative;
+    z-index: 1;
+}
 
 /* Keyframes: suben constantemente y se reinician */
 @keyframes moveCloudsUp {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-130vh); }
+    0%   { transform: translate3d(0,0,0); }
+    100% { transform: translate3d(0,-130vh,0); }
 }
 
 /* Base de nube */
 .cloud {
-  position: absolute;
-  bottom: -250px;               /* arrancan bajo el viewport */
-  background: rgba(255,255,255,0.45);
-  filter: blur(35px);
-  border-radius: 50%;
-  pointer-events: none;
-  will-change: transform;
-  animation-name: moveCloudsUp;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+    position: absolute;
+    bottom: -250px;
+    background: rgba(255,255,255,0.45);
+    filter: blur(35px);
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform;
+    animation-name: moveCloudsUp;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    /* Evita que el blur empuje el layout horizontalmente */
+    left: clamp(0px, var(--cloud-left, 50%), calc(100% - 1px));
+    transform: translateX(-50%);
 }
 
 /* Cada nube con tamaño, posición, duración y delay NEGATIVO */
-.cloud.one {
-  left:  5%;
-  width: 220px;  height: 110px;
-  animation-duration: 30s;
-  animation-delay:   -5s;
-}
-.cloud.two {
-  left: 20%;
-  width: 180px;  height: 100px;
-  animation-duration: 35s;
-  animation-delay:  -15s;
-}
-.cloud.three {
-  left: 40%;
-  width: 250px;  height: 120px;
-  animation-duration: 40s;
-  animation-delay:  -25s;
-}
-.cloud.four {
-  left: 60%;
-  width: 200px;  height: 110px;
-  animation-duration: 28s;
-  animation-delay:  -10s;
-}
-.cloud.five {
-  left: 80%;
-  width: 230px;  height: 115px;
-  animation-duration: 33s;
-  animation-delay:  -20s;
-}
-.cloud.six {
-  left: 30%;
-  width: 210px;  height: 130px;
-  animation-duration: 38s;
-  animation-delay:  -30s;
-}
+.cloud.one   { --cloud-left:  5%; width: 220px; height: 110px; animation-duration: 30s; animation-delay:  -5s; }
+.cloud.two   { --cloud-left: 20%; width: 180px; height: 100px; animation-duration: 35s; animation-delay: -15s; }
+.cloud.three { --cloud-left: 40%; width: 250px; height: 120px; animation-duration: 40s; animation-delay: -25s; }
+.cloud.four  { --cloud-left: 60%; width: 200px; height: 110px; animation-duration: 28s; animation-delay: -10s; }
+.cloud.five  { --cloud-left: 80%; width: 230px; height: 115px; animation-duration: 33s; animation-delay: -20s; }
+.cloud.six   { --cloud-left: 30%; width: 210px; height: 130px; animation-duration: 38s; animation-delay: -30s; }
 
-/* en src/styles/animations.css (o tu CSS global) */
-
-/* 1) Oculta scrollbar en IE/Edge */
-.hide-scrollbar {
-  -ms-overflow-style: none;     /* IE y Edge */
-  scrollbar-width: none;        /* Firefox */
-}
-
-/* 2) Oculta scrollbar en Chrome/Safari/Opera */
-.hide-scrollbar::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  background: transparent;
-}
-
-/* 3) (Opcional) si quieres también ocultar el track/thumb explícitamente */
-.hide-scrollbar::-webkit-scrollbar-track,
-.hide-scrollbar::-webkit-scrollbar-thumb {
-  background: transparent;
-}
-
-/* Ajustes para móvil */
+/* En mobile: reduce un poco el blur para iPhone (menos “pintura” fuera) */
 @media (max-width: 768px) {
-  /* 1) Empuja cada sección snap-start hacia abajo para
-        que no choque con la navbar semitransparente */
-  .snap-start {
-    padding-top: 5rem;          /* Ajusta este valor a la altura de tu navbar */
-    box-sizing: border-box;     /* Para que el padding no rompa el snap-height */
-  }
-  /* 2) Si quieres ocultar el navbar sólo en móvil y solo en esta página,
-        ponle a tu <body> una clase .know-page cuando estés en /know,
-        y luego: */
-  .know-page .navbar {
-    display: none !important;
-  }
+    .cloud { filter: blur(26px); }
 }
+/* =========================================
+   SLIDE STACK (única definición)
+   ========================================= */
 
-/* ===========================
-   Slide stack (tipo “fotos/diapositivas”)
-   =========================== */
-
-.slide-stack {
-    position: relative;
-    width: min(420px, 92vw);   /* responsive */
-    aspect-ratio: 1 / 1;       /* cuadrado como la referencia */
-    max-width: 420px;
-}
-
-/* Base: todas las “fotos” */
-.slide-stack__img {
-    position: absolute;
-    inset: 0;
+/* Wrapper opcional si lo tienes; si no existe, no pasa nada */
+.slide-stack-wrapper,
+.slide-stack-container {
     width: 100%;
-    height: 100%;
-    object-fit: contain;       /* si quieres recorte tipo foto, cambia a cover */
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.04);
-    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.25);
-    transform-origin: center;
+    max-width: 100%;
+    overflow-x: hidden; /* clave para iPhone cuando hay transforms */
 }
 
-/* Fondo 1 (más atrás) */
-.slide-stack__img--back1 {
-    transform: translate(-16px, 10px) rotate(-8deg);
-    opacity: 0.9;
-    filter: saturate(0.95) brightness(0.98);
-}
-
-/* Fondo 2 (medio) */
-.slide-stack__img--back2 {
-    transform: translate(18px, 16px) rotate(6deg);
-    opacity: 0.92;
-    filter: saturate(0.98) brightness(0.99);
-}
-
-/* Principal (frente) */
-.slide-stack__img--front {
-    position: relative;
-    transform: translate(0, 0) rotate(0deg);
-    opacity: 1;
-}
-
-/* Ajustes en pantallas medianas/grandes */
-@media (min-width: 768px) {
-    .slide-stack {
-        width: 420px;
-    }
-}
-
-/* ===========================
-   SLIDE STACK (X imágenes)
-   =========================== */
-
+/* Stack */
 .slide-stack {
     position: relative;
-    width: min(420px, 90vw);
+    /* Más “seguro” que usar 90vw: evita que el translate se salga del viewport */
+    width: min(420px, calc(100vw - 32px));
+    max-width: 420px;
     aspect-ratio: 1 / 1;
+
+    margin-inline: auto;
+    /* Importante: NO poner display:flex aquí */
 }
 
+/* Imágenes */
 .slide-stack__img {
     position: absolute;
     inset: 0;
@@ -165,13 +94,14 @@
     object-fit: contain;
     border-radius: 18px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-    transition: transform 0.35s ease;
-    cursor: pointer;
     user-select: none;
+    cursor: pointer;
+
     transition: transform 0.35s ease, opacity 0.25s ease;
+    will-change: transform;
 }
 
-/* Capas dinámicas */
+/* Capas (desktop / default) */
 .slide-stack__img--0 {
     transform: translate(-20px, 18px) rotate(-10deg);
     opacity: 0.85;
@@ -195,8 +125,8 @@
     transform: translate(0, 0) rotate(0deg);
 }
 
-/* Hover (desktop) */
-@media (hover: hover) {
+/* Hover (solo escritorio) */
+@media (hover: hover) and (pointer: fine) {
     .slide-stack:hover .slide-stack__img--0 {
         transform: translate(-28px, 22px) rotate(-14deg);
     }
@@ -205,13 +135,41 @@
     }
 }
 
-/* Mobile tuning */
+/* =========================================
+   MOBILE: más pequeño + menos “desborde”
+   ========================================= */
 @media (max-width: 480px) {
+    .slide-stack {
+        /* más pequeño en mobile */
+        width: min(320px, calc(100vw - 40px));
+        aspect-ratio: 1 / 1;
+    }
+
+    /* Reduce offsets para que iPhone no genere overflow */
     .slide-stack__img--0 {
-        transform: translate(-12px, 12px) rotate(-6deg);
+        transform: translate(-10px, 10px) rotate(-5deg);
     }
     .slide-stack__img--1 {
-        transform: translate(12px, 10px) rotate(6deg);
+        transform: translate(10px, 9px) rotate(5deg);
+    }
+    .slide-stack__img--2 {
+        transform: translate(-6px, 6px) rotate(-3deg);
+    }
+    .slide-stack__img--3 {
+        transform: translate(6px, 5px) rotate(3deg);
     }
 }
 
+/* Un extra para iPhone muy angosto */
+@media (max-width: 360px) {
+    .slide-stack {
+        width: min(280px, calc(100vw - 40px));
+    }
+
+    .slide-stack__img--0 {
+        transform: translate(-8px, 8px) rotate(-4deg);
+    }
+    .slide-stack__img--1 {
+        transform: translate(8px, 7px) rotate(4deg);
+    }
+}
