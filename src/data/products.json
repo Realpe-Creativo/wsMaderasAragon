@@ -3,7 +3,7 @@
         "slug": "posteAserrado",
         "title": "POSTES ASERRADOS",
         "description": "Nuestros postes aserrados son una opción un poco más económica para alambrados rurales. Su corte recto permite una instalación rápida y estética. Disponibles en dos presentaciones: 3 filos (más rústico) y 4 caras cuadrado (más parejo y simétrico).",
-        "mainImage": "/img/products/postes_aserrados/postes_aserrado05.jpg",
+        "mainImage": "/img/products/postes_aserrados/postes_aserrado06.jpeg",
         "modelPath": null,    
         "cameraPosition": [
             30,
@@ -78,7 +78,7 @@
         "title": "POSTES CILINDRADOS",
         "description": "Los postes cilindrados son postes torneados con un diámetro uniforme, tratados con inmunización al vacío-presión para resistir el clima, la humedad y el paso del tiempo. Son ideales para cercas duraderas, alambrados fuertes y templetes en zonas ganaderas.",
         "modelPath": null,
-        "mainImage": "/img/products/postes_cilindrados/postes_cilindrados06.jpg",
+        "mainImage": "/img/products/postes_cilindrados/postes_cilindrados12.jpg",
         "collageImages": [
             "/img/products/postes_cilindrados/postes_cilindrados01.jpg",
             "/img/products/postes_cilindrados/postes_cilindrados02.jpg",
@@ -330,7 +330,7 @@
     },
     "acabadosPersonalizados": {
         "slug": "acabadosPersonalizados",
-        "title": "ACABADOS EN MADERA PERSONALIZADA",
+        "title": "ACABADOS EN MADERA",
         "description": "Ofrecemos madera para todo tipo de aplicaciones personalizadas: desde acabados decorativos, hasta usos estructurales o funcionales que requieren un corte limpio, uniforme y con mejor apariencia.<br><br> Cada pieza es trabajada bajo pedido, de acuerdo con las dimensiones y necesidades específicas de tu proyecto. No es un producto estándar, sino un servicio de valor agregado que incluye asesoría técnica directa.",
         "modelPath": null,
         "mainImage": "/img/products/acabados_madera/acabados_madera01.jpg",
@@ -433,7 +433,7 @@
     },
     "jardineria": {
         "slug": "jardineria",
-        "title": "POSTES CILINDRADOS PARA JARDINERÍA Y CERCAMIENTO",
+        "title": "POSTES PARA JARDINERÍA",
         "description": "Ofrecemos postes cilindrados en madera inmunizada, con acabado uniforme y presentaciones adaptadas tanto para cerramientos funcionales como para proyectos de jardinería decorativa. <br><br> Puedes elegir las dimensiones según el uso, ya que fabricamos postes desde 1 m hasta 2.5 m de largo, con diámetros entre 8 y 12 cm. Son livianos, versátiles y resistentes, ideales para cercas de jardines, divisiones campestres, delimitación de espacios y detalles paisajísticos. Todo el proceso se puede personalizar según tu necesidad.",
         "modelPath": null,
         "mainImage": "/img/products/jardineria/jardineria03.jpg",
@@ -486,7 +486,7 @@
     },
     "lenna": {
         "slug": "lenna",
-        "title": "LEÑA NATURAL EN CAJAS DE 10 LB",
+        "title": "LEÑA NATURAL",
         "description": "Vendemos leña seca de eucalipto, empacada en cajas de 10 libras, lista para uso inmediato en cocinas, hornos de leña, fogones, fogatas o chimeneas. Proviene de cultivos sostenibles y responsables, sin químicos añadidos ni residuos tóxicos. <br><br> El empaque es práctico, manejable y fácil de almacenar. Ideal para uso doméstico, turístico o recreativo. Cada caja contiene piezas de tamaño variado, listas para encender.",
         "modelPath": null,
         "mainImage": "/img/products/caja_lena/caja_leña04.jpg",

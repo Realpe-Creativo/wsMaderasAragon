@@ -81,7 +81,7 @@
 
 /* Ajustes para móvil */
 @media (max-width: 768px) {
-  /* 1) Empuja cada sección snap-start hacia abajo para 
+  /* 1) Empuja cada sección snap-start hacia abajo para
         que no choque con la navbar semitransparente */
   .snap-start {
     padding-top: 5rem;          /* Ajusta este valor a la altura de tu navbar */
@@ -94,3 +94,124 @@
     display: none !important;
   }
 }
+
+/* ===========================
+   Slide stack (tipo “fotos/diapositivas”)
+   =========================== */
+
+.slide-stack {
+    position: relative;
+    width: min(420px, 92vw);   /* responsive */
+    aspect-ratio: 1 / 1;       /* cuadrado como la referencia */
+    max-width: 420px;
+}
+
+/* Base: todas las “fotos” */
+.slide-stack__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;       /* si quieres recorte tipo foto, cambia a cover */
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.25);
+    transform-origin: center;
+}
+
+/* Fondo 1 (más atrás) */
+.slide-stack__img--back1 {
+    transform: translate(-16px, 10px) rotate(-8deg);
+    opacity: 0.9;
+    filter: saturate(0.95) brightness(0.98);
+}
+
+/* Fondo 2 (medio) */
+.slide-stack__img--back2 {
+    transform: translate(18px, 16px) rotate(6deg);
+    opacity: 0.92;
+    filter: saturate(0.98) brightness(0.99);
+}
+
+/* Principal (frente) */
+.slide-stack__img--front {
+    position: relative;
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+}
+
+/* Ajustes en pantallas medianas/grandes */
+@media (min-width: 768px) {
+    .slide-stack {
+        width: 420px;
+    }
+}
+
+/* ===========================
+   SLIDE STACK (X imágenes)
+   =========================== */
+
+.slide-stack {
+    position: relative;
+    width: min(420px, 90vw);
+    aspect-ratio: 1 / 1;
+}
+
+.slide-stack__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    transition: transform 0.35s ease;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+/* Capas dinámicas */
+.slide-stack__img--0 {
+    transform: translate(-20px, 18px) rotate(-10deg);
+    opacity: 0.85;
+}
+
+.slide-stack__img--1 {
+    transform: translate(20px, 14px) rotate(8deg);
+    opacity: 0.9;
+}
+
+.slide-stack__img--2 {
+    transform: translate(-8px, 8px) rotate(-4deg);
+    opacity: 0.95;
+}
+
+.slide-stack__img--3 {
+    transform: translate(10px, 6px) rotate(4deg);
+}
+
+.slide-stack__img--4 {
+    transform: translate(0, 0) rotate(0deg);
+}
+
+/* Hover (desktop) */
+@media (hover: hover) {
+    .slide-stack:hover .slide-stack__img--0 {
+        transform: translate(-28px, 22px) rotate(-14deg);
+    }
+    .slide-stack:hover .slide-stack__img--1 {
+        transform: translate(28px, 20px) rotate(12deg);
+    }
+}
+
+/* Mobile tuning */
+@media (max-width: 480px) {
+    .slide-stack__img--0 {
+        transform: translate(-12px, 12px) rotate(-6deg);
+    }
+    .slide-stack__img--1 {
+        transform: translate(12px, 10px) rotate(6deg);
+    }
+}
+

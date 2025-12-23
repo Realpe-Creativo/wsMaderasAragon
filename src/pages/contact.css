@@ -1,5 +1,5 @@
 /* Fuerza el borde negro en todos los inputs y textareas */
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
   border: 2px solid #000 !important;
 }
@@ -8,4 +8,23 @@
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   opacity: 0;
+}
+
+.contact-form,
+.contact-form * ,
+.contact-form *::before,
+.contact-form *::after {
+    box-sizing: border-box;
+}
+
+.contact-form input,
+.contact-form textarea {
+    max-width: 100%;
+    border: 2px solid #000 !important;
+}
+
+/* Asegura que los placeholders no interfieran */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    opacity: 0;
 }

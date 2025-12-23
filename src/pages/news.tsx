@@ -8,10 +8,10 @@ export default function NewsList() {
   const [posts] = useState<NewsItem[]>(newsData);
 
   return (
-    <div className="flex flex-col items-center mt-20 mb-20">
+    <div className="flex flex-col items-center mt-24 mb-20">
       <div className="w-full bg-stone-700 py-4 flex justify-center">
         <span className="text-5xl text-white font-title-bold">
-          Noticias y Anuncios
+          Bitácora
         </span>
       </div>
 

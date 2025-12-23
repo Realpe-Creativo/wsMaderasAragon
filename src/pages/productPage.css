@@ -1,3 +1,35 @@
 /* global.css */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* === SCROLL HORIZONTAL TABLA (SIEMPRE ACTIVO) === */
+.table-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 6px;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #7fb069 #7fb069;
+}
+
+/* Chrome / Edge / Safari */
+.table-scroll::-webkit-scrollbar {
+    height: 10px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+    background: #2f3e2e;   /* verde oscuro fijo */
+    border-radius: 8px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    background-color: #7fb069; /* verde claro SIEMPRE */
+    border-radius: 8px;
+    border: 2px solid #2f3e2e;
+}
+
+/* 🔒 Sin cambios en hover: siempre igual */
+.table-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #7fb069;
+}
