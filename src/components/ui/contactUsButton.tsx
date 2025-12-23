@@ -10,7 +10,7 @@ const ContactUsButton: React.FC<ContactUsButtonProps> = ({
   ...props
 }) => (
   <a
-    href="https://wa.me/573125085185"
+    href="https://wa.me/573132618038"
     target="_blank"
     rel="noopener noreferrer"
     className={`
