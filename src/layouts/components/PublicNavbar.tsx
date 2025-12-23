@@ -6,7 +6,8 @@ import {
     LuShoppingBag,
     LuNewspaper,
     LuMessageCircle,
-    LuInfo
+    LuInfo,
+    LuChevronRight
 } from "react-icons/lu";
 import {Link} from "react-router-dom";
 import {useWindowScroll} from "@mantine/hooks";
@@ -154,16 +155,16 @@ export default function PublicNavbar({tab}: PublicNavbarProps) {
                             className={`${base} ${justifyCls} ${active ? activeCls : inactiveCls}`}
                         >
               <span className="flex items-center">
-                {item.Icon && (
-                    <span className="inline-block mr-2">
-                    <item.Icon size={18}/>
-                  </span>
-                )}
+                    {item.Icon && (
+                        <span className="inline-block mr-2">
+                        <item.Icon size={18}/>
+                      </span>
+                    )}
                   {item.label}
               </span>
                             <span
                                 className={`transform transition-transform duration-300 ease-in-out ${isOpen ? "rotate-90" : ""}`}>
-                ▶
+                <LuChevronRight size={18} />
               </span>
                         </button>
                     ) : (

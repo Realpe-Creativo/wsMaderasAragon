@@ -1,14 +1,14 @@
 // src/pages/ProductPage.tsx
-import React, {useState, useMemo} from 'react';
-import {useParams} from 'react-router-dom';
-import rawData from '@/data/products.json';
-import ContactUsButton from '@/components/ui/contactUsButton';
-import GuaranteeStatsSlider from '@/components/ui/GuaranteeStats';
-import ThreeDModel from '@/components/ui/ThreeDModel';
-import {Products, Product} from '@/types/Product';
-import "./productPage.css"
+import React, { useState, useMemo } from "react";
+import { useParams } from "react-router-dom";
+import rawData from "@/data/products.json";
+import ContactUsButton from "@/components/ui/contactUsButton";
+import GuaranteeStatsSlider from "@/components/ui/GuaranteeStats";
+import ThreeDModel from "@/components/ui/ThreeDModel";
+import { Products, Product } from "@/types/Product";
+import "./productPage.css";
 
-const productsData = (rawData as unknown) as Products;
+const productsData = rawData as unknown as Products;
 
 function shuffleArray<T>(arr: T[]): T[] {
     const a = [...arr];
@@ -20,7 +20,7 @@ function shuffleArray<T>(arr: T[]): T[] {
 }
 
 const ProductPage: React.FC = () => {
-    const {slug} = useParams<{ slug: string }>();
+    const { slug } = useParams<{ slug: string }>();
 
     if (!slug) {
         return <div>Falta el parámetro “slug” en la URL.</div>;
@@ -57,7 +57,7 @@ const ProductPage: React.FC = () => {
         }));
         const sumSpans = base.reduce((sum, img) => sum + img.span, 0);
         const missingSpans = (columns - (sumSpans % columns)) % columns;
-        const padding = base.slice(0, missingSpans).map(img => ({src: img.src, span: 1}));
+        const padding = base.slice(0, missingSpans).map((img) => ({ src: img.src, span: 1 }));
         return [...base, ...padding];
     }, [shuffled, columns]);
 
@@ -101,17 +101,16 @@ const ProductPage: React.FC = () => {
 
             <div className="mt-16 bg-white w-full">
                 <div className="max-w-screen-xl mx-auto px-8 py-28">
-                    <h1 className="text-5xl md:text-6xl font-bold text-center mb-12"
-                        style={{color: '#394930'}}>{title}</h1>
+                    <h1
+                        className="text-5xl md:text-6xl font-bold text-center mb-12"
+                        style={{ color: "#394930" }}
+                    >
+                        {title}
+                    </h1>
                     <div className="flex flex-col md:flex-row items-center gap-12">
-                        <div
-                            className="w-full max-w-lg md:w-3/4 md:max-w-2xl h-[500px] object-contain rounded-lg shadow-lg">
+                        <div className="w-full max-w-lg md:w-3/4 md:max-w-2xl h-[500px] object-contain rounded-lg shadow-lg">
                             {modelPath ? (
-                                <ThreeDModel
-                                    modelPath={modelPath}
-                                    cameraPosition={cameraPosition}
-                                    lookAt={lookAt}
-                                />
+                                <ThreeDModel modelPath={modelPath} cameraPosition={cameraPosition} lookAt={lookAt} />
                             ) : (
                                 <img
                                     src={mainImage}
@@ -121,10 +120,7 @@ const ProductPage: React.FC = () => {
                             )}
                         </div>
                         <div className="w-full md:w-2/4 text-gray-700 text-lg md:text-xl leading-relaxed">
-                            <p
-                                className="text-center md:text-left"
-                                dangerouslySetInnerHTML={{__html: description}}
-                            />
+                            <p className="md:text-left text-justify" dangerouslySetInnerHTML={{ __html: description }} />
                             <div className="mt-6 flex justify-center">
                                 <ContactUsButton>Contáctanos</ContactUsButton>
                             </div>
@@ -136,71 +132,72 @@ const ProductPage: React.FC = () => {
             {/* USOS RECOMENDADOS + GRUPOS */}
             <div className="bg-[#394930] py-12">
                 <div className="max-w-screen-xl mx-auto px-8">
-                    <h3
-                        className="text-2xl md:text-3xl font-semibold mb-4"
-                        style={{color: "white"}}
-                    >
+                    <h3 className="text-2xl md:text-3xl font-semibold mb-4" style={{ color: "white" }}>
                         {recommendedUses.title}
                     </h3>
                     <p
-                        className="text-gray-700 text-lg md:text-xl mb-8"
-                        style={{color: "white"}}
+                        className="text-gray-700 text-lg md:text-xl mb-8 text-justify"
+                        style={{ color: "white" }}
                     >
                         {recommendedUses.text}
                     </p>
 
-                    {/* Si existen grupos, mapeamos cada uno */}
-                    {recommendedUses.groups
-                        ? recommendedUses.groups.map((group, gi) => (
-                            <div key={gi} className="mb-10">
+                    {recommendedUses.groups ? (
+                        recommendedUses.groups.map((group, gi) => (
+                            <div key={gi} className="grid gap-6">
                                 {group.title && (
                                     <h4
-                                        className="text-xl md:text-2xl font-medium mb-6"
-                                        style={{color: "white"}}
+                                        className="text-xl md:text-2xl font-medium mb-6 px-4"
+                                        style={{ color: "white" }}
                                     >
                                         {group.title}
                                     </h4>
                                 )}
                                 {group.text && (
-                                    <p
-                                        className="text-gray-200 text-base md:text-lg mb-4"
-                                        style={{color: "white"}}
-                                    >
+                                    <p className="text-gray-200 text-base md:text-lg mb-4 px-4" style={{ color: "white" }}>
                                         {group.text}
                                     </p>
                                 )}
-                                <div
-                                    className="grid gap-6"
-                                    style={{
-                                        gridTemplateColumns: `repeat(${group.columns}, minmax(0,1fr))`
-                                    }}
-                                >
-                                    {group.specs.map((spec, si) => (
-                                        <p
-                                            key={si}
-                                            className="text-gray-100 text-lg md:text-xl text-center"
-                                            dangerouslySetInnerHTML={{__html: spec}}
-                                        />
-                                    ))}
+
+                                {/* Mantener estructura tipo tabla: mismas columnas. Si no cabe, scroll horizontal */}
+                                <div className="table-scroll">
+                                    <div
+                                        className="grid gap-6"
+                                        style={{
+                                            gridTemplateColumns: `repeat(${group.columns}, minmax(180px, 1fr))`,
+                                            minWidth: `${group.columns * 220}px`,
+                                        }}
+                                    >
+                                        {group.specs.map((spec, si) => (
+                                            <p
+                                                key={si}
+                                                className="text-gray-100 text-lg md:text-xl text-center"
+                                                dangerouslySetInnerHTML={{ __html: spec }}
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         ))
-                        : (
+                    ) : (
+                        <div className="table-scroll">
                             <div
                                 className="grid gap-6"
                                 style={{
-                                    gridTemplateColumns: `repeat(${recommendedUses.columns}, minmax(0,1fr))`
+                                    gridTemplateColumns: `repeat(${recommendedUses.columns}, minmax(180px, 1fr))`,
+                                    minWidth: `${recommendedUses.columns * 220}px`,
                                 }}
                             >
                                 {recommendedUses.specs!.map((spec, idx) => (
                                     <p
                                         key={idx}
                                         className="text-gray-100 text-lg md:text-xl text-center"
-                                        dangerouslySetInnerHTML={{__html: spec}}
+                                        dangerouslySetInnerHTML={{ __html: spec }}
                                     />
                                 ))}
                             </div>
-                        )}
+                        </div>
+                    )}
                 </div>
             </div>
 
@@ -208,20 +205,23 @@ const ProductPage: React.FC = () => {
             {characteristics && (
                 <div className="bg-[#394930] py-5">
                     <div className="max-w-screen-xl mx-auto px-8">
-                        <div
-                            className="grid gap-6"
-                            style={{
-                                gridTemplateColumns: `repeat(${characteristics.columns}, minmax(0,1fr))`
-                            }}
-                        >
-                            {characteristics.specs.map((spec, idx) => (
-                                <p
-                                    key={idx}
-                                    className="text-gray-700 text-lg md:text-xl text-center"
-                                    dangerouslySetInnerHTML={{__html: spec}}
-                                    style={{color: "white"}}
-                                />
-                            ))}
+                        <div className="table-scroll">
+                            <div
+                                className="grid gap-6"
+                                style={{
+                                    gridTemplateColumns: `repeat(${characteristics.columns}, minmax(180px, 1fr))`,
+                                    minWidth: `${characteristics.columns * 220}px`,
+                                }}
+                            >
+                                {characteristics.specs.map((spec, idx) => (
+                                    <p
+                                        key={idx}
+                                        className="text-gray-700 text-lg md:text-xl text-center"
+                                        dangerouslySetInnerHTML={{ __html: spec }}
+                                        style={{ color: "white" }}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -231,21 +231,17 @@ const ProductPage: React.FC = () => {
             {additionalText !== null && (
                 <div className="bg-[#394930] w-full">
                     <div className="max-w-screen-xl mx-auto px-8 py-14">
-                        <p
-                            className="text-gray-700 text-lg md:text-xl mb-8 text-center"
-                            style={{color: "white"}}
-                        >
+                        <p className="text-gray-700 text-lg md:text-xl mb-8 text-center" style={{ color: "white" }}>
                             {additionalText}
                         </p>
                     </div>
                 </div>
             )}
 
-
             {/* VENTAJAS DEL PRODUCTO */}
             <div className="bg-[#394930] py-12">
                 <div className="max-w-screen-xl mx-auto px-8">
-                    <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6" style={{color: "white"}}>
+                    <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6" style={{ color: "white" }}>
                         VENTAJAS DEL PRODUCTO
                     </h3>
 
@@ -253,7 +249,7 @@ const ProductPage: React.FC = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
                         {advantages.slice(0, 5).map((adv, idx) => (
                             <div key={idx} className="p-4 text-center">
-                                <p className="text-gray-700 text-lg md:text-xl" style={{color: "white"}}>
+                                <p className="text-gray-700 text-lg md:text-xl" style={{ color: "white" }}>
                                     {adv}
                                 </p>
                             </div>
@@ -263,32 +259,26 @@ const ProductPage: React.FC = () => {
             </div>
 
             {/* POR QUÉ ELEGIRNOS */}
-
             <div className="bg-[#F8F7DD] w-full">
                 <div className="max-w-screen-xl mx-auto px-8 py-14">
-                    <h3 className="text-2xl md:text-3xl font-semibold text-right mb-4">
-                        {whyChoose.title}
-                    </h3>
+                    <h3 className="text-2xl md:text-3xl font-semibold text-right mb-4">{whyChoose.title}</h3>
                     <p
-                        className="text-gray-700 text-lg md:text-xl"
-                        dangerouslySetInnerHTML={{__html: whyChoose.text}}
+                        className="text-gray-700 text-lg md:text-xl text-justify"
+                        dangerouslySetInnerHTML={{ __html: whyChoose.text }}
                     />
                 </div>
             </div>
 
-            <div className=" px-1 bg-[#F8F7DD]">
+            <div className="px-1 bg-[#F8F7DD]">
                 <div className="max-w-6xl mx-auto">
-                    <GuaranteeStatsSlider className="py-0"/>
+                    <GuaranteeStatsSlider className="py-0" />
                 </div>
             </div>
 
             {/* GALERÍA */}
             <div className="bg-[#394930] w-full">
                 <div className="max-w-screen-xl mx-auto px-8 py-14">
-                    <h3
-                        className="text-2xl md:text-3xl font-semibold text-center mb-6"
-                        style={{color: "white"}}
-                    >
+                    <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6" style={{ color: "white" }}>
                         GALERÍA DE IMÁGENES
                     </h3>
                     <div
@@ -297,11 +287,8 @@ const ProductPage: React.FC = () => {
                             gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
                         }}
                     >
-                        {imagesWithSpan.map(({src, span}, idx) => (
-                            <div
-                                key={idx}
-                                className={`aspect-square overflow-hidden ${span === 2 ? "col-span-2" : ""}`}
-                            >
+                        {imagesWithSpan.map(({ src, span }, idx) => (
+                            <div key={idx} className={`aspect-square overflow-hidden ${span === 2 ? "col-span-2" : ""}`}>
                                 <img
                                     src={src}
                                     alt={`Galería ${idx + 1}`}
@@ -317,9 +304,7 @@ const ProductPage: React.FC = () => {
             {/* COTIZACIÓN */}
             <div className="w-full bg-[#F8F7DD]">
                 <div className="max-w-screen-md mx-auto px-8 py-16 text-center">
-                    <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-                        ¿QUIERES COTIZAR?
-                    </h3>
+                    <h3 className="text-2xl md:text-3xl font-semibold mb-4">¿QUIERES COTIZAR?</h3>
                     <p className="text-gray-700 text-lg md:text-xl mb-6">
                         Contáctanos para recibir una cotización personalizada para tu proyecto.
                     </p>
