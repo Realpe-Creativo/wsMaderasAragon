@@ -62,14 +62,9 @@ const menuItems: MenuItem[] = [
                         children: [
                             {
                                 key: "poste_ganadero",
-                                label: "Poste Ganadero",
+                                label: "Postes y Varetas Ganaderos",
                                 to: "/products/postesGanaderos",
-                            },
-                            {
-                                key: "vareta_eucalipto",
-                                label: "Vareta de Eucalipto",
-                                to: "/products/varetaEucalipto",
-                            },
+                            }
                         ],
                     },
                 ],
