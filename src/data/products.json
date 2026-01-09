@@ -54,7 +54,7 @@
                         "Alambrados estándar",
                         "12 x 12 cm",
                         "2.10 m",
-                        "Alambrados con mayor carga o durabilidad"
+                        "Alambrados con mayor soporte"
                     ],
                     "columns": 3
                 }
@@ -78,7 +78,7 @@
         "title": "POSTES CILINDRADOS",
         "description": "Los postes cilindrados son postes torneados con un diámetro uniforme, tratados con inmunización al vacío-presión para resistir el clima, la humedad y el paso del tiempo. Son ideales para cercas duraderas, alambrados fuertes y templetes en zonas ganaderas.",
         "modelPath": null,
-        "mainImage": "/img/products/postes_cilindrados/postes_cilindrados12.jpg",
+        "mainImage": "/img/products/postes_cilindrados/postes_cilindrados09.jpg",
         "collageImages": [
             "/img/products/postes_cilindrados/postes_cilindrados01.jpg",
             "/img/products/postes_cilindrados/postes_cilindrados02.jpg",
@@ -118,7 +118,7 @@
             "specs": [
                 "<strong>Tipo de madera:</strong> pino o eucalipto (según disponibilidad)",
                 "<strong>Tratamiento:</strong> Inmunizado con sales CCA, protección garantizada por más de 20 años contra hongos, insectos y humedad.",
-                "<strong>Acabado:</strong> rústico, descortezado manual"
+                "<strong>Acabado:</strong> cilindrado, rústico, descortezado manual e inmunizados"
             ],
             "columns": 3
         },
@@ -140,16 +140,13 @@
         "title": "POSTES ROLLIZOS",
         "description": "Los postes rollizos son ideales para cercas rurales, ganaderas o agrícolas. Tienen un acabado rústico y natural, y están inmunizados para garantizar alta durabilidad y resistencia estructural. Son una solución eficiente y confiable para usos de corta, mediana y larga duración.",
         "modelPath": null,
-        "mainImage": "/img/products/postes_rollizos/postes_rollizos06.jpg",
+        "mainImage": "/img/products/postes_rollizos/postes_rollizos01.jpg",
         "collageImages": [
-            "/img/products/postes_rollizos/postes_rollizos01.jpg",
+            "/img/products/postes_rollizos/postes_rollizos06.jpg",
             "/img/products/postes_rollizos/postes_rollizos02.jpg",
             "/img/products/postes_rollizos/postes_rollizos03.jpg",
             "/img/products/postes_rollizos/postes_rollizos04.jpg",
-            "/img/products/postes_rollizos/postes_rollizos05.jpg",
-            "/img/products/postes_rollizos/postes_rollizos06.jpg",
-            "/img/products/postes_rollizos/postes_rollizos07.jpg",
-            "/img/products/postes_rollizos/postes_rollizos08.jpg"
+            "/img/products/postes_rollizos/postes_rollizos05.jpg"
         ],
         "recommendedUses": {
             "title": "USOS RECOMENDADOS",
@@ -172,9 +169,9 @@
         },
         "characteristics": {
             "specs": [
-                "<strong>Tipo de madera:</strong> Pino o eucalipto",
+                "<strong>Tipo de madera:</strong> Eucalipto",
                 "<strong>Tratamiento:</strong>  Inmunizado con sales CCA, protección garantizada por más de 20 años",
-                "<strong>Acabado:</strong> Cilindrado y Aserrado"
+                "<strong>Acabado:</strong> Brusco, descortezado manual."
             ],
             "columns": 3
         },
@@ -247,12 +244,11 @@
     },
     "postesGanaderos": {
         "slug": "postesGanadaros",
-        "title": "POSTES GANADEROS",
+        "title": "POSTES Y VARETAS PARA CORRALES",
         "description": "Nuestros postes para corrales ganaderos están diseñados para soportar el peso, el movimiento constante del ganado y las condiciones del campo. Disponibles en versión cilindrada e individual cuadrada, con medidas especiales para estructuras más robustas.",
         "modelPath": null,
         "mainImage": "/img/products/postes_ganaderos/postes_ganaderos01.jpg",
         "collageImages": [
-            "/img/products/postes_ganaderos/postes_ganaderos03.jpg",
             "/img/products/postes_ganaderos/postes_ganaderos04.jpg",
             "/img/products/postes_ganaderos/postes_ganaderos05.jpg",
             "/img/products/postes_ganaderos/postes_ganaderos06.jpg",
@@ -304,7 +300,20 @@
                         "Bases principales"
                     ],
                     "columns": 3
-                }
+                },
+              {
+                "title": "Vareta Rectangular",
+                "text": null,
+                "specs": [
+                  "<strong>Sección</strong>",
+                  "<strong>Largo</strong>",
+                  "<strong>Uso recomendado</strong>",
+                  "4 x 12 cm",
+                  "3 m",
+                  "Refuerzo de estructuras, acabados, barandas"
+                ],
+                "columns": 3
+              }
             ]
         },
         "characteristics": {

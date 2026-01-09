@@ -1,5 +1,3 @@
-// pages/categories.tsx
-
 import GalleryGrid from '@/components/ui/GalleryGridProps';
 import GuaranteeStatsSlider from '@/components/ui/GuaranteeStats';
 import React from 'react';
