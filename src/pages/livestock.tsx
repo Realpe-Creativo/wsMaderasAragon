@@ -22,22 +22,21 @@ const items: ProductItem[] = [
         label: 'Poste Rollizo',
         href: '/products/posteRollizo',
       },
-      // …añade más productos de la categoría “CERCAS”
     ],
   },
   {
-    image: '/img/livestock/pens.jpg',
+    image: '/img/products/postes_ganaderos/postes_ganaderos02.jpg',
     title: 'CORRALES',
     subtitle: 'Modelos de corrales para tu ganado',
     products: [
       {
-        label: 'Postes Ganaderos',
+        label: 'Postes y Varetas Ganaderos',
         href: '/products/postesGanaderos',
-      },
-      {
+      }
+      /*{
         label: 'Varetas de Eucalipto',
         href: '/products/varetaEucalipto',
-      },
+      },*/
     ],
   },
   
