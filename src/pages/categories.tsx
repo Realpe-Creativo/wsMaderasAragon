@@ -31,7 +31,7 @@ const items: CategoryItem[] = [
     {
         title: "LEÑA",
         subtitle: "Nuestro equipo transforma la madera con conocimiento y respeto",
-        image: "/img/categories/firewood.jpg",
+        image: "/img/products/caja_lena/caja_leña01.jpg",
         href: "/products/lenna",
     },
 ];
