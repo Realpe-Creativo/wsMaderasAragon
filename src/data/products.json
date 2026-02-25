@@ -78,7 +78,7 @@
         "title": "POSTES CILINDRADOS",
         "description": "Los postes cilindrados son postes torneados con un diámetro uniforme, tratados con inmunización al vacío-presión para resistir el clima, la humedad y el paso del tiempo. Son ideales para cercas duraderas, alambrados fuertes y templetes en zonas ganaderas.",
         "modelPath": null,
-        "mainImage": "/img/products/postes_cilindrados/postes_cilindrados09.jpg",
+        "mainImage": "/img/products/postes_cilindrados/postes_cilindrados01.jpg",
         "collageImages": [
             "/img/products/postes_cilindrados/postes_cilindrados01.jpg",
             "/img/products/postes_cilindrados/postes_cilindrados02.jpg",
@@ -89,7 +89,9 @@
             "/img/products/postes_cilindrados/postes_cilindrados07.jpg",
             "/img/products/postes_cilindrados/postes_cilindrados08.jpg",
             "/img/products/postes_cilindrados/postes_cilindrados09.jpg",
-            "/img/products/postes_cilindrados/postes_cilindrados10.jpg"
+            "/img/products/postes_cilindrados/postes_cilindrados10.jpg",
+            "/img/products/postes_cilindrados/postes_cilindrados11.jpg",
+            "/img/products/postes_cilindrados/postes_cilindrados12.jpg"
         ],
         "recommendedUses": {
             "title": "USOS RECOMENDADOS",
@@ -142,11 +144,16 @@
         "modelPath": null,
         "mainImage": "/img/products/postes_rollizos/postes_rollizos01.jpg",
         "collageImages": [
-            "/img/products/postes_rollizos/postes_rollizos06.jpg",
             "/img/products/postes_rollizos/postes_rollizos02.jpg",
             "/img/products/postes_rollizos/postes_rollizos03.jpg",
             "/img/products/postes_rollizos/postes_rollizos04.jpg",
-            "/img/products/postes_rollizos/postes_rollizos05.jpg"
+            "/img/products/postes_rollizos/postes_rollizos01.jpg",
+            "/img/products/postes_rollizos/postes_rollizos06.jpg",
+            "/img/products/postes_rollizos/postes_rollizos07.jpg",
+            "/img/products/postes_rollizos/postes_rollizos08.jpg",
+            "/img/products/postes_rollizos/postes_rollizos09.jpg",
+            "/img/products/postes_rollizos/postes_rollizos10.jpg",
+            "/img/products/postes_rollizos/postes_rollizos11.jpg"
         ],
         "recommendedUses": {
             "title": "USOS RECOMENDADOS",
@@ -247,14 +254,18 @@
         "title": "POSTES Y VARETAS PARA CORRALES",
         "description": "Nuestros postes para corrales ganaderos están diseñados para soportar el peso, el movimiento constante del ganado y las condiciones del campo. Disponibles en versión cilindrada e individual cuadrada, con medidas especiales para estructuras más robustas.",
         "modelPath": null,
-        "mainImage": "/img/products/postes_ganaderos/postes_ganaderos01.jpg",
+        "mainImage": "/img/products/postes_ganaderos/postes_ganaderos07.jpg",
         "collageImages": [
+            "/img/products/postes_ganaderos/postes_ganaderos01.jpg",
+            "/img/products/postes_ganaderos/postes_ganaderos02.jpg",
+            "/img/products/postes_ganaderos/postes_ganaderos03.jpg",
             "/img/products/postes_ganaderos/postes_ganaderos04.jpg",
             "/img/products/postes_ganaderos/postes_ganaderos05.jpg",
             "/img/products/postes_ganaderos/postes_ganaderos06.jpg",
-            "/img/products/postes_ganaderos/postes_ganaderos07.jpg",
             "/img/products/postes_ganaderos/postes_ganaderos08.jpg",
-            "/img/products/postes_ganaderos/postes_ganaderos02.jpg"
+            "/img/products/postes_ganaderos/postes_ganaderos09.jpg",
+            "/img/products/postes_ganaderos/postes_ganaderos10.jpg",
+            "/img/products/postes_ganaderos/postes_ganaderos11.jpg"
         ],
         "recommendedUses": {
             "title": "USOS RECOMENDADOS",
