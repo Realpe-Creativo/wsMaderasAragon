@@ -134,7 +134,7 @@ export default function Know() {
             {/* ================= HERO ================= */}
             <section className="relative isolate h-screen md:snap-start bg-black text-white">
                 <div className="flex flex-col items-center justify-center h-full px-6 text-center">
-                    <img src="/logo-white.png" className="mb-8 w-32 sm:w-40" />
+                    <img src="/logo-white.png" className="mb-8 w-48 sm:w-56" />
                     <h1 className="text-3xl sm:text-5xl font-bold mb-6">Celebrando nuestra historia</h1>
                     <button onClick={() => scrollTo(0)} className="bg-white text-black px-8 py-4 rounded-full">
                         Comenzar
@@ -192,7 +192,7 @@ export default function Know() {
 
             {/* ================= FINAL ================= */}
             <section className="h-screen md:snap-start bg-black flex items-center justify-center">
-                <img src="/logo-white.png" className="w-64 md:w-80" />
+                <img src="/logo-white.png" className="w-80 md:w-96" />
             </section>
         </div>
     )

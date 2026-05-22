@@ -231,7 +231,7 @@ export default function PublicNavbar({tab}: PublicNavbarProps) {
                     }}
                     className="flex-1 flex justify-center"
                 >
-                    <img src="/logo-white.png" className="w-12" alt="Logo Maderas Aragón"/>
+                    <img src="/logo-white.png" className="w-20" alt="Logo"/>
                 </Link>
                 <div className="w-6"/>
             </div>
@@ -257,12 +257,9 @@ export default function PublicNavbar({tab}: PublicNavbarProps) {
                     >
                         <img
                             src="/logo-white.png"
-                            className="w-14 mx-2"
-                            alt="Logo Maderas Aragón"
+                            className="w-40 mx-2"
+                            alt="Logo"
                         />
-                        <span className="text-2xl font-title-bold text-white">
-              Maderas Aragón
-            </span>
                     </Link>
                 </div>
                 <div className="flex w-6/12 p-3 justify-center">
