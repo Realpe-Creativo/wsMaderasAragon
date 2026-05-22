@@ -20,8 +20,7 @@ export default function (props: props) {
         <div className="absolute inset-0 backdrop-blur-sm bg-stone-950/25 flex flex-col md:flex-row justify-center items-center gap-8 px-6 py-16">
           {/* = Logo + título centrado = */}
           <div className="flex w-3/12 justify-center flex-col h-full items-center content-center align-middle">
-            <img src="/logo-white.png" className="flex min-w-40 min-h-40 w-40 h-40" alt="Logo Maderas Aragon" />
-            <span className="flex text-4xl text-white text-center -mt-5 font-title-bold">Maderas Aragón</span>
+            <img src="/logo-white.png" className="w-64 object-contain" alt="Logo" />
           </div>
 
           {/* = Menú de enlaces centrado = */}
